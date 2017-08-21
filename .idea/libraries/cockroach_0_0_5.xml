@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="cockroach-0.0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/667de878c0a6bf01dd39933f07df6c821b917264/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/667de878c0a6bf01dd39933f07df6c821b917264/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wanjian/cockroach/0.0.5/59b82c2321c0a29e9520710b4404021de2c5df84/cockroach-0.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

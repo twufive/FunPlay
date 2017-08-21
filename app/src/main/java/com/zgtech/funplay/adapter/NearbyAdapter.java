@@ -1,0 +1,46 @@
+package com.zgtech.funplay.adapter;
+
+import android.app.Activity;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import com.zgtech.funplay.FunPlayApplication;
+import com.zgtech.funplay.R;
+import com.zgtech.funplay.model.NearbyModel;
+
+import java.util.List;
+
+/**
+ * 附近   适配器
+ * Created by Administrator on 2017/8/3.
+ */
+
+public class NearbyAdapter extends BaseQuickAdapter<NearbyModel, BaseViewHolder> {
+    private Activity act;
+
+    public NearbyAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<NearbyModel> data) {
+        super(layoutResId, data);
+
+        this.act = act;
+    }
+
+    @Override
+    protected void convert(BaseViewHolder helper, NearbyModel individualModel) {
+        ImageView ivAvatar = helper.getView(R.id.iv_avatar);
+        TextView tvNick = helper.getView(R.id.tv_nick);
+        TextView tvPrice = helper.getView(R.id.tv_price);
+
+        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Glide.with(FunPlayApplication.getContext())
+                .load(individualModel.getImgUrl())
+                .into(ivAvatar);
+
+        tvNick.setText(individualModel.getNick());
+        tvPrice.setText("￥" + individualModel.getPrice() + "/时");
+    }
+}
