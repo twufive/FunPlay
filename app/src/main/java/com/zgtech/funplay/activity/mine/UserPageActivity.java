@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/8/14.
  */
 
-public class MyPageActivity extends BaseActivity {
+public class UserPageActivity extends BaseActivity {
     @Bind(R.id.nestedScrollView)
     NestedScrollView nestedScrollView;
     @Bind(R.id.tabs)

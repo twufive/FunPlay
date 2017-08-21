@@ -16,7 +16,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.mine.MyCertifyActivity;
 import com.zgtech.funplay.activity.mine.MyCollectActivity;
 import com.zgtech.funplay.activity.mine.MyInfoActivity;
-import com.zgtech.funplay.activity.mine.MyPageActivity;
+import com.zgtech.funplay.activity.mine.UserPageActivity;
 import com.zgtech.funplay.activity.mine.MyPinTuanActivity;
 import com.zgtech.funplay.activity.mine.MyPwdActivity;
 import com.zgtech.funplay.activity.mine.MyReportActivity;
@@ -138,7 +138,7 @@ public class MineFragment extends BaseFragment {
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
-                toNextActivity(MyPageActivity.class);
+                toNextActivity(UserPageActivity.class);
                 break;
             case R.id.rl_mine_collect:
                 toNextActivity(MyCollectActivity.class);

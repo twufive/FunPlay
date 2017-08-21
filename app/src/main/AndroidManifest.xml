@@ -57,7 +57,7 @@
 
         <activity android:name=".activity.mine.MyPinTuanActivity" />
         <activity android:name=".activity.mine.MyInfoActivity" />
-        <activity android:name=".activity.mine.MyPageActivity" />
+        <activity android:name=".activity.mine.UserPageActivity" />
         <activity android:name=".activity.mine.MyCertifyActivity" />
         <activity android:name=".activity.mine.MyCollectActivity" />
         <activity android:name=".activity.mine.MySuggestActivity" />

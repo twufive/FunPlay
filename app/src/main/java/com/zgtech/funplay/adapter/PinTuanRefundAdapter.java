@@ -48,5 +48,7 @@ public class PinTuanRefundAdapter extends BaseQuickAdapter<PinTuanAllModel, Base
         tvPrice.setText("总价:￥" + individualModel.getPrice());
         tvState.setText(individualModel.getState());
         tvBtn.setText("查看详情");
+
+
     }
 }

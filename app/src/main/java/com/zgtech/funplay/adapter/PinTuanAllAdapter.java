@@ -48,5 +48,6 @@ public class PinTuanAllAdapter extends BaseQuickAdapter<PinTuanAllModel, BaseVie
         tvPrice.setText("总价:￥" + individualModel.getPrice());
         tvState.setText(individualModel.getState());
         tvBtn.setText("再来一单");
+
     }
 }

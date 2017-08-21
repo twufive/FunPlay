@@ -1,8 +1,11 @@
 package com.zgtech.funplay.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +14,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.mine.UserPageActivity;
 import com.zgtech.funplay.model.RecommendModel;
 
 import java.util.List;
@@ -36,6 +40,7 @@ public class RecommendAdapter extends BaseQuickAdapter<RecommendModel, BaseViewH
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvSign = helper.getView(R.id.tv_sign);
         TextView tvRead = helper.getView(R.id.tv_read);
+        CardView cardview = helper.getView(R.id.cardview);
 
 //        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
 //        Glide.with(FunPlayApplication.getContext())
@@ -48,6 +53,14 @@ public class RecommendAdapter extends BaseQuickAdapter<RecommendModel, BaseViewH
 
         tvSign.setText(individualModel.getSign());
         tvRead.setText(individualModel.getReadCount());
+
+        cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(act, UserPageActivity.class);
+                act.startActivity(intent);
+            }
+        });
 
 
     }
