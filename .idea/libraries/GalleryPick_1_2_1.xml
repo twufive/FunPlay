@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="GalleryPick-1.2.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/52bf13ab5a9079ef2fe5631497078da12cc8932e/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/52bf13ab5a9079ef2fe5631497078da12cc8932e/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/b51c8d17c6ed7d641961ecb95488488fd9333638/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b51c8d17c6ed7d641961ecb95488488fd9333638/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

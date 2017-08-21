@@ -46,10 +46,10 @@ public class PinTuanTogetherActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        ivRight.setVisibility(View.VISIBLE);
+//        ivRight.setVisibility(View.VISIBLE);
         tvToolbar.setText("一起拼团");
 //        ivRight.setBackgroundResource(R.drawable.ic_add_white_24dp);
-        ivRight.setImageResource(R.drawable.ic_add_white_36dp);
+//        ivRight.setImageResource(R.drawable.icon_arrow_right);
 
 
         adapter = new PinTuanCoreAdapter(this, R.layout.fp_item_pintuan_together, originList);
