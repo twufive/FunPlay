@@ -13,10 +13,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.CoreUserPageActivity;
 import com.zgtech.funplay.activity.mine.MyCertifyActivity;
 import com.zgtech.funplay.activity.mine.MyCollectActivity;
 import com.zgtech.funplay.activity.mine.MyInfoActivity;
-import com.zgtech.funplay.activity.mine.UserPageActivity;
 import com.zgtech.funplay.activity.mine.MyPinTuanActivity;
 import com.zgtech.funplay.activity.mine.MyPwdActivity;
 import com.zgtech.funplay.activity.mine.MyReportActivity;
@@ -138,7 +138,7 @@ public class MineFragment extends BaseFragment {
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
-                toNextActivity(UserPageActivity.class);
+                toNextActivity(CoreUserPageActivity.class);
                 break;
             case R.id.rl_mine_collect:
                 toNextActivity(MyCollectActivity.class);

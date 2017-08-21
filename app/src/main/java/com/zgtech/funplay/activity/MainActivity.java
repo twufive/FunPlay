@@ -23,6 +23,7 @@ import android.widget.PopupWindow;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.center.PinTuanTogetherActivity;
 import com.zgtech.funplay.fragment.FindFragment;
 import com.zgtech.funplay.fragment.HomeFragment;
 import com.zgtech.funplay.fragment.MessageFragment;
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LogUtils.i("cardPinTuanhahhahhah");
 
-                Intent intent = new Intent(MainActivity.this, PinTuanActivity.class);
+                Intent intent = new Intent(MainActivity.this, PinTuanTogetherActivity.class);
                 startActivity(intent);
 
                 pop.dismiss();

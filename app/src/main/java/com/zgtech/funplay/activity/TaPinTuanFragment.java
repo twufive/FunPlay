@@ -14,6 +14,7 @@ import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.PinTuanAllModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,7 +29,7 @@ public class TaPinTuanFragment extends BaseFragment {
     RecyclerView recyclerview;
 
     private PinTuanAllAdapter adapter;
-    private ArrayList<PinTuanAllModel> originList;
+    private List<PinTuanAllModel> originList;
 
     @Nullable
     @Override

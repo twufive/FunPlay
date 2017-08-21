@@ -84,21 +84,24 @@ public class RecommendFragment extends BaseFragment {
     protected void initData() {
         recommendList = new ArrayList<RecommendModel>();
 
-        RecommendModel recommendModel = new RecommendModel();
-        recommendModel.setAvatarImgUrl("http://img4.imgtn.bdimg.com/it/u=3050884629,2611088519&fm=26&gp=0.jpg");
-//        newPersonModel.setSiteImgUrl("http://img4.imgtn.bdimg.com/it/u=3050884629,2611088519&fm=26&gp=0.jpg");
-        recommendModel.setSiteImgUrl("http://img1.imgtn.bdimg.com/it/u=3703540791,4182251432&fm=26&gp=0.jpg");
-        recommendModel.setSite("加拿大");
-        recommendModel.setSign("在这里，享受清风");
-        recommendModel.setReadCount("168");
+        RecommendModel individualModel = new RecommendModel();
+        individualModel.setAvatarImgUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503315858704&di=eefd6e428c7f1aeb33b27144b939ede9&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F11%2F61%2F47%2F91b3OOOPIC66.jpg");
+        individualModel.setSiteImgUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1503315858704&di=eefd6e428c7f1aeb33b27144b939ede9&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F11%2F61%2F47%2F91b3OOOPIC66.jpg");
+        individualModel.setSign("在这里，享受清风");
+        individualModel.setReadCount("168");
 
-        recommendList.add(recommendModel);
-        recommendList.add(recommendModel);
-        recommendList.add(recommendModel);
-        recommendList.add(recommendModel);
-        recommendList.add(recommendModel);
-        recommendList.add(recommendModel);
-
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
+        recommendList.add(individualModel);
     }
 
     public static RecommendFragment newInstance() {

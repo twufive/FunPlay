@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -13,8 +13,6 @@ import android.view.View;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.TaPinTuanFragment;
-import com.zgtech.funplay.activity.TaStoryFragment;
 import com.zgtech.funplay.base.BaseActivity;
 
 import butterknife.Bind;
@@ -25,7 +23,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/8/14.
  */
 
-public class UserPageActivity extends BaseActivity {
+public class CoreUserPageActivity extends BaseActivity {
     @Bind(R.id.nestedScrollView)
     NestedScrollView nestedScrollView;
     @Bind(R.id.tabs)

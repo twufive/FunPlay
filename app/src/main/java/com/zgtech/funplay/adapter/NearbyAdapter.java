@@ -14,7 +14,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.mine.UserPageActivity;
+import com.zgtech.funplay.activity.CoreUserPageActivity;
 import com.zgtech.funplay.model.NearbyModel;
 
 import java.util.List;
@@ -52,7 +52,7 @@ public class NearbyAdapter extends BaseQuickAdapter<NearbyModel, BaseViewHolder>
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, UserPageActivity.class);
+                Intent intent = new Intent(act, CoreUserPageActivity.class);
                 act.startActivity(intent);
             }
         });
