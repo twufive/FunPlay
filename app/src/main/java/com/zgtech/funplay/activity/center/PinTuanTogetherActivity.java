@@ -86,8 +86,6 @@ public class PinTuanTogetherActivity extends BaseActivity {
         originList.add(individualModel);
         originList.add(individualModel);
         originList.add(individualModel);
-
-
     }
 
     @OnClick({R.id.ll_back, R.id.tv_toolbar})
