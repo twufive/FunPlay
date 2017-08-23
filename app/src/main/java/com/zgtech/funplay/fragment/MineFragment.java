@@ -17,6 +17,7 @@ import com.zgtech.funplay.activity.CoreUserPageActivity;
 import com.zgtech.funplay.activity.mine.MyCertifyActivity;
 import com.zgtech.funplay.activity.mine.MyCollectActivity;
 import com.zgtech.funplay.activity.mine.MyInfoActivity;
+import com.zgtech.funplay.activity.mine.MyOrderActivity;
 import com.zgtech.funplay.activity.mine.MyPinTuanActivity;
 import com.zgtech.funplay.activity.mine.MyPwdActivity;
 import com.zgtech.funplay.activity.mine.MyReportActivity;
@@ -50,6 +51,8 @@ public class MineFragment extends BaseFragment {
     AppBarLayout appBar;
     @Bind(R.id.rl_order)
     RelativeLayout rlOrder;
+    @Bind(R.id.rl_pintuan)
+    RelativeLayout rlPinTuan;
     @Bind(R.id.rl_info)
     RelativeLayout rlInfo;
     @Bind(R.id.rl_page)
@@ -117,7 +120,7 @@ public class MineFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care, R.id.tv_fans, R.id.rl_order, R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion, R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout})
+    @OnClick({R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care, R.id.tv_fans, R.id.rl_order,R.id.rl_pintuan, R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion, R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_avatar:
@@ -132,6 +135,9 @@ public class MineFragment extends BaseFragment {
             case R.id.tv_fans:
                 break;
             case R.id.rl_order:
+                toNextActivity(MyOrderActivity.class);
+                break;
+            case R.id.rl_pintuan:
                 toNextActivity(MyPinTuanActivity.class);
                 break;
             case R.id.rl_info:

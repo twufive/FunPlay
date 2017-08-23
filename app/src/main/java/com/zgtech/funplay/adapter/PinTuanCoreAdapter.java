@@ -1,9 +1,11 @@
 package com.zgtech.funplay.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,6 +15,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.CorePinTuanTogetherActivity;
 import com.zgtech.funplay.model.PinTuanCoreModel;
 
 import java.util.List;
@@ -55,6 +58,14 @@ public class PinTuanCoreAdapter extends BaseQuickAdapter<PinTuanCoreModel, BaseV
         tvCountNow.setText("已团" + individualModel.getTuanCountNow() + "人");
 
         tvPriceOld.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG); //中划线
+
+        btnRush.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(act, CorePinTuanTogetherActivity.class);
+                act.startActivity(intent);
+            }
+        });
 
     }
 }

@@ -1,15 +1,14 @@
-package com.zgtech.funplay.activity;
+package com.zgtech.funplay.activity.mine;
 
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.NestedScrollView;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
@@ -17,28 +16,31 @@ import com.zgtech.funplay.base.BaseActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
- * 我的主页
- * Created by Administrator on 2017/8/14.
+ * 我的订单
+ * Created by Administrator on 2017/8/5.
  */
 
-public class CoreUserPageActivity extends BaseActivity {
-    @Bind(R.id.nestedScrollView)
-    NestedScrollView nestedScrollView;
+public class MyOrderActivity extends BaseActivity {
+    @Bind(R.id.ll_back)
+    LinearLayout llBack;
+    @Bind(R.id.tv_toolbar)
+    TextView tvToolbar;
     @Bind(R.id.tabs)
     PagerSlidingTabStrip tabs;
     @Bind(R.id.viewpager)
     ViewPager viewpager;
 
     private MyPagerAdapter adapter;
-    private TaStoryFragment taStoryFragment;
-    private TaPinTuanFragment taPinTuanFragment;
+    private PinTuanAllFragment pinTuanAllFragment;
+    private PinTuanRefundFragment pinTuanRefundFragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_core_user_detail);
+        setContentView(R.layout.activity_mine_pintuan);
         ButterKnife.bind(this);
         initData();
         initView();
@@ -46,10 +48,8 @@ public class CoreUserPageActivity extends BaseActivity {
 
     @Override
     public void initView() {
-//        llBack.setVisibility(View.VISIBLE);
-//        tvToolbar.setText("我的主页");
-
-        initStatusBarState();
+        llBack.setVisibility(View.VISIBLE);
+        tvToolbar.setText("我的订单");
 
         adapter = new MyPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(adapter);
@@ -59,6 +59,17 @@ public class CoreUserPageActivity extends BaseActivity {
     @Override
     public void initData() {
 
+    }
+
+    @OnClick({R.id.ll_back, R.id.tv_toolbar})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_back:
+                finish();
+                break;
+            case R.id.tv_toolbar:
+                break;
+        }
     }
 
 
@@ -82,8 +93,6 @@ public class CoreUserPageActivity extends BaseActivity {
                     default:
                         break;
                 }
-
-//                nestedScrollView.scrollTo(0, 0);
             }
 
             @Override
@@ -93,9 +102,10 @@ public class CoreUserPageActivity extends BaseActivity {
         });
     }
 
+
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"TA的故事", "TA的拼团"};
+        private final String[] TITLES = {"全部", "退款/售后"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -115,24 +125,13 @@ public class CoreUserPageActivity extends BaseActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return taStoryFragment == null ? TaStoryFragment.newInstance() : taStoryFragment;
+                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
                 case 1:
-                    return taPinTuanFragment == null ? TaPinTuanFragment.newInstance() : taPinTuanFragment;
+                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
                 default:
-                    return taStoryFragment == null ? TaStoryFragment.newInstance() : taStoryFragment;
+                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
             }
-
-
         }
 
-    }
-
-    private void initStatusBarState() {
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
     }
 }
