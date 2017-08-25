@@ -51,6 +51,7 @@
         <activity android:name=".activity.PhotoViewActivity" />
         <activity android:name=".activity.CoreUserPageActivity" />
         <activity android:name=".activity.CorePinTuanTogetherActivity" />
+        <activity android:name=".activity.CoreWanZhuanDiQiuActivity" />
 
         <activity android:name=".activity.center.PinTuanTogetherActivity" />
 

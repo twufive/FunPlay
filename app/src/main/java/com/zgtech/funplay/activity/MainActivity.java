@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(Color.BLACK);
         }
 
-        initPoPClicks(pop,popView);
+        initPoPClicks(pop, popView);
     }
 
     private void initPoPClicks(final PopupWindow pop, View popView) {
@@ -179,26 +179,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //进入一起拼团体系页面
         cardPinTuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogUtils.i("cardPinTuanhahhahhah");
-
-                Intent intent = new Intent(MainActivity.this, PinTuanTogetherActivity.class);
-                startActivity(intent);
-
-                pop.dismiss();
-
-//                pop.setAnimationStyle();
+                toTargetActivity(pop, PinTuanTogetherActivity.class);
             }
         });
 
         llPinTuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogUtils.i("llPinTuanhahhahhah");
+                toTargetActivity(pop, PinTuanTogetherActivity.class);
             }
         });
+
+
+        //进入玩赚地球体系页面
+        cardDiqiu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+            }
+        });
+
+        llDiqiu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+            }
+        });
+
+
+    }
+
+    private void toTargetActivity(PopupWindow pop, Class targetActivity) {
+        Intent intent = new Intent(MainActivity.this, targetActivity);
+        startActivity(intent);
+        pop.dismiss();
     }
 
     /**
