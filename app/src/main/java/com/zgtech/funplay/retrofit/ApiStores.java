@@ -2,6 +2,7 @@ package com.zgtech.funplay.retrofit;
 
 import com.zgtech.funplay.model.LoginModel;
 import com.zgtech.funplay.model.NearbyData;
+import com.zgtech.funplay.model.PinTuanTogetherModel;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
 
@@ -10,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Retrofit ApiStores
@@ -25,11 +27,6 @@ public interface ApiStores {
     /***登录注册模块*/
     @POST("user/login")
     Call<LoginModel> doLogin(@Body RequestBody requestBody);//登录
-
-//    @POST("user/login")
-//    Call<String> doLogin(@Body RequestBody requestBody);//登录
-
-
 
 
 
@@ -54,6 +51,14 @@ public interface ApiStores {
 
 
     /***消息模块*/
+
+
+
+
+    /***中间红色按钮*/
+    @GET("order/queryOrder")
+    Call<PinTuanTogetherModel> getPinTuanTogetherData(@Query("cursor") String cursor,@Query("more") String more);//一起拼团列表
+
 
 
 

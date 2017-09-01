@@ -16,7 +16,8 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CorePinTuanTogetherActivity;
-import com.zgtech.funplay.model.PinTuanCoreModel;
+import com.zgtech.funplay.model.PinTuanTogetherModel;
+import com.zgtech.funplay.retrofit.ApiStores;
 
 import java.util.List;
 
@@ -25,17 +26,17 @@ import java.util.List;
  * Created by Administrator on 2017/8/3.
  */
 
-public class PinTuanCoreAdapter extends BaseQuickAdapter<PinTuanCoreModel, BaseViewHolder> {
+public class PinTuanTogetherAdapter extends BaseQuickAdapter<PinTuanTogetherModel.ObjBean, BaseViewHolder> {
     private Activity act;
 
-    public PinTuanCoreAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<PinTuanCoreModel> data) {
+    public PinTuanTogetherAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<PinTuanTogetherModel.ObjBean> data) {
         super(layoutResId, data);
 
         this.act = act;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, PinTuanCoreModel individualModel) {
+    protected void convert(BaseViewHolder helper, PinTuanTogetherModel.ObjBean individualModel) {
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvScore = helper.getView(R.id.tv_score);
@@ -47,17 +48,18 @@ public class PinTuanCoreAdapter extends BaseQuickAdapter<PinTuanCoreModel, BaseV
 
         ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
-                .load(individualModel.getSiteUrl())
+                .load(ApiStores.API_SERVER_URL + individualModel.getOrderPicture1())
                 .into(ivSite);
 
-        tvTitle.setText(individualModel.getTitle());
-        tvScore.setText(individualModel.getScore()+"分");
-        tvPrice.setText("￥" + individualModel.getPrice());
-        tvPriceOld.setText("￥" + individualModel.getPriceOld());
-        btnCountAll.setText(individualModel.getTuanCountAll() + "人团");
-        tvCountNow.setText("已团" + individualModel.getTuanCountNow() + "人");
+        tvTitle.setText(individualModel.getOrderTitle());
+        tvTitle.setMaxLines(1);
+        tvScore.setText(individualModel.getAvgMark() + "分");
+        tvPrice.setText("￥" + individualModel.getOrderPrice1());//getOrderPrice1为折后价
+        tvPriceOld.setText("￥" + individualModel.getOrderPrice0());//getOrderPrice0为折前价
+        btnCountAll.setText(individualModel.getOrderSize() + "人团");
+        tvCountNow.setText("已团" + individualModel.getOrderTransactionCount() + "人");
 
-        tvPriceOld.getPaint().setFlags(Paint. STRIKE_THRU_TEXT_FLAG); //中划线
+        tvPriceOld.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG); //中划线
 
         btnRush.setOnClickListener(new View.OnClickListener() {
             @Override
