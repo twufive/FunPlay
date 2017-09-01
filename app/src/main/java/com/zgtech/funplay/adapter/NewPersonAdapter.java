@@ -15,7 +15,8 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserPageActivity;
-import com.zgtech.funplay.model.NewPersonModel;
+import com.zgtech.funplay.model.RecommendOther3Model;
+import com.zgtech.funplay.retrofit.ApiStores;
 
 import java.util.List;
 
@@ -24,38 +25,50 @@ import java.util.List;
  * Created by Administrator on 2017/8/3.
  */
 
-public class NewPersonAdapter extends BaseQuickAdapter<NewPersonModel, BaseViewHolder> {
+public class NewPersonAdapter extends BaseQuickAdapter<RecommendOther3Model.ObjBean, BaseViewHolder> {
     private Activity act;
 
-    public NewPersonAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<NewPersonModel> data) {
+    public NewPersonAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<RecommendOther3Model.ObjBean> data) {
         super(layoutResId, data);
         this.act = act;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, NewPersonModel individualModel) {
+    protected void convert(BaseViewHolder helper, RecommendOther3Model.ObjBean individualModel) {
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         ImageView ivStar = helper.getView(R.id.iv_star);
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvNick = helper.getView(R.id.tv_nick);
         TextView tvDeal = helper.getView(R.id.tv_deal);
+        TextView tvTag0 = helper.getView(R.id.tv_tag0);
+        TextView tvTag1 = helper.getView(R.id.tv_tag1);
         TextView tvScore = helper.getView(R.id.tv_score);
         TextView tvPrice = helper.getView(R.id.tv_price);
         CardView cardview = helper.getView(R.id.cardview);
 
-//        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//        Glide.with(FunPlayApplication.getContext())
-//                .load(individualModel.getAvatarImgUrl())
-//                .into(ivAvatar);
-        ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
-                .load(individualModel.getSiteImgUrl())
-                .into(ivSite);
+                .load(ApiStores.API_SERVER_URL + individualModel.getUserIcon())
+                .into(ivAvatar);
+        ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
-        tvNick.setText(individualModel.getNick());
-        tvDeal.setText(individualModel.getDeal() + "笔成交");
-        tvScore.setText("评分：" + individualModel.getScore());
-        tvPrice.setText("￥" + individualModel.getPrice() + "/时");
+        if (individualModel.getOrders() != null && individualModel.getOrders().size() != 0) {
+            Glide.with(FunPlayApplication.getContext())
+                    .load(ApiStores.API_SERVER_URL + individualModel.getOrders().get(0).getOrderPicture1())
+//                .load("http://img4.imgtn.bdimg.com/it/u=3050884629,2611088519&fm=26&gp=0.jpg")
+                    .into(ivSite);
+        } else {
+            //否则使用默认图片
+            cardview.setVisibility(View.GONE);
+        }
+
+
+        tvNick.setText(individualModel.getUserNick());
+        tvDeal.setText(individualModel.getTransactionCount() + "笔成交");
+        tvScore.setText("评分：" + individualModel.getAvgMark());
+        tvPrice.setText("￥" + individualModel.getAvgPrice() + "/时");
+        tvTag0.setText(individualModel.getUserTag1() + "");
+        tvTag1.setText(individualModel.getUserTag2() + "");
 
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override

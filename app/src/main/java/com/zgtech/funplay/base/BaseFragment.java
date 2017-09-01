@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.retrofit.ApiStores;
+import com.zgtech.funplay.retrofit.RetrofitUtilPublicParams;
 
 /**
  * 基类Fragment
@@ -20,6 +22,7 @@ import com.zgtech.funplay.R;
 public abstract class BaseFragment extends Fragment {
 
     protected AppCompatActivity mActivity;
+    public ApiStores mApiStores;
 
     /**
      * 获得全局的，防止使用getActivity()为空
@@ -30,15 +33,21 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         this.mActivity = (AppCompatActivity) context;
+
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mApiStores = RetrofitUtilPublicParams.initApiStores();
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(mActivity).inflate(R.layout.fragment_base, container, false);
         initData();
-        initView(view,savedInstanceState);
+        initView(view, savedInstanceState);
         return view;
     }
 

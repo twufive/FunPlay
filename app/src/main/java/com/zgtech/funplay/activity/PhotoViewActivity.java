@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 import java.util.ArrayList;
 
@@ -98,7 +98,7 @@ public class PhotoViewActivity extends BaseActivity {
                 container.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        LogUtils.d("shishi", "click");
+                        L.d("shishi", "click");
                     }
                 });
                 return viewList.get(position);

@@ -24,14 +24,14 @@ import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.home.CertifyFragment;
+import com.zgtech.funplay.fragment.childFragment.CertifyFragment;
 import com.zgtech.funplay.activity.home.FilterActivity;
-import com.zgtech.funplay.activity.home.HighBeautyFragment;
-import com.zgtech.funplay.activity.home.NearbyFragment;
-import com.zgtech.funplay.activity.home.NewPersonFragment;
-import com.zgtech.funplay.activity.home.RecommendFragment;
+import com.zgtech.funplay.fragment.childFragment.HighBeautyFragment;
+import com.zgtech.funplay.fragment.childFragment.NearbyFragment;
+import com.zgtech.funplay.fragment.childFragment.NewPersonFragment;
+import com.zgtech.funplay.fragment.childFragment.RecommendFragment;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 import butterknife.ButterKnife;
 
@@ -79,7 +79,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtils.i("HomeFragment", "onDestroy");
+        L.i("HomeFragment", "onDestroy");
     }
 
 
@@ -89,7 +89,6 @@ public class HomeFragment extends BaseFragment {
 
         initTop(view);
         initViewPager(view);
-
     }
 
     private void initStatusBar() {

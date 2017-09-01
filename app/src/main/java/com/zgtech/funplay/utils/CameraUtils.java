@@ -58,7 +58,7 @@ public class CameraUtils {
             } else {
                 Log.i(TAG, "进行授权");
                 ActivityCompat.requestPermissions(ctx, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
-                ToastUtils.showShort(ctx,"您已授权，请重新拍照或选择相册");
+                T.showShort(ctx,"您已授权，请重新拍照或选择相册");
             }
         } else {
             Log.i(TAG, "不需要授权 ");

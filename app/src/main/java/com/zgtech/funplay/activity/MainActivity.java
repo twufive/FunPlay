@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,17 +23,27 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.center.PinTuanTogetherActivity;
+import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.fragment.FindFragment;
 import com.zgtech.funplay.fragment.HomeFragment;
 import com.zgtech.funplay.fragment.MessageFragment;
 import com.zgtech.funplay.fragment.MineFragment;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.model.LoginModel;
+import com.zgtech.funplay.retrofit.RequestBodyBuilder;
+import com.zgtech.funplay.utils.L;
+import com.zgtech.funplay.utils.T;
+
+import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private static String TAG = "MainActivity";
     @Bind(R.id.frame_container)
     FrameLayout frameContainer;
@@ -56,9 +65,48 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+
+        initData();
+        initView();
+    }
+
+    @Override
+    public void initView() {
         ivTabPost.bringToFront();
         initTabBottom();
         initTabListener(NOW_FRAGMENT);
+    }
+
+    @Override
+    public void initData() {
+        HashMap map = new HashMap();
+        map.put("userPhone", "15073001217");
+        map.put("userPwd", "123456");
+        RequestBody body = RequestBodyBuilder.build(map);
+
+        mApiStores.doLogin(body).enqueue(new Callback<LoginModel>() {
+            @Override
+            public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginModel> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void handleServerData(LoginModel model) {
+        L.i("loginInfo",model.toString());
     }
 
 
@@ -101,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         /**这里是中间的那个红色按钮噢*/
-                        LogUtils.i("tabCenterClick", "true");
+                        L.i("tabCenterClick", "true");
                         break;
                     case 3:
                         if (findFragment == null) {

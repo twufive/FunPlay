@@ -132,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
-            android:background="@color/white">
+            android:background="@drawable/bg_corners_theme_white">
 
             <!--   android:background="@android:color/transparent"-->
 
@@ -159,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_below="@+id/view_temp"
-                android:background="@drawable/bg_mine_info">
+                android:background="@drawable/bg_diqiu_heihei">
 
                 <TextView
                     android:layout_width="match_parent"

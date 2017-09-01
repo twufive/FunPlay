@@ -16,7 +16,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.adapter.QuickAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.FriendTalkModel;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +59,7 @@ public class FindFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtils.i("FindFragment", "onDestroy");
+        L.i("FindFragment", "onDestroy");
     }
 
 

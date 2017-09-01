@@ -16,25 +16,25 @@ import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserPageActivity;
 import com.zgtech.funplay.model.RecommendModel;
+import com.zgtech.funplay.retrofit.ApiStores;
 
 import java.util.List;
 
 /**
- * 推荐   适配器
+ * 推荐   人物适配器
  * Created by Administrator on 2017/8/3.
  */
 
-public class RecommendAdapter extends BaseQuickAdapter<RecommendModel, BaseViewHolder> {
+public class RecommendPersonAdapter extends BaseQuickAdapter<RecommendModel.ObjBean.FoodListBean, BaseViewHolder> {
     private Activity act;
 
-    public RecommendAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<RecommendModel> data) {
+    public RecommendPersonAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<RecommendModel.ObjBean.FoodListBean> data) {
         super(layoutResId, data);
-
         this.act = act;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, RecommendModel individualModel) {
+    protected void convert(BaseViewHolder helper, RecommendModel.ObjBean.FoodListBean individualModel) {
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         ImageView ivStar = helper.getView(R.id.iv_star);
         ImageView ivSite = helper.getView(R.id.iv_site);
@@ -42,17 +42,18 @@ public class RecommendAdapter extends BaseQuickAdapter<RecommendModel, BaseViewH
         TextView tvRead = helper.getView(R.id.tv_read);
         CardView cardview = helper.getView(R.id.cardview);
 
-//        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//        Glide.with(FunPlayApplication.getContext())
-//                .load(individualModel.getAvatarImgUrl())
-//                .into(ivAvatar);
+        ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Glide.with(FunPlayApplication.getContext())
+                .load(ApiStores.API_SERVER_URL + individualModel.getUserIcon())
+                .into(ivAvatar);
+
         ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
-                .load(individualModel.getSiteImgUrl())
+                .load(ApiStores.API_SERVER_URL + individualModel.getOrderPicture1())
                 .into(ivSite);
 
-        tvSign.setText(individualModel.getSign());
-        tvRead.setText(individualModel.getReadCount());
+        tvSign.setText(individualModel.getOrderTitle()+"");
+        tvRead.setText(individualModel.getCommentCount() + "");
 
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +62,5 @@ public class RecommendAdapter extends BaseQuickAdapter<RecommendModel, BaseViewH
                 act.startActivity(intent);
             }
         });
-
-
     }
 }

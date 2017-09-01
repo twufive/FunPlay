@@ -126,26 +126,28 @@
                 android:background="@drawable/icon_sign" />
 
             <TextView
+                android:id="@+id/tv_tag0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="资深吃货"
+                android:text=""
                 android:textColor="@color/little_black"
                 android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/little_black"
+                android:textSize="12sp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="星座分析"
-                android:textColor="@color/little_black"
-                android:textSize="12sp" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="摄影师"
+                android:text=""
                 android:textColor="@color/little_black"
                 android:textSize="12sp" />
 

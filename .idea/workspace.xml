@@ -14,17 +14,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56e1d6a-d900-478b-ad48-3838a58c4505" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/bg_diqiu.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_add_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_add_white_36dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/icon_newfish.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/icon_total_fee.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/icon_total_person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/icon_txt_diqiu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TouziActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_touzi_detail.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/bg_diqiu_heihei.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PushNewOrderActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendPersonAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/LoginModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RequestBodyBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtilPublicParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NewPersonModel.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/PhotoViewActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/PhotoViewActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/FilterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/FilterActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MessageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MessageFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/CameraUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/CameraUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/CertifyFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/CertifyFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/HighBeautyFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/HighBeautyFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/NearbyFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/NewPersonFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NewPersonFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/RecommendFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/RecommendFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendSiteAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/LogUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/L.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/ToastUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/T.java" />
     </list>
     <ignored path="FunPlay.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,23 +89,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CoreWanZhuanDiQiuActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java">
+      <file leaf-file-name="NearbyFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1454#1455#0" expanded="true" />
+                <element signature="e#3252#3253#0" expanded="true" />
+                <element signature="e#3309#3310#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NearbyAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TouziActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TouziActivity.java">
+      <file leaf-file-name="NewPersonAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="209">
+              <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="62" selection-end-column="9" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fp_item_nearby.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="582">
+              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1753,7 +1811,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="E:\ProjectFunPlayTWO\FunPlay" value="4504064401159" />
+        <entry key="E:\ProjectFunPlayTWO\FunPlay" value="4505660212895" />
         <entry key="E:\ProjectFunPlay\FunPlay" value="4505660212895" />
       </map>
     </option>
@@ -2104,34 +2162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recommend.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MessageFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_message.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/UserPageActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/PinTuanAllAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/PinTuanRefundAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/UserDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pintuan_together.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TaPinTuanFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/PinTuanCoreModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_red_big_arc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_colorprimary_big_arc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_little_red_big_arc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_little_red.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_pintuan_together.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/RecommendFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_find.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/PhotoViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/FriendTalkModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/QuickAdapter.java" />
@@ -2146,15 +2176,43 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CorePinTuanTogetherActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_core_pintuan_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_mine.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TouziActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_touzi_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendNetModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/RecommendFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOtherData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtilPublicParams.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RequestBodyBuilder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/FunPlayCallBack.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendPersonAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendSiteAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PushNewOrderActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/LoginModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NewPersonFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/CertifyFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/HighBeautyFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/RecommendFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java" />
       </list>
     </option>
   </component>
@@ -2211,6 +2269,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2305,62 +2369,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunPlay" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunPlay" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunPlay" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FunPlay" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2399,7 +2407,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="retrofit" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2433,23 +2441,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FunPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FunPlay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="funplay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="childFragment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="Nexus_5_API_23" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -2458,27 +2498,30 @@
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable-xxhdpi" />
-      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\mipmap-hdpi" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zgtech.funplay.activity.center" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zgtech.funplay.activity" />
       <recent name="com.zgtech.funplay.activity.home" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zgtech.funplay.activity" />
-      <recent name="com.zgtech.funplay.activity.mine" />
-      <recent name="com.zgtech.funplay.adapter" />
-      <recent name="com.zgtech.funplay.global" />
-      <recent name="com.zgtech.funplay.utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProjectFunPlayTWO\FunPlay\app\src\main\res\drawable-xxxhdpi" />
       <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable-xxxhdpi" />
       <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\layout" />
       <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable" />
       <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\java\com\zgtech\funplay\activity\circle" />
-      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\anim" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zgtech.funplay.adapter" />
+      <recent name="com.zgtech.funplay.retrofit" />
+      <recent name="com.zgtech.funplay.activity" />
+      <recent name="com.zgtech.funplay.activity.mine" />
+      <recent name="com.zgtech.funplay.global" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable-xxhdpi" />
+      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\mipmap-hdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -2853,12 +2896,19 @@
       <option name="project" value="LOCAL" />
       <updated>1503628378365</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Diqiu UI other">
+      <created>1503628585715</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1503628585715</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21181718" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
@@ -2866,27 +2916,27 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37235227" sideWeight="0.5042644" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22408026" sideWeight="0.49573562" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64437014" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2865106" sideWeight="0.49573562" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2707889" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64437014" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19829424" sideWeight="0.4950495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988273" sideWeight="0.4950495" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34225196" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1945629" sideWeight="0.5049505" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17643923" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2925,133 +2975,228 @@
     <MESSAGE value="LvYouQuan Fragment UI" />
     <MESSAGE value="PinTuan Rush UI" />
     <MESSAGE value="Diqiu UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diqiu UI" />
+    <MESSAGE value="Diqiu UI other" />
+    <option name="LAST_COMMIT_MESSAGE" value="Diqiu UI other" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/PinTuanAllFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/PinTuanAllAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/PinTuanRefundAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_detail.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/UserDetailActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CorePinTuanTogetherActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/PhotoViewActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_touzi_detail.xml" />
+    <entry file="android-dummy://E:/ProjectFunPlay/FunPlay/app/Translations Editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TouziActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="40" />
+        <state relative-caret-position="342">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pintuan_together.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TaStoryFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreUserPageActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_red_big_arc.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_colorprimary_big_arc.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_little_red_big_arc.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_corners_theme_little_red.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/PinTuanCoreModel.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TaPinTuanFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/FunPlayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/home/RecommendFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_find.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-705">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.android/build-cache/e1f06207e1dd5608ccc60c7a56366ef03c38ed53/output/jars/classes.jar!/com/hss01248/dialog/StyledDialog.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/FriendTalkModel.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/QuickAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_social_main.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_photo_view.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/MyPinTuanActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/MyOrderActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_core_user_detail.xml" />
-    <entry file="file://$USER_HOME$/.android/build-cache/71e6be60f96a7a1d895ead4417abcef205acb06e/output/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="231" column="18" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="18" />
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_pintuan_together.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/PinTuanCoreAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_core_pintuan_detail.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+        <state relative-caret-position="916">
+          <caret line="702" column="0" selection-start-line="702" selection-start-column="0" selection-end-line="702" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mine.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/76f3c69879d3e01c082f49d8661c5590838148e1/retrofit-2.3.0-sources.jar!/retrofit2/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RequestBodyBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/FunPlayCallBack.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/MyReportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="49" column="41" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendPersonAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12616">
-          <caret line="664" column="0" selection-start-line="664" selection-start-column="0" selection-end-line="664" selection-end-column="0" />
+        <state relative-caret-position="454">
+          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendSiteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtilPublicParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PinTuanTogetherActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3060,56 +3205,193 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="398">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_suggest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="513">
+          <caret line="27" column="19" selection-start-line="9" selection-start-column="4" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/mine/MySuggestActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8284">
+          <caret line="436" column="0" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/center/PushNewOrderActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/L.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/LoginModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="710" column="29" selection-start-line="710" selection-start-column="29" selection-end-line="710" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="360">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#3383#3384#0" expanded="false" />
+            <element signature="e#3432#3433#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/CertifyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="907">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CorePinTuanTogetherActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/PhotoViewActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RetrofitUtil.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_touzi_detail.xml" />
-    <entry file="android-dummy://E:/ProjectFunPlay/FunPlay/app/Translations Editor" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_core_diqiu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreWanZhuanDiQiuActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NewPersonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TouziActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="366">
+          <caret line="149" column="30" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NewPersonFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/HighBeautyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/RecommendFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#3252#3253#0" expanded="true" />
+            <element signature="e#3309#3310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="62" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>

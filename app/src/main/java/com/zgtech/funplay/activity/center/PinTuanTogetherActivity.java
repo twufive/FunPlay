@@ -46,9 +46,9 @@ public class PinTuanTogetherActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-//        ivRight.setVisibility(View.VISIBLE);
+        ivRight.setVisibility(View.VISIBLE);
         tvToolbar.setText("一起拼团");
-//        ivRight.setBackgroundResource(R.drawable.ic_add_white_24dp);
+        ivRight.setBackgroundResource(R.drawable.ic_add_white_24dp);
 //        ivRight.setImageResource(R.drawable.icon_arrow_right);
 
 
@@ -60,7 +60,6 @@ public class PinTuanTogetherActivity extends BaseActivity {
 
     @Override
     public void initData() {
-
         originList = new ArrayList<PinTuanCoreModel>();
 
         PinTuanCoreModel individualModel = new PinTuanCoreModel();
@@ -88,13 +87,16 @@ public class PinTuanTogetherActivity extends BaseActivity {
         originList.add(individualModel);
     }
 
-    @OnClick({R.id.ll_back, R.id.tv_toolbar})
+    @OnClick({R.id.ll_back, R.id.tv_toolbar, R.id.iv_right})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
                 finish();
                 break;
             case R.id.tv_toolbar:
+                break;
+            case R.id.iv_right:
+                toNextActivity(PushNewOrderActivity.class);
                 break;
         }
     }

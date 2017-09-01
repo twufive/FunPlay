@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 import butterknife.ButterKnife;
 
@@ -42,7 +42,7 @@ public class MessageFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtils.i("MessageFragment", "onDestroy");
+        L.i("MessageFragment", "onDestroy");
     }
 
     @Override

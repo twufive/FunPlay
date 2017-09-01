@@ -6,8 +6,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.retrofit.ApiStores;
+import com.zgtech.funplay.retrofit.RetrofitUtilPublicParams;
 import com.zgtech.funplay.utils.ActivityCollectorUtils;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 /**
  * Created by Administrator on 2017/8/2.
@@ -16,17 +18,15 @@ import com.zgtech.funplay.utils.LogUtils;
 public abstract class BaseActivity extends AppCompatActivity {
 
     public String TAG = "NetConditions";
-//    public ApiStores mApiStores;
+    public ApiStores mApiStores;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityCollectorUtils.addActivity(this);
-        LogUtils.d("NowActivity:", getClass().getSimpleName());
+        L.d("NowActivity:", getClass().getSimpleName());
 
-//        initView();
-        initData();
-//        mApiStores = RetrofitUtil.initApiStores();
+        mApiStores = RetrofitUtilPublicParams.initApiStores();
     }
 
     public abstract void initView();
@@ -37,7 +37,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ActivityCollectorUtils.removeActivity(this);
-        LogUtils.d("DestroyedActivity:", getClass().getSimpleName());
+        L.d("DestroyedActivity:", getClass().getSimpleName());
     }
 
     public void toNextActivity(Class targetActivityClass) {

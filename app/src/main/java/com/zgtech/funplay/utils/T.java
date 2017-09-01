@@ -12,19 +12,19 @@ import com.zgtech.funplay.FunPlayApplication;
  * Create by zayin on 2016/04/07
  * TIME 09:25
  */
-public class ToastUtils {
+public class T {
 
     private static Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message msg) {
             String erroMsg = (String) msg.obj;
-            ToastUtils.showShort(FunPlayApplication.getContext(), erroMsg);
+            T.showShort(FunPlayApplication.getContext(), erroMsg);
             return false;
         }
     });
 
 
-    private ToastUtils() {
+    private T() {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
     }

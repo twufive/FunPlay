@@ -23,7 +23,7 @@ import com.zgtech.funplay.activity.mine.MyPwdActivity;
 import com.zgtech.funplay.activity.mine.MyReportActivity;
 import com.zgtech.funplay.activity.mine.MySuggestActivity;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -90,7 +90,7 @@ public class MineFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtils.i("MineFragment", "onDestroy");
+        L.i("MineFragment", "onDestroy");
 
     }
 
@@ -124,7 +124,7 @@ public class MineFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_avatar:
-                LogUtils.i("iv_avatar", "iv_avatar");
+                L.i("iv_avatar", "iv_avatar");
                 break;
             case R.id.tv_nick:
                 break;

@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
-import com.zgtech.funplay.utils.LogUtils;
+import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.view.RangeSeekBar;
 
 import butterknife.Bind;
@@ -51,8 +51,8 @@ public class FilterActivity extends BaseActivity {
         rsbAge.setOnRangeChangedListener(new RangeSeekBar.OnRangeChangedListener() {
             @Override
             public void onRangeChanged(RangeSeekBar view, float min, float max) {
-                LogUtils.i("min", "" + min);
-                LogUtils.i("max", "" + max);
+                L.i("min", "" + min);
+                L.i("max", "" + max);
 
 
 
@@ -63,8 +63,8 @@ public class FilterActivity extends BaseActivity {
         rsbPrice.setOnRangeChangedListener(new RangeSeekBar.OnRangeChangedListener() {
             @Override
             public void onRangeChanged(RangeSeekBar view, float min, float max) {
-                LogUtils.i("min", "" + min);
-                LogUtils.i("max", "" + max);
+                L.i("min", "" + min);
+                L.i("max", "" + max);
 
                 tvRangePrice.setText(min + "~" + max);
             }

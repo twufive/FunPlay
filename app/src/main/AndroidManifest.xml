@@ -54,6 +54,7 @@
         <activity android:name=".activity.CoreWanZhuanDiQiuActivity" />
 
         <activity android:name=".activity.center.PinTuanTogetherActivity" />
+        <activity android:name=".activity.center.PushNewOrderActivity" />
 
 
         <activity android:name=".activity.home.FilterActivity" />
