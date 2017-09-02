@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.retrofit.ApiStores;
-import com.zgtech.funplay.retrofit.RetrofitUtilPublicParams;
+import com.zgtech.funplay.retrofit.RetrofitUtil;
 
 /**
  * 基类Fragment
@@ -39,7 +39,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mApiStores = RetrofitUtilPublicParams.initApiStores();
+        mApiStores = RetrofitUtil.initApiStores();
     }
 
     @Nullable

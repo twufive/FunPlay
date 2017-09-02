@@ -1,14 +1,18 @@
 package com.zgtech.funplay.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Gravity;
@@ -18,6 +22,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -43,8 +48,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.zgtech.funplay.FunPlayApplication.mContext;
+
 public class MainActivity extends BaseActivity {
     private static String TAG = "MainActivity";
+    private static final int REQUEST_CODE = 100;
     @Bind(R.id.frame_container)
     FrameLayout frameContainer;
     @Bind(R.id.bnb_main)
@@ -65,6 +73,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        initPermission();
 
         initData();
         initView();
@@ -278,6 +287,48 @@ public class MainActivity extends BaseActivity {
         activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
         Log.d(TAG, "statusBarHeight:" + frame.top + "px");
         return frame.top;
+    }
+
+    private void initPermission() {
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "需要授权 ");
+            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
+                Log.i(TAG, "拒绝过了");
+                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的拍照授权开启拍照功能。", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.i(TAG, "进行授权");
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, REQUEST_CODE);
+            }
+        } else {
+            Log.i(TAG, "不需要授权 ");
+        }
+
+
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "需要授权 ");
+            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                Log.i(TAG, "拒绝过了");
+                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的储存授权开启相册功能。", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.i(TAG, "进行授权");
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
+            }
+        } else {
+            Log.i(TAG, "不需要授权 ");
+        }
+
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "需要授权 ");
+            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.RECORD_AUDIO)) {
+                Log.i(TAG, "拒绝过了");
+                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的录音授权开启语音聊天功能。", Toast.LENGTH_SHORT).show();
+            } else {
+                Log.i(TAG, "进行授权");
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_CODE);
+            }
+        } else {
+            Log.i(TAG, "不需要授权 ");
+        }
     }
 
     @Override

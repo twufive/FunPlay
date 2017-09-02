@@ -2,7 +2,6 @@ package com.zgtech.funplay.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +12,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.PhotoViewActivity;
-import com.zgtech.funplay.model.FriendTalkModel;
+import com.zgtech.funplay.model.FriendTalkData;
+import com.zgtech.funplay.retrofit.ApiStores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,39 +23,33 @@ import java.util.List;
  * Created by Administrator on 2017/6/14.
  */
 
-public class QuickAdapter extends BaseQuickAdapter<FriendTalkModel, BaseViewHolder> {
+public class QuickAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseViewHolder> {
     private Activity context;
 
-    public QuickAdapter(Activity context, int layoutResId, List<FriendTalkModel> data) {
+    public QuickAdapter(Activity context, int layoutResId, List<FriendTalkData.ListBean> data) {
         super(layoutResId, data);
         this.context = context;
 
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, FriendTalkModel individualModel) {
+    protected void convert(BaseViewHolder helper, FriendTalkData.ListBean individualModel) {
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvContent = helper.getView(R.id.tv_content);
 
-        initAvatar(ivAvatar, individualModel.getAvatarUrl());
-        tvTitle.setText(individualModel.getTitle());
-        tvContent.setText(individualModel.getContent());
+        initAvatar(ivAvatar, ApiStores.API_SERVER_URL + individualModel.getUserIcon());
+        tvTitle.setText(individualModel.getUserNick());
+        tvContent.setText(individualModel.getSpaceContent());
 
-        List<String> imgUrlList = initImgUrlList(individualModel);
-        initImgsUI(helper, individualModel, imgUrlList);
-    }
-
-
-    @NonNull
-    private List<String> initImgUrlList(FriendTalkModel individuallModel) {
         List<String> imgUrlList = new ArrayList<>();
-        String pics = individuallModel.getFriendTalkPics();
-        String[] split = pics.split(",");
-        for (int i = 0; i < split.length; i++) {
-            imgUrlList.add(split[i]);
+
+        List<String> originPics = individualModel.getPictures();
+        for (String singleImgUrl : originPics) {
+            imgUrlList.add(ApiStores.API_SERVER_URL + singleImgUrl);
         }
-        return imgUrlList;
+
+        initImgsUI(helper, individualModel, imgUrlList);
     }
 
 
@@ -63,7 +57,7 @@ public class QuickAdapter extends BaseQuickAdapter<FriendTalkModel, BaseViewHold
         loadImg(avatarImgUrl, ivAvatar);
     }
 
-    private void initImgsUI(BaseViewHolder helper, FriendTalkModel individuallModel, List<String> imgUrlList) {
+    private void initImgsUI(BaseViewHolder helper, FriendTalkData.ListBean individuallModel, List<String> imgUrlList) {
         ImageView iv1 = helper.getView(R.id.image_1);
         ImageView iv2 = helper.getView(R.id.image_2);
         ImageView iv3 = helper.getView(R.id.image_3);
@@ -84,7 +78,7 @@ public class QuickAdapter extends BaseQuickAdapter<FriendTalkModel, BaseViewHold
         setIVClickListener(imgUrlList, iv8, 7);
         setIVClickListener(imgUrlList, iv9, 8);
 
-        if (imgUrlList.size() == 0 || individuallModel.getFriendTalkPics() == null) {
+        if (imgUrlList.size() == 0 || individuallModel.getPictures() == null) {
             //易用APP目前所能看到的朋友圈，通常不存在纯文本类型，至少会有一张图片，所以先暂时不予以修改，放这里吧暂时。
         } else if (imgUrlList.size() == 1) {
             iv1.setVisibility(View.VISIBLE);

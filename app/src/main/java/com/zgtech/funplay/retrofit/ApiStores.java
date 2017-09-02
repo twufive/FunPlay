@@ -1,5 +1,6 @@
 package com.zgtech.funplay.retrofit;
 
+import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.model.LoginModel;
 import com.zgtech.funplay.model.NearbyData;
 import com.zgtech.funplay.model.PinTuanTogetherModel;
@@ -55,6 +56,7 @@ public interface ApiStores {
 
 
 
+
     /***中间红色按钮*/
     @GET("order/queryOrder")
     Call<PinTuanTogetherModel> getPinTuanTogetherData(@Query("cursor") String cursor,@Query("more") String more);//一起拼团列表
@@ -63,6 +65,8 @@ public interface ApiStores {
 
 
     /***旅游圈模块*/
+    @GET("user/space/queryList")
+    Call<FriendTalkData> getFriendTalkData(@Query("cursor") String cursor,@Query("more") String more);//旅游圈最外边列表
 
 
 

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.retrofit.ApiStores;
-import com.zgtech.funplay.retrofit.RetrofitUtilPublicParams;
+import com.zgtech.funplay.retrofit.RetrofitUtil;
 import com.zgtech.funplay.utils.ActivityCollectorUtils;
 import com.zgtech.funplay.utils.L;
 
@@ -26,7 +26,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         ActivityCollectorUtils.addActivity(this);
         L.d("NowActivity:", getClass().getSimpleName());
 
-        mApiStores = RetrofitUtilPublicParams.initApiStores();
+        mApiStores = RetrofitUtil.initApiStores();
     }
 
     public abstract void initView();
