@@ -1,6 +1,5 @@
-package com.zgtech.funplay.activity.center;
+package com.zgtech.funplay.activity.moduled;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -15,35 +14,32 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 发布新的拼团订单
- * Created by Administrator on 2017/8/31.
+ * 我的主页
+ * Created by Administrator on 2017/8/14.
  */
 
-public class PushNewOrderActivity extends BaseActivity {
+public class MySuggestActivity extends BaseActivity {
+
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
     TextView tvToolbar;
-    @Bind(R.id.tv_right)
-    TextView tvRight;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_center_push_new_order);
+        setContentView(R.layout.activity_my_suggest);
         ButterKnife.bind(this);
-
-        initView();
         initData();
+        initView();
     }
 
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        tvRight.setVisibility(View.VISIBLE);
-        tvToolbar.setText("发布拼团");
-        tvRight.setText("保存");
-        tvRight.setTextColor(Color.WHITE);
+        tvToolbar.setText("意见反馈");
+
+
     }
 
     @Override
@@ -51,14 +47,13 @@ public class PushNewOrderActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.ll_back, R.id.tv_right})
+    @OnClick({R.id.ll_back, R.id.tv_toolbar})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
                 finish();
                 break;
-            case R.id.tv_right:
-
+            case R.id.tv_toolbar:
                 break;
         }
     }

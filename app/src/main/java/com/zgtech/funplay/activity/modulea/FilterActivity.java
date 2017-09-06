@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.home;
+package com.zgtech.funplay.activity.modulea;
 
 import android.os.Bundle;
 import android.view.View;

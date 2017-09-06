@@ -26,7 +26,7 @@ import com.yancy.gallerypick.config.GalleryPick;
 import com.yancy.gallerypick.inter.IHandlerCallBack;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.circle.FriendTalkPushActivity;
+import com.zgtech.funplay.activity.modulec.FriendTalkPushActivity;
 import com.zgtech.funplay.adapter.QuickAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.global.GlideImageLoader;

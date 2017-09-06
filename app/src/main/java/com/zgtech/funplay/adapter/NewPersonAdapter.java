@@ -14,11 +14,13 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CoreUserPageActivity;
+import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
 import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.retrofit.ApiStores;
 
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * 新人   适配器
@@ -34,8 +36,8 @@ public class NewPersonAdapter extends BaseQuickAdapter<RecommendOther3Model.ObjB
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, RecommendOther3Model.ObjBean individualModel) {
-        ImageView ivAvatar = helper.getView(R.id.iv_avatar);
+    protected void convert(BaseViewHolder helper, final RecommendOther3Model.ObjBean individualModel) {
+        CircleImageView ivAvatar = helper.getView(R.id.iv_avatar);
         ImageView ivStar = helper.getView(R.id.iv_star);
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvNick = helper.getView(R.id.tv_nick);
@@ -73,7 +75,8 @@ public class NewPersonAdapter extends BaseQuickAdapter<RecommendOther3Model.ObjB
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, CoreUserPageActivity.class);
+                Intent intent = new Intent(act, CoreUserDetailPageActivity.class);
+                intent.putExtra("userId", individualModel.getUserId() + "");
                 act.startActivity(intent);
             }
         });

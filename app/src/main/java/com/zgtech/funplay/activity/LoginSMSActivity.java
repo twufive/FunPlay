@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,37 +16,44 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 我的主页
- * Created by Administrator on 2017/8/14.
+ * 登录时使用手机验证码登录页面
+ * Created by Administrator on 2017/8/9.
  */
 
-public class MyPwdActivity extends BaseActivity {
+public class LoginSMSActivity extends BaseActivity {
+
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
     TextView tvToolbar;
-    @Bind(R.id.et_pwd_origin)
-    EditText etPwdOrigin;
-    @Bind(R.id.et_pwd_new)
-    EditText etPwdNew;
-    @Bind(R.id.et_pwd_new_confirm)
-    EditText etPwdNewConfirm;
-    @Bind(R.id.btn_save)
-    Button btnSave;
+    @Bind(R.id.et_mobile)
+    EditText etMobile;
+    @Bind(R.id.et_verify_code)
+    EditText etVerifyCode;
+    @Bind(R.id.btn_get_verify)
+    Button btnGetVerify;
+    @Bind(R.id.tv_protocol)
+    TextView tvProtocol;
+    @Bind(R.id.btn_login)
+    Button btnLogin;
+    @Bind(R.id.tv_to_register)
+    TextView tvToRegister;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_pwd);
+        setContentView(R.layout.activity_login_sms);
         ButterKnife.bind(this);
-        initData();
+
         initView();
+        initData();
     }
 
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        tvToolbar.setText("修改密码");
+        tvToolbar.setText("使用手机登录");
+
     }
 
     @Override
@@ -54,13 +61,19 @@ public class MyPwdActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.ll_back, R.id.btn_save})
+    @OnClick({R.id.ll_back, R.id.btn_get_verify, R.id.tv_protocol, R.id.btn_login, R.id.tv_to_register})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
                 finish();
                 break;
-            case R.id.btn_save:
+            case R.id.btn_get_verify:
+                break;
+            case R.id.tv_protocol:
+                break;
+            case R.id.btn_login:
+                break;
+            case R.id.tv_to_register:
                 break;
         }
     }

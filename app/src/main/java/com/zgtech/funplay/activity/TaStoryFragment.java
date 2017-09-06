@@ -2,7 +2,6 @@ package com.zgtech.funplay.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,10 +52,10 @@ public class TaStoryFragment extends BaseFragment {
     protected void initView(View view, Bundle savedInstanceState) {
 
 
-        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
-        recyclerview.setLayoutManager(linearLayoutManager);
-        recyclerview.setAdapter(adapter);
+//        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
+//        recyclerview.setLayoutManager(linearLayoutManager);
+//        recyclerview.setAdapter(adapter);
     }
 
     @Override

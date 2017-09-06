@@ -27,7 +27,7 @@ import android.widget.Toast;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.center.PinTuanTogetherActivity;
+import com.zgtech.funplay.activity.tabcenter.PinTuanTogetherActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.fragment.FindFragment;
 import com.zgtech.funplay.fragment.HomeFragment;
@@ -83,6 +83,8 @@ public class MainActivity extends BaseActivity {
     public void initView() {
         ivTabPost.bringToFront();
         initTabBottom();
+
+        NOW_FRAGMENT = getIntent().getIntExtra("whichFragment", 0);
         initTabListener(NOW_FRAGMENT);
     }
 
@@ -115,7 +117,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void handleServerData(LoginModel model) {
-        L.i("loginInfo",model.toString());
+        L.i("loginInfo", model.toString());
     }
 
 

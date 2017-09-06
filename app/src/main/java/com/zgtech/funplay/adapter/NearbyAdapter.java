@@ -14,7 +14,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CoreUserPageActivity;
+import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
 import com.zgtech.funplay.model.NearbyData;
 import com.zgtech.funplay.retrofit.ApiStores;
 
@@ -35,7 +35,7 @@ public class NearbyAdapter extends BaseQuickAdapter<NearbyData.ObjBean, BaseView
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, NearbyData.ObjBean individualModel) {
+    protected void convert(BaseViewHolder helper, final NearbyData.ObjBean individualModel) {
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         TextView tvNick = helper.getView(R.id.tv_nick);
         TextView tvPrice = helper.getView(R.id.tv_price);
@@ -58,7 +58,8 @@ public class NearbyAdapter extends BaseQuickAdapter<NearbyData.ObjBean, BaseView
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, CoreUserPageActivity.class);
+                Intent intent = new Intent(act, CoreUserDetailPageActivity.class);
+                intent.putExtra("userId", individualModel.getUserId() + "");
                 act.startActivity(intent);
             }
         });

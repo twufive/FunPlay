@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.center;
+package com.zgtech.funplay.activity.tabcenter;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -90,8 +90,6 @@ public class PinTuanTogetherActivity extends BaseActivity {
                 T.showShort(t.toString());
             }
         });
-
-
     }
 
     @OnClick({R.id.ll_back, R.id.tv_toolbar, R.id.iv_right})

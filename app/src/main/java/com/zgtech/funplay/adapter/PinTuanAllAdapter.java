@@ -11,7 +11,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.model.PinTuanAllModel;
+import com.zgtech.funplay.model.MyOrderModel;
+import com.zgtech.funplay.retrofit.ApiStores;
+import com.zgtech.funplay.utils.FunPlayUtils;
 
 import java.util.List;
 
@@ -20,17 +22,17 @@ import java.util.List;
  * Created by Administrator on 2017/8/3.
  */
 
-public class PinTuanAllAdapter extends BaseQuickAdapter<PinTuanAllModel, BaseViewHolder> {
+public class PinTuanAllAdapter extends BaseQuickAdapter<MyOrderModel.ObjBean, BaseViewHolder> {
     private Activity act;
 
-    public PinTuanAllAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<PinTuanAllModel> data) {
+    public PinTuanAllAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<MyOrderModel.ObjBean> data) {
         super(layoutResId, data);
 
         this.act = act;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, PinTuanAllModel individualModel) {
+    protected void convert(BaseViewHolder helper, MyOrderModel.ObjBean individualModel) {
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvTime = helper.getView(R.id.tv_time);
@@ -40,14 +42,20 @@ public class PinTuanAllAdapter extends BaseQuickAdapter<PinTuanAllModel, BaseVie
 
         ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
-                .load(individualModel.getSiteUrl())
+                .load(ApiStores.API_SERVER_URL + individualModel.getOrderPicture1())
                 .into(ivSite);
 
-        tvTitle.setText(individualModel.getTitle());
-        tvTime.setText("下单时间:" + individualModel.getTime());
-        tvPrice.setText("总价:￥" + individualModel.getPrice());
-        tvState.setText(individualModel.getState());
-        tvBtn.setText("再来一单");
+        long time = individualModel.getModifyTime();
+        String strTime = FunPlayUtils.long2str(time);
+        tvTime.setText("下单时间:" + strTime);
+
+        int stateCode = individualModel.getState();
+        tvState.setText("" + FunPlayUtils.code2StrState(stateCode));
+
+
+        tvTitle.setText(individualModel.getOrderTitle());
+        tvPrice.setText("总价:￥" + individualModel.getOrderPrice1());
+        tvBtn.setText("");
 
     }
 }

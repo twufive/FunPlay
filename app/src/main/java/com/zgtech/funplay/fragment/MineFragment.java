@@ -1,5 +1,6 @@
 package com.zgtech.funplay.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,15 +14,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CoreUserPageActivity;
-import com.zgtech.funplay.activity.mine.MyCertifyActivity;
-import com.zgtech.funplay.activity.mine.MyCollectActivity;
-import com.zgtech.funplay.activity.mine.MyInfoActivity;
-import com.zgtech.funplay.activity.mine.MyOrderActivity;
-import com.zgtech.funplay.activity.mine.MyPinTuanActivity;
-import com.zgtech.funplay.activity.mine.MyPwdActivity;
-import com.zgtech.funplay.activity.mine.MyReportActivity;
-import com.zgtech.funplay.activity.mine.MySuggestActivity;
+import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
+import com.zgtech.funplay.activity.moduled.MyCertifyActivity;
+import com.zgtech.funplay.activity.moduled.MyCollectActivity;
+import com.zgtech.funplay.activity.moduled.MyInfoActivity;
+import com.zgtech.funplay.activity.moduled.MyOrderActivity;
+import com.zgtech.funplay.activity.moduled.MyPinTuanActivity;
+import com.zgtech.funplay.activity.moduled.MyPwdActivity;
+import com.zgtech.funplay.activity.moduled.MyReportActivity;
+import com.zgtech.funplay.activity.moduled.MySuggestActivity;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.utils.L;
 
@@ -120,7 +121,7 @@ public class MineFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care, R.id.tv_fans, R.id.rl_order,R.id.rl_pintuan, R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion, R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout})
+    @OnClick({R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care, R.id.tv_fans, R.id.rl_order, R.id.rl_pintuan, R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion, R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_avatar:
@@ -144,7 +145,9 @@ public class MineFragment extends BaseFragment {
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
-                toNextActivity(CoreUserPageActivity.class);
+                Intent intent = new Intent(mActivity, CoreUserDetailPageActivity.class);
+                intent.putExtra("isMyself", true);
+                mActivity.startActivity(intent);
                 break;
             case R.id.rl_mine_collect:
                 toNextActivity(MyCollectActivity.class);

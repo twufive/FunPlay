@@ -14,6 +14,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.PhotoViewActivity;
 import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.retrofit.ApiStores;
+import com.zgtech.funplay.utils.FunPlayUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +38,15 @@ public class QuickAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, Base
         ImageView ivAvatar = helper.getView(R.id.iv_avatar);
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvContent = helper.getView(R.id.tv_content);
+        TextView tvTime = helper.getView(R.id.tv_time);
+
 
         initAvatar(ivAvatar, ApiStores.API_SERVER_URL + individualModel.getUserIcon());
         tvTitle.setText(individualModel.getUserNick());
         tvContent.setText(individualModel.getSpaceContent());
+        tvTime.setText(FunPlayUtils.long2str(individualModel.getModifyTime()));
 
         List<String> imgUrlList = new ArrayList<>();
-
         List<String> originPics = individualModel.getPictures();
         for (String singleImgUrl : originPics) {
             imgUrlList.add(ApiStores.API_SERVER_URL + singleImgUrl);

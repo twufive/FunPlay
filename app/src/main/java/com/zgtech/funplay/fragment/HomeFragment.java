@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.fragment.childFragment.CertifyFragment;
-import com.zgtech.funplay.activity.home.FilterActivity;
+import com.zgtech.funplay.activity.modulea.FilterActivity;
 import com.zgtech.funplay.fragment.childFragment.HighBeautyFragment;
 import com.zgtech.funplay.fragment.childFragment.NearbyFragment;
 import com.zgtech.funplay.fragment.childFragment.NewPersonFragment;

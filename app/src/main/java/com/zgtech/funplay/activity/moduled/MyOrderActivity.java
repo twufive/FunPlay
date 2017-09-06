@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity.moduled;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,17 +13,21 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.model.MyOrderModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 我的拼团
+ * 我的订单
  * Created by Administrator on 2017/8/5.
  */
 
-public class MyPinTuanActivity extends BaseActivity {
+public class MyOrderActivity extends BaseActivity {
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
@@ -36,12 +40,14 @@ public class MyPinTuanActivity extends BaseActivity {
     private MyPagerAdapter adapter;
     private PinTuanAllFragment pinTuanAllFragment;
     private PinTuanRefundFragment pinTuanRefundFragment;
+    private List<MyOrderModel.ObjBean> originList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mine_pintuan);
         ButterKnife.bind(this);
+
         initData();
         initView();
     }
@@ -49,7 +55,7 @@ public class MyPinTuanActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        tvToolbar.setText("我的拼团");
+        tvToolbar.setText("我的订单");
 
         adapter = new MyPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(adapter);
@@ -58,6 +64,7 @@ public class MyPinTuanActivity extends BaseActivity {
 
     @Override
     public void initData() {
+
 
     }
 
@@ -127,7 +134,7 @@ public class MyPinTuanActivity extends BaseActivity {
                 case 0:
                     return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
                 case 1:
-                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
+//                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
                 default:
                     return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
             }

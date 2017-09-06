@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zgtech.funplay.R;
@@ -16,28 +15,29 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 登录页面
+ * 注册第一页面
  * Created by Administrator on 2017/8/9.
  */
 
-public class LoginActivity extends BaseActivity {
-    @Bind(R.id.btn_login)
-    Button btnLogin;
-    @Bind(R.id.tv_to_register)
-    TextView tvToRegister;
-    @Bind(R.id.tv_forget_pwd)
-    TextView tvForgetPwd;
+public class RegistAActivity extends BaseActivity {
+
     @Bind(R.id.et_mobile)
     EditText etMobile;
+    @Bind(R.id.et_verify)
+    EditText etVerify;
+    @Bind(R.id.tv_get_verify)
+    TextView tvGetVerify;
     @Bind(R.id.et_pwd)
     EditText etPwd;
-    @Bind(R.id.rl_to_mobile_login)
-    RelativeLayout rlToMobileLogin;
+    @Bind(R.id.btn_regist)
+    Button btnRegist;
+    @Bind(R.id.tv_protocol)
+    TextView tvProtocol;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_regist_a);
         ButterKnife.bind(this);
 
         initView();
@@ -47,6 +47,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void initView() {
 
+
     }
 
     @Override
@@ -54,20 +55,15 @@ public class LoginActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_login, R.id.tv_to_register, R.id.tv_forget_pwd,R.id.rl_to_mobile_login})
+    @OnClick({R.id.tv_get_verify, R.id.btn_regist, R.id.tv_protocol})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn_login:
-                toNextActivityAndCloseThis(MainActivity.class);
+            case R.id.tv_get_verify:
                 break;
-            case R.id.tv_forget_pwd:
-                toNextActivity(ForgetPwdActivity.class);
+            case R.id.btn_regist:
+                toNextActivity(RegistBActivity.class);
                 break;
-            case R.id.rl_to_mobile_login:
-                toNextActivity(LoginSMSActivity.class);
-                break;
-            case R.id.tv_to_register:
-                toNextActivity(RegistAActivity.class);
+            case R.id.tv_protocol:
                 break;
         }
     }

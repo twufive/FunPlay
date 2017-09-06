@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity.moduled;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

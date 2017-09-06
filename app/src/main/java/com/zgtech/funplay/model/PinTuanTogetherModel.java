@@ -51,6 +51,7 @@ public class PinTuanTogetherModel {
          * orderTransactionCount : 4
          */
 
+        private String orderId;
         private String orderTitle;
         private String orderPicture1;
         private int orderSize;
@@ -58,6 +59,14 @@ public class PinTuanTogetherModel {
         private int orderPrice0;
         private double avgMark;
         private int orderTransactionCount;
+
+        public String getOrderId() {
+            return orderId;
+        }
+
+        public void setOrderId(String orderId) {
+            this.orderId = orderId;
+        }
 
         public String getOrderTitle() {
             return orderTitle;

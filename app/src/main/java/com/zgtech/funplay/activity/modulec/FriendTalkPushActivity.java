@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.circle;
+package com.zgtech.funplay.activity.modulec;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -38,18 +38,28 @@ import com.zgtech.funplay.activity.MainActivity;
 import com.zgtech.funplay.activity.PhotoViewActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.global.GlideImageLoader;
+import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.model.UpImgsModel;
+import com.zgtech.funplay.retrofit.RequestBodyBuilder;
+import com.zgtech.funplay.retrofit.RetrofitParameterBuilder;
 import com.zgtech.funplay.utils.SPUtils;
 import com.zgtech.funplay.utils.T;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-
+import me.shaohui.advancedluban.Luban;
+import me.shaohui.advancedluban.OnMultiCompressListener;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * 发布旅游圈页面
@@ -73,13 +83,14 @@ public class FriendTalkPushActivity extends BaseActivity {
     private static final int REQUEST_CODE = 100;
     private static final String TAG = "Gallery";
     private GalleryConfig galleryConfig;
-    private ArrayList<String> path = new ArrayList<>();//照片存放路径
+    private List<String> path = new ArrayList<>();//照片存放路径
 
     private ImageAdapter imageAdapter;
     private ProgressDialog dialog;
-    private ArrayList<String> originPhotoList;
+    private ArrayList<String> originPhotoList = new ArrayList<>();
     private String exclusiveId;
     private String talkContent;
+    private HashMap<Object, Object> originMap = new HashMap<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -102,7 +113,7 @@ public class FriendTalkPushActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        
+
     }
 
     private void initGridView() {
@@ -115,7 +126,7 @@ public class FriendTalkPushActivity extends BaseActivity {
                 if (originPhotoList.size() < 9 && position == originPhotoList.size()) {
                     addPhotoToGridView();
                 } else {
-                    showDetailOrDeleteDialog(position);
+                    showBigPicOrDeleteDialog(position);
                 }
             }
 
@@ -130,7 +141,7 @@ public class FriendTalkPushActivity extends BaseActivity {
 //                finish();
 
                 Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
-                intent.putExtra("whichFragment", "3");
+                intent.putExtra("whichFragment", "4");
                 startActivity(intent);
                 finish();
                 break;
@@ -151,120 +162,133 @@ public class FriendTalkPushActivity extends BaseActivity {
     }
 
     // 发布说说
-    private void sendTalk(String talkContent, String talkPicture) {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("userId", exclusiveId);
-        map.put("talkContent", talkContent);
-        map.put("talkPicture", talkPicture);
-        map.put("talkPermissions", "1");
-        map.put("talkNotice", "0");
+    private void sendTalk(String talkContent, List<String> urlList) {
+        originMap = new HashMap<>();
+        originMap.put("spaceContent", talkContent);
+        originMap.put("spaceContentMin", talkContent);
+        originMap.put("spacePictrueCount", urlList.size());
+        originMap.put("orderId", "1");
+        originMap.put("orderTitle", "1");
+        originMap.put("orderPrice1", "1");
+        originMap.put("orderSize", "1");
+        addMapParam(urlList);
+        RequestBody body = RequestBodyBuilder.build(originMap);
 
-//        RequestBody body = RequestBodyBuilder.build(map);
-//        mApiStores.pushTalk(body).enqueue(new Callback<BaseResultModel>() {
-//            @Override
-//            public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
-//                if (response.isSuccessful()) {
-//                    ifSuccess(response);
-//                } else {
-//                    T.showShort("请检查您的网络链接");
-//                }
-//            }
-//
-//            private void ifSuccess(Response<BaseResultModel> response) {
-//                if (response.body().getCode() == 2) {
-//                    dialog.dismiss();
-//
-//                    SPUtils.setString(FriendTalkPushActivity.this, "YouQuanCache", "");
-//
-//                    Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
-//                    intent.putExtra("whichFragment", "3");
-//                    startActivity(intent);
-//                    finish();
-//                } else {
-//                    T.showShort(FriendTalkPushActivity.this, response.body().getMsg());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<BaseResultModel> call, Throwable t) {
-//
-//            }
-//        });
+
+        mApiStores.pushTalk(body).enqueue(new Callback<BaseResultModel>() {
+            @Override
+            public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(BaseResultModel model) {
+                dialog.dismiss();
+
+                SPUtils.setString(FriendTalkPushActivity.this, "YouQuanCache", "");
+
+                Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
+                intent.putExtra("whichFragment", 3);
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResultModel> call, Throwable t) {
+                T.showShort(t.toString());
+            }
+        });
+    }
+
+    private void addMapParam(List<String> urlList) {
+        for (int i = 0; i < urlList.size(); i++) {
+            int temp = i + 1;
+            originMap.put("spacePicture" + temp, urlList.get(i));
+        }
     }
 
     private void upImgsToServer(ArrayList<String> originPhotoList) {
-//        final RetrofitParameterBuilder retrofitParameterBuilder = RetrofitParameterBuilder.newBuilder();
-//
-//        ArrayList<File> fileList = new ArrayList<>();
-//        for (int i = 0; i < originPhotoList.size(); i++) {
-//            File file = new File(originPhotoList.get(i));
-//            fileList.add(file);
-//        }
-//
-//        Luban.compress(FriendTalkPushActivity.this, fileList)
-//                .setMaxSize(500)                // 限制最终图片大小（单位：Kb）
-//                .setMaxHeight(1920)             // 限制图片高度
-//                .setMaxWidth(1080)              // 限制图片宽度
-//                .putGear(Luban.CUSTOM_GEAR)
-//                .launch(new OnMultiCompressListener() {
-//                    @Override
-//                    public void onStart() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onSuccess(List<File> fileList) {
-//                        for (int i = 0; i < fileList.size(); i++) {
-//                            retrofitParameterBuilder.addParameter("imgFiles", fileList.get(i));
-//                        }
-//
-//                        retrofitParameterBuilder.addParameter("id", exclusiveId);
-//                        Map<String, RequestBody> map = retrofitParameterBuilder.bulider();
-//                        doUp(retrofitParameterBuilder, map);
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//
-//                    }
-//                });
+        final RetrofitParameterBuilder retrofitParameterBuilder = RetrofitParameterBuilder.newBuilder();
+
+        List<File> fileList = new ArrayList<>();
+        for (int i = 0; i < originPhotoList.size(); i++) {
+            File file = new File(originPhotoList.get(i));
+            fileList.add(file);
+        }
+
+        Luban.compress(FriendTalkPushActivity.this, fileList)
+                .setMaxSize(500)                // 限制最终图片大小（单位：Kb）
+                .setMaxHeight(1920)             // 限制图片高度
+                .setMaxWidth(1080)              // 限制图片宽度
+                .putGear(Luban.CUSTOM_GEAR)
+                .launch(new OnMultiCompressListener() {
+                    @Override
+                    public void onStart() {
+
+                    }
+
+                    @Override
+                    public void onSuccess(List<File> fileList) {
+                        for (int i = 0; i < fileList.size(); i++) {
+                            retrofitParameterBuilder.addParameter("imgFiles", fileList.get(i));
+                        }
+
+                        retrofitParameterBuilder.addParameter("id", exclusiveId);
+                        Map<String, RequestBody> map = retrofitParameterBuilder.bulider();
+                        doUp(retrofitParameterBuilder, map);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+                });
     }
 
-//    private void doUp(final RetrofitParameterBuilder retrofitParameterBuilder, Map<String, RequestBody> map) {
-//        mApiStores.upImgs(map).enqueue(new Callback<UpImgsModel>() {
-//            @Override
-//            public void onResponse(Call<UpImgsModel> call, Response<UpImgsModel> response) {
-//                if (response.isSuccessful()) {
-//                    ifSuccess(response);
-//                } else {
-//                    T.showShort("请检查您的网络链接");
-//                }
-//            }
-//
-//            private void ifSuccess(Response<UpImgsModel> response) {
-//                if (response.body().getCode() == 2) {
-//                    List<String> urlList = response.body().getList();
+    private void doUp(final RetrofitParameterBuilder retrofitParameterBuilder, Map<String, RequestBody> map) {
+        mApiStores.upImgs(map).enqueue(new Callback<UpImgsModel>() {
+            @Override
+            public void onResponse(Call<UpImgsModel> call, Response<UpImgsModel> response) {
+                if (response.isSuccessful()) {
+                    ifSuccess(response);
+                } else {
+                    T.showShort("请检查您的网络链接");
+                }
+            }
+
+            private void ifSuccess(Response<UpImgsModel> response) {
+                if (response.body().getCode() == 2) {
+                    List<String> urlList = response.body().getList();
+
+
 //                    String talkPicture = "";
-//
 //                    for (int i = 0; i < urlList.size(); i++) {
 //                        talkPicture = talkPicture + urlList.get(i) + ",";
 //                    }
 //
 //                    String talkPictureSub = talkPicture.substring(0, talkPicture.length() - 1);
-//                    sendTalk(talkContent, talkPictureSub);
-//
-//                    retrofitParameterBuilder.cleanParams();
-//                } else {
-//                    T.showShort(FriendTalkPushActivity.this, response.body().getMsg());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<UpImgsModel> call, Throwable t) {
-//
-//            }
-//        });
-//    }
+
+                    sendTalk(talkContent, urlList);
+
+                    retrofitParameterBuilder.cleanParams();
+                } else {
+                    T.showShort(FriendTalkPushActivity.this, response.body().getMsg());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UpImgsModel> call, Throwable t) {
+
+            }
+        });
+    }
 
     class ImageAdapter extends BaseAdapter {
         LayoutInflater inflater;
@@ -320,7 +344,7 @@ public class FriendTalkPushActivity extends BaseActivity {
         initPermissions();
     }
 
-    private void showDetailOrDeleteDialog(final int position) {
+    private void showBigPicOrDeleteDialog(final int position) {
         final AlertDialog dlg = new AlertDialog.Builder(this).create();
         dlg.show();
         Window window = dlg.getWindow();
@@ -430,7 +454,7 @@ public class FriendTalkPushActivity extends BaseActivity {
         super.onBackPressed();
 
         Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
-        intent.putExtra("whichFragment", "3");
+        intent.putExtra("whichFragment", 3);
         startActivity(intent);
         finish();
     }

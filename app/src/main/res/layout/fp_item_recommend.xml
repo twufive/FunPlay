@@ -24,10 +24,17 @@
                 android:layout_height="90dp"
                 android:background="@drawable/bg_mine_info" />
 
-            <ImageView
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_avatar"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_gravity="bottom|center_horizontal"-->
+                <!--android:background="@drawable/icon_default_avatar" />-->
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_avatar"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:background="@drawable/icon_default_avatar" />
         </FrameLayout>

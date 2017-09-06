@@ -32,7 +32,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.LoginActivity">
 
             <!--android:theme="@style/AppSplash"-->
 
@@ -47,27 +47,35 @@
              android:name=".activity.MainActivity"
              android:windowSoftInputMode="adjustPan" />-->
 
-        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <!--<activity android:name=".activity.LoginActivity" />-->
+        <activity android:name=".activity.LoginSMSActivity" />
+        <activity android:name=".activity.ForgetPwdActivity" />
+        <activity android:name=".activity.RegistAActivity" />
+        <activity android:name=".activity.RegistBActivity" />
+        <activity android:name=".activity.RegistCActivity" />
+
         <activity android:name=".activity.PhotoViewActivity" />
-        <activity android:name=".activity.CoreUserPageActivity" />
-        <activity android:name=".activity.CorePinTuanTogetherActivity" />
+        <activity android:name=".activity.CoreUserDetailPageActivity" />
+        <activity android:name=".activity.CorePinTuanDetailActivity" />
         <activity android:name=".activity.CoreWanZhuanDiQiuActivity" />
 
-        <activity android:name=".activity.center.PinTuanTogetherActivity" />
-        <activity android:name=".activity.center.PushNewOrderActivity" />
 
-        <activity android:name=".activity.home.FilterActivity" />
+        <activity android:name=".activity.tabcenter.PinTuanTogetherActivity" />
+        <activity android:name=".activity.tabcenter.PushNewOrderActivity" />
 
-        <activity android:name=".activity.circle.FriendTalkPushActivity" />
+        <activity android:name=".activity.modulea.FilterActivity" />
 
-        <activity android:name=".activity.mine.MyOrderActivity" />
-        <activity android:name=".activity.mine.MyPinTuanActivity" />
-        <activity android:name=".activity.mine.MyInfoActivity" />
-        <activity android:name=".activity.mine.MyCertifyActivity" />
-        <activity android:name=".activity.mine.MyCollectActivity" />
-        <activity android:name=".activity.mine.MySuggestActivity" />
-        <activity android:name=".activity.mine.MyReportActivity" />
-        <activity android:name=".activity.mine.MyPwdActivity" />
+        <activity android:name=".activity.modulec.FriendTalkPushActivity" />
+
+        <activity android:name=".activity.moduled.MyOrderActivity" />
+        <activity android:name=".activity.moduled.MyPinTuanActivity" />
+        <activity android:name=".activity.moduled.MyInfoActivity" />
+        <activity android:name=".activity.moduled.MyCertifyActivity" />
+        <activity android:name=".activity.moduled.MyCollectActivity" />
+        <activity android:name=".activity.moduled.MySuggestActivity" />
+        <activity android:name=".activity.moduled.MyReportActivity" />
+        <activity android:name=".activity.moduled.MyPwdActivity" />
 
 
 

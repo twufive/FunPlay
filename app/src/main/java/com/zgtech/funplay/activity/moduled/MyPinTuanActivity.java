@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity.moduled;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,11 +19,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 我的订单
+ * 我的拼团
  * Created by Administrator on 2017/8/5.
  */
 
-public class MyOrderActivity extends BaseActivity {
+public class MyPinTuanActivity extends BaseActivity {
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
@@ -49,7 +49,7 @@ public class MyOrderActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        tvToolbar.setText("我的订单");
+        tvToolbar.setText("我的拼团");
 
         adapter = new MyPagerAdapter(getSupportFragmentManager());
         viewpager.setAdapter(adapter);
@@ -127,7 +127,7 @@ public class MyOrderActivity extends BaseActivity {
                 case 0:
                     return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
                 case 1:
-                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
+//                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
                 default:
                     return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
             }

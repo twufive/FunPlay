@@ -143,14 +143,15 @@
                         android:id="@+id/tv_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="长沙火宫殿+橘子洲+岳麓山+天心阁+湖南第一师范一日游【纯玩再升级可选滴水洞或演出】5人团"
+                        android:text=""
                         android:textColor="@color/little_black"
                         android:textSize="14sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:layout_marginBottom="3dp">
+                            android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp">
 
                         <TextView
                             android:id="@+id/tv_price"
@@ -158,7 +159,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="5dp"
                             android:gravity="bottom"
-                            android:text="￥90"
+                            android:text="￥00"
                             android:textColor="@color/red"
                             android:textSize="16sp" />
 
@@ -170,7 +171,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@id/tv_price"
                             android:gravity="bottom"
-                            android:text="￥240"
+                            android:text="￥000"
                             android:textColor="@color/little_black"
                             android:textSize="11sp" />
 
@@ -203,7 +204,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tv_calendar"
+                    android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -246,17 +247,13 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tv_order_trip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="12dp"
                     android:paddingLeft="24dp"
                     android:paddingRight="12dp"
-                    android:text="概要，游玩约5小时，交通约3小时，用餐约1小时；午餐自由。
-
-
-1）07:30 集合点：长沙火车站阿波罗商业广场
-
-2）08:00 交通 乘巴士前往花明楼景区"
+                    android:text=""
                     android:textColor="@color/little_black"
                     android:textSize="12sp" />
 
@@ -296,21 +293,13 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tv_order_remark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="12dp"
                     android:paddingLeft="24dp"
                     android:paddingRight="12dp"
-                    android:text="费用包含：
-
-1）往返交通：空调旅游车，车型根据人数而定，保证一人正座；
-
-2）景区门票：
-A线：搞基
-
-B线：搞基搞基
-
-C线：搞基搞基搞基"
+                    android:text=""
                     android:textColor="@color/little_black"
                     android:textSize="12sp" />
 
@@ -349,15 +338,13 @@ C线：搞基搞基搞基"
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tv_order_attention"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="12dp"
                     android:paddingLeft="24dp"
                     android:paddingRight="12dp"
-                    android:text="时间观念：
-
-
-本产品是可以拼团，如因天气恶劣，政府重大接待，景区闭馆等不可抗因素导致无法工作，工作人员会在出行前1天21:00前通知到您全额退款"
+                    android:text=""
                     android:textColor="@color/little_black"
                     android:textSize="12sp" />
 
@@ -400,7 +387,7 @@ C线：搞基搞基搞基"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="联系人：吴小姐"
+                        android:text="联系人："
                         android:textColor="@color/little_black"
                         android:textSize="13sp" />
 
@@ -409,7 +396,7 @@ C线：搞基搞基搞基"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="159****8278"
+                        android:text=""
                         android:textColor="@color/little_black"
                         android:textSize="13sp" />
 

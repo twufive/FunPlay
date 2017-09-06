@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity.mine;
+package com.zgtech.funplay.activity.moduled;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,12 +11,17 @@ import android.view.ViewGroup;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.adapter.PinTuanAllAdapter;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.model.PinTuanAllModel;
+import com.zgtech.funplay.model.MyOrderModel;
+import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * 我的拼团，全部fragment
@@ -28,7 +33,8 @@ public class PinTuanAllFragment extends BaseFragment {
     RecyclerView recyclerview;
 
     private PinTuanAllAdapter adapter;
-    private ArrayList<PinTuanAllModel> originList;
+    private List<MyOrderModel.ObjBean> originList = new ArrayList<>();
+
 
     @Nullable
     @Override
@@ -51,32 +57,41 @@ public class PinTuanAllFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
 
-
-        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
-        recyclerview.setLayoutManager(linearLayoutManager);
-        recyclerview.setAdapter(adapter);
     }
 
     @Override
     protected void initData() {
-        originList = new ArrayList<PinTuanAllModel>();
+        mApiStores.getMyOrderData("0", "false").enqueue(new Callback<MyOrderModel>() {
+            @Override
+            public void onResponse(Call<MyOrderModel> call, Response<MyOrderModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
 
-        PinTuanAllModel pinTuanAllModel = new PinTuanAllModel();
-        pinTuanAllModel.setSiteUrl("http://img1.imgtn.bdimg.com/it/u=3703540791,4182251432&fm=26&gp=0.jpg");
-        pinTuanAllModel.setState("已完成");
-        pinTuanAllModel.setPrice("90");
-        pinTuanAllModel.setTime("2017-08-16 19:37");
-        pinTuanAllModel.setTitle("桃花仑三日游");
+            private void handleServerData(MyOrderModel model) {
+                originList = model.getObj();
+                initPinTuanAll(originList);
+            }
 
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
+            @Override
+            public void onFailure(Call<MyOrderModel> call, Throwable t) {
+                T.showShort(t.toString());
+            }
+        });
+    }
+
+    private void initPinTuanAll(List<MyOrderModel.ObjBean> originList) {
+        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
+        recyclerview.setLayoutManager(linearLayoutManager);
+        recyclerview.setAdapter(adapter);
     }
 
     public static PinTuanAllFragment newInstance() {
