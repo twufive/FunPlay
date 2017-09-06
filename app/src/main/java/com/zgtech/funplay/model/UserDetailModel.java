@@ -12,7 +12,7 @@ public class UserDetailModel {
     /**
      * code : 2
      * msg : 成功
-     * obj : {"userId":12,"userNick":"cast.zhou","userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userSex":1,"userHeight":170,"userConstellation":1,"stateIdent":1,"stateIdentJob":0,"transactionCount":2,"spaces":[{"spaceId":1,"userId":12,"userNick":"cast.zhou","userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","spaceContent":"今天组了五人开黑团去岳麓山杀了三进三出，杀得人仰马翻，杀得口吐白沫，特发此文，聊表谢意，谢谢Cast.Zhou、MM、CC、Nice、COCO、豆豆的大力支持！","spaceContentMin":"今天组了五人开黑团去岳麓山杀了三进三出...","spacePictureCount":1,"spacePicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture2":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture3":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture4":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture5":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture6":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture7":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture8":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture9":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","pictures":[],"orderId":2,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","orderPrice1":200,"orderSize":5,"modifyTime":1503038831000,"comments":[{"commentId":1,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":2,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长****的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":3,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":4,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":5,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"}],"goodCounts":3,"goodNicks":"cast.zhou,趣玩-13,趣玩-14"}],"togethers":[{"orderId":null,"orderTitle":null,"orderPicture1":null,"orderSize":0,"orderPrice1":0,"orderPrice0":0,"avgMark":0,"orderTransactionCount":0}]}
+     * obj : {"serviceAddress":"长沙市","spaces":[{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":4,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504524527000,"orderId":1,"orderPrice1":1,"orderSize":1,"orderTitle":"1","pictures":[],"spaceContent":"牛批牛批🐮","spaceContentMin":"牛批牛批🐮","spaceId":4,"spacePicture1":"upload/user/img/20170904/aa631f6688254bf0bebf36778b1c67f2.png","spacePicture2":"upload/user/img/20170904/0db1d49dda634e95aa7661c5e3e499ba.png","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":3,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504524332000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"hahha","spaceContentMin":"hah","spaceId":3,"spacePicture1":"","spacePicture2":"","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":2,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504517920000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"hahaha","spaceContentMin":"hahaha","spaceId":2,"spacePicture1":"","spacePicture2":"","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","commentId":1,"commentUserId":12,"commentUserNick":"cast.zhou","modifyTime":"2017-08-18","spaceId":1,"userId":12},{"commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长****的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","commentId":2,"commentUserId":12,"commentUserNick":"cast.zhou","modifyTime":"2017-08-18","spaceId":1,"userId":12}],"goodCounts":3,"goodNicks":"趣玩-13,趣玩-14,cast.zhou","modifyTime":1503038831000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"今天组了五人开黑团去岳麓山杀了三进三出，杀得人仰马翻，杀得口吐白沫，特发此文，聊表谢意，谢谢Cast.Zhou、MM、CC、Nice、COCO、豆豆的大力支持！","spaceContentMin":"今天组了五人开黑团去岳麓山杀了三进三出...","spaceId":1,"spacePicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture2":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture3":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture4":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture5":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture6":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture7":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture8":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture9":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePictureCount":1,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"}],"stateIdent":1,"stateIdentJob":0,"togethers":[{"avgMark":4.3,"orderId":"1","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderPrice0":500,"orderPrice1":300,"orderSize":5,"orderTitle":"【2017年8月15日-五人团】岳麓山两日游","orderTransactionCount":14}],"transactionCount":104,"userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userConstellation":1,"userHeight":170,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou","userRemark":"这是个人简介，哈哈哈哈，12杀！","userSex":1,"userSign":"要趣玩，来找我","userVocation":"1、0"}
      */
 
     private int code;
@@ -45,87 +45,47 @@ public class UserDetailModel {
 
     public static class ObjBean {
         /**
-         * userId : 12
-         * userNick : cast.zhou
-         * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-         * userBackground : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-         * userSex : 1
-         * userHeight : 170
-         * userConstellation : 1
+         * serviceAddress : 长沙市
+         * spaces : [{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":4,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504524527000,"orderId":1,"orderPrice1":1,"orderSize":1,"orderTitle":"1","pictures":[],"spaceContent":"牛批牛批🐮","spaceContentMin":"牛批牛批🐮","spaceId":4,"spacePicture1":"upload/user/img/20170904/aa631f6688254bf0bebf36778b1c67f2.png","spacePicture2":"upload/user/img/20170904/0db1d49dda634e95aa7661c5e3e499ba.png","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":3,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504524332000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"hahha","spaceContentMin":"hah","spaceId":3,"spacePicture1":"","spacePicture2":"","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":2,"userId":12}],"goodCounts":0,"goodNicks":"","modifyTime":1504517920000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"hahaha","spaceContentMin":"hahaha","spaceId":2,"spacePicture1":"","spacePicture2":"","spacePicture3":"","spacePicture4":"","spacePicture5":"","spacePicture6":"","spacePicture7":"","spacePicture8":"","spacePicture9":"","spacePictureCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"},{"comments":[{"commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","commentId":1,"commentUserId":12,"commentUserNick":"cast.zhou","modifyTime":"2017-08-18","spaceId":1,"userId":12},{"commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长****的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","commentId":2,"commentUserId":12,"commentUserNick":"cast.zhou","modifyTime":"2017-08-18","spaceId":1,"userId":12}],"goodCounts":3,"goodNicks":"趣玩-13,趣玩-14,cast.zhou","modifyTime":1503038831000,"orderId":2,"orderPrice1":200,"orderSize":5,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","pictures":[],"spaceContent":"今天组了五人开黑团去岳麓山杀了三进三出，杀得人仰马翻，杀得口吐白沫，特发此文，聊表谢意，谢谢Cast.Zhou、MM、CC、Nice、COCO、豆豆的大力支持！","spaceContentMin":"今天组了五人开黑团去岳麓山杀了三进三出...","spaceId":1,"spacePicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture2":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture3":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture4":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture5":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture6":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture7":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture8":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture9":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePictureCount":1,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":12,"userNick":"cast.zhou"}]
          * stateIdent : 1
          * stateIdentJob : 0
-         * transactionCount : 2
-         * spaces : [{"spaceId":1,"userId":12,"userNick":"cast.zhou","userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","spaceContent":"今天组了五人开黑团去岳麓山杀了三进三出，杀得人仰马翻，杀得口吐白沫，特发此文，聊表谢意，谢谢Cast.Zhou、MM、CC、Nice、COCO、豆豆的大力支持！","spaceContentMin":"今天组了五人开黑团去岳麓山杀了三进三出...","spacePictureCount":1,"spacePicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture2":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture3":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture4":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture5":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture6":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture7":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture8":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","spacePicture9":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","pictures":[],"orderId":2,"orderTitle":"岳麓山5人一日游，200块多不多不多！！！","orderPrice1":200,"orderSize":5,"modifyTime":1503038831000,"comments":[{"commentId":1,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":2,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长****的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":3,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":4,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":5,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"}],"goodCounts":3,"goodNicks":"cast.zhou,趣玩-13,趣玩-14"}]
-         * togethers : [{"orderId":null,"orderTitle":null,"orderPicture1":null,"orderSize":0,"orderPrice1":0,"orderPrice0":0,"avgMark":0,"orderTransactionCount":0}]
+         * togethers : [{"avgMark":4.3,"orderId":"1","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderPrice0":500,"orderPrice1":300,"orderSize":5,"orderTitle":"【2017年8月15日-五人团】岳麓山两日游","orderTransactionCount":14}]
+         * transactionCount : 104
+         * userBackground : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
+         * userConstellation : 1
+         * userHeight : 170
+         * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
+         * userId : 12
+         * userNick : cast.zhou
+         * userRemark : 这是个人简介，哈哈哈哈，12杀！
+         * userSex : 1
+         * userSign : 要趣玩，来找我
+         * userVocation : 1、0
          */
 
-        private int userId;
-        private String userNick;
-        private String userIcon;
-        private String userBackground;
-        private int userSex;
-        private int userHeight;
-        private int userConstellation;
+        private String serviceAddress;
         private int stateIdent;
         private int stateIdentJob;
         private int transactionCount;
+        private String userBackground;
+        private int userConstellation;
+        private int userHeight;
+        private String userIcon;
+        private int userId;
+        private String userNick;
+        private String userRemark;
+        private int userSex;
+        private String userSign;
+        private String userVocation;
         private List<SpacesBean> spaces;
         private List<TogethersBean> togethers;
 
-        public int getUserId() {
-            return userId;
+        public String getServiceAddress() {
+            return serviceAddress;
         }
 
-        public void setUserId(int userId) {
-            this.userId = userId;
-        }
-
-        public String getUserNick() {
-            return userNick;
-        }
-
-        public void setUserNick(String userNick) {
-            this.userNick = userNick;
-        }
-
-        public String getUserIcon() {
-            return userIcon;
-        }
-
-        public void setUserIcon(String userIcon) {
-            this.userIcon = userIcon;
-        }
-
-        public String getUserBackground() {
-            return userBackground;
-        }
-
-        public void setUserBackground(String userBackground) {
-            this.userBackground = userBackground;
-        }
-
-        public int getUserSex() {
-            return userSex;
-        }
-
-        public void setUserSex(int userSex) {
-            this.userSex = userSex;
-        }
-
-        public int getUserHeight() {
-            return userHeight;
-        }
-
-        public void setUserHeight(int userHeight) {
-            this.userHeight = userHeight;
-        }
-
-        public int getUserConstellation() {
-            return userConstellation;
-        }
-
-        public void setUserConstellation(int userConstellation) {
-            this.userConstellation = userConstellation;
+        public void setServiceAddress(String serviceAddress) {
+            this.serviceAddress = serviceAddress;
         }
 
         public int getStateIdent() {
@@ -152,6 +112,86 @@ public class UserDetailModel {
             this.transactionCount = transactionCount;
         }
 
+        public String getUserBackground() {
+            return userBackground;
+        }
+
+        public void setUserBackground(String userBackground) {
+            this.userBackground = userBackground;
+        }
+
+        public int getUserConstellation() {
+            return userConstellation;
+        }
+
+        public void setUserConstellation(int userConstellation) {
+            this.userConstellation = userConstellation;
+        }
+
+        public int getUserHeight() {
+            return userHeight;
+        }
+
+        public void setUserHeight(int userHeight) {
+            this.userHeight = userHeight;
+        }
+
+        public String getUserIcon() {
+            return userIcon;
+        }
+
+        public void setUserIcon(String userIcon) {
+            this.userIcon = userIcon;
+        }
+
+        public int getUserId() {
+            return userId;
+        }
+
+        public void setUserId(int userId) {
+            this.userId = userId;
+        }
+
+        public String getUserNick() {
+            return userNick;
+        }
+
+        public void setUserNick(String userNick) {
+            this.userNick = userNick;
+        }
+
+        public String getUserRemark() {
+            return userRemark;
+        }
+
+        public void setUserRemark(String userRemark) {
+            this.userRemark = userRemark;
+        }
+
+        public int getUserSex() {
+            return userSex;
+        }
+
+        public void setUserSex(int userSex) {
+            this.userSex = userSex;
+        }
+
+        public String getUserSign() {
+            return userSign;
+        }
+
+        public void setUserSign(String userSign) {
+            this.userSign = userSign;
+        }
+
+        public String getUserVocation() {
+            return userVocation;
+        }
+
+        public void setUserVocation(String userVocation) {
+            this.userVocation = userVocation;
+        }
+
         public List<SpacesBean> getSpaces() {
             return spaces;
         }
@@ -170,40 +210,43 @@ public class UserDetailModel {
 
         public static class SpacesBean {
             /**
-             * spaceId : 1
+             * comments : [{"commentContent":"","commentId":0,"commentUserId":0,"commentUserNick":"","modifyTime":"2017-09-04","spaceId":4,"userId":12}]
+             * goodCounts : 0
+             * goodNicks :
+             * modifyTime : 1504524527000
+             * orderId : 1
+             * orderPrice1 : 1
+             * orderSize : 1
+             * orderTitle : 1
+             * pictures : []
+             * spaceContent : 牛批牛批🐮
+             * spaceContentMin : 牛批牛批🐮
+             * spaceId : 4
+             * spacePicture1 : upload/user/img/20170904/aa631f6688254bf0bebf36778b1c67f2.png
+             * spacePicture2 : upload/user/img/20170904/0db1d49dda634e95aa7661c5e3e499ba.png
+             * spacePicture3 :
+             * spacePicture4 :
+             * spacePicture5 :
+             * spacePicture6 :
+             * spacePicture7 :
+             * spacePicture8 :
+             * spacePicture9 :
+             * spacePictureCount : 0
+             * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
              * userId : 12
              * userNick : cast.zhou
-             * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-             * spaceContent : 今天组了五人开黑团去岳麓山杀了三进三出，杀得人仰马翻，杀得口吐白沫，特发此文，聊表谢意，谢谢Cast.Zhou、MM、CC、Nice、COCO、豆豆的大力支持！
-             * spaceContentMin : 今天组了五人开黑团去岳麓山杀了三进三出...
-             * spacePictureCount : 1
-             * spacePicture1 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture2 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture3 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture4 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture5 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture6 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture7 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture8 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * spacePicture9 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
-             * pictures : []
-             * orderId : 2
-             * orderTitle : 岳麓山5人一日游，200块多不多不多！！！
-             * orderPrice1 : 200
-             * orderSize : 5
-             * modifyTime : 1503038831000
-             * comments : [{"commentId":1,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":2,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长****的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了","modifyTime":"2017-08-18"},{"commentId":3,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":4,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"},{"commentId":5,"spaceId":1,"userId":12,"commentUserId":12,"commentUserNick":"cast.zhou","commentContent":"**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好**的刚好","modifyTime":"2017-08-18"}]
-             * goodCounts : 3
-             * goodNicks : cast.zhou,趣玩-13,趣玩-14
              */
 
-            private int spaceId;
-            private int userId;
-            private String userNick;
-            private String userIcon;
+            private int goodCounts;
+            private String goodNicks;
+            private long modifyTime;
+            private int orderId;
+            private int orderPrice1;
+            private int orderSize;
+            private String orderTitle;
             private String spaceContent;
             private String spaceContentMin;
-            private int spacePictureCount;
+            private int spaceId;
             private String spacePicture1;
             private String spacePicture2;
             private String spacePicture3;
@@ -213,46 +256,67 @@ public class UserDetailModel {
             private String spacePicture7;
             private String spacePicture8;
             private String spacePicture9;
-            private int orderId;
-            private String orderTitle;
-            private int orderPrice1;
-            private int orderSize;
-            private long modifyTime;
-            private int goodCounts;
-            private String goodNicks;
-            private List<?> pictures;
+            private int spacePictureCount;
+            private String userIcon;
+            private int userId;
+            private String userNick;
             private List<CommentsBean> comments;
+            private List<?> pictures;
 
-            public int getSpaceId() {
-                return spaceId;
+            public int getGoodCounts() {
+                return goodCounts;
             }
 
-            public void setSpaceId(int spaceId) {
-                this.spaceId = spaceId;
+            public void setGoodCounts(int goodCounts) {
+                this.goodCounts = goodCounts;
             }
 
-            public int getUserId() {
-                return userId;
+            public String getGoodNicks() {
+                return goodNicks;
             }
 
-            public void setUserId(int userId) {
-                this.userId = userId;
+            public void setGoodNicks(String goodNicks) {
+                this.goodNicks = goodNicks;
             }
 
-            public String getUserNick() {
-                return userNick;
+            public long getModifyTime() {
+                return modifyTime;
             }
 
-            public void setUserNick(String userNick) {
-                this.userNick = userNick;
+            public void setModifyTime(long modifyTime) {
+                this.modifyTime = modifyTime;
             }
 
-            public String getUserIcon() {
-                return userIcon;
+            public int getOrderId() {
+                return orderId;
             }
 
-            public void setUserIcon(String userIcon) {
-                this.userIcon = userIcon;
+            public void setOrderId(int orderId) {
+                this.orderId = orderId;
+            }
+
+            public int getOrderPrice1() {
+                return orderPrice1;
+            }
+
+            public void setOrderPrice1(int orderPrice1) {
+                this.orderPrice1 = orderPrice1;
+            }
+
+            public int getOrderSize() {
+                return orderSize;
+            }
+
+            public void setOrderSize(int orderSize) {
+                this.orderSize = orderSize;
+            }
+
+            public String getOrderTitle() {
+                return orderTitle;
+            }
+
+            public void setOrderTitle(String orderTitle) {
+                this.orderTitle = orderTitle;
             }
 
             public String getSpaceContent() {
@@ -271,12 +335,12 @@ public class UserDetailModel {
                 this.spaceContentMin = spaceContentMin;
             }
 
-            public int getSpacePictureCount() {
-                return spacePictureCount;
+            public int getSpaceId() {
+                return spaceId;
             }
 
-            public void setSpacePictureCount(int spacePictureCount) {
-                this.spacePictureCount = spacePictureCount;
+            public void setSpaceId(int spaceId) {
+                this.spaceId = spaceId;
             }
 
             public String getSpacePicture1() {
@@ -351,68 +415,36 @@ public class UserDetailModel {
                 this.spacePicture9 = spacePicture9;
             }
 
-            public int getOrderId() {
-                return orderId;
+            public int getSpacePictureCount() {
+                return spacePictureCount;
             }
 
-            public void setOrderId(int orderId) {
-                this.orderId = orderId;
+            public void setSpacePictureCount(int spacePictureCount) {
+                this.spacePictureCount = spacePictureCount;
             }
 
-            public String getOrderTitle() {
-                return orderTitle;
+            public String getUserIcon() {
+                return userIcon;
             }
 
-            public void setOrderTitle(String orderTitle) {
-                this.orderTitle = orderTitle;
+            public void setUserIcon(String userIcon) {
+                this.userIcon = userIcon;
             }
 
-            public int getOrderPrice1() {
-                return orderPrice1;
+            public int getUserId() {
+                return userId;
             }
 
-            public void setOrderPrice1(int orderPrice1) {
-                this.orderPrice1 = orderPrice1;
+            public void setUserId(int userId) {
+                this.userId = userId;
             }
 
-            public int getOrderSize() {
-                return orderSize;
+            public String getUserNick() {
+                return userNick;
             }
 
-            public void setOrderSize(int orderSize) {
-                this.orderSize = orderSize;
-            }
-
-            public long getModifyTime() {
-                return modifyTime;
-            }
-
-            public void setModifyTime(long modifyTime) {
-                this.modifyTime = modifyTime;
-            }
-
-            public int getGoodCounts() {
-                return goodCounts;
-            }
-
-            public void setGoodCounts(int goodCounts) {
-                this.goodCounts = goodCounts;
-            }
-
-            public String getGoodNicks() {
-                return goodNicks;
-            }
-
-            public void setGoodNicks(String goodNicks) {
-                this.goodNicks = goodNicks;
-            }
-
-            public List<?> getPictures() {
-                return pictures;
-            }
-
-            public void setPictures(List<?> pictures) {
-                this.pictures = pictures;
+            public void setUserNick(String userNick) {
+                this.userNick = userNick;
             }
 
             public List<CommentsBean> getComments() {
@@ -423,24 +455,40 @@ public class UserDetailModel {
                 this.comments = comments;
             }
 
+            public List<?> getPictures() {
+                return pictures;
+            }
+
+            public void setPictures(List<?> pictures) {
+                this.pictures = pictures;
+            }
+
             public static class CommentsBean {
                 /**
-                 * commentId : 1
-                 * spaceId : 1
+                 * commentContent :
+                 * commentId : 0
+                 * commentUserId : 0
+                 * commentUserNick :
+                 * modifyTime : 2017-09-04
+                 * spaceId : 4
                  * userId : 12
-                 * commentUserId : 12
-                 * commentUserNick : cast.zhou
-                 * commentContent : **的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长**的太长了
-                 * modifyTime : 2017-08-18
                  */
 
+                private String commentContent;
                 private int commentId;
-                private int spaceId;
-                private int userId;
                 private int commentUserId;
                 private String commentUserNick;
-                private String commentContent;
                 private String modifyTime;
+                private int spaceId;
+                private int userId;
+
+                public String getCommentContent() {
+                    return commentContent;
+                }
+
+                public void setCommentContent(String commentContent) {
+                    this.commentContent = commentContent;
+                }
 
                 public int getCommentId() {
                     return commentId;
@@ -448,22 +496,6 @@ public class UserDetailModel {
 
                 public void setCommentId(int commentId) {
                     this.commentId = commentId;
-                }
-
-                public int getSpaceId() {
-                    return spaceId;
-                }
-
-                public void setSpaceId(int spaceId) {
-                    this.spaceId = spaceId;
-                }
-
-                public int getUserId() {
-                    return userId;
-                }
-
-                public void setUserId(int userId) {
-                    this.userId = userId;
                 }
 
                 public int getCommentUserId() {
@@ -482,14 +514,6 @@ public class UserDetailModel {
                     this.commentUserNick = commentUserNick;
                 }
 
-                public String getCommentContent() {
-                    return commentContent;
-                }
-
-                public void setCommentContent(String commentContent) {
-                    this.commentContent = commentContent;
-                }
-
                 public String getModifyTime() {
                     return modifyTime;
                 }
@@ -497,29 +521,53 @@ public class UserDetailModel {
                 public void setModifyTime(String modifyTime) {
                     this.modifyTime = modifyTime;
                 }
+
+                public int getSpaceId() {
+                    return spaceId;
+                }
+
+                public void setSpaceId(int spaceId) {
+                    this.spaceId = spaceId;
+                }
+
+                public int getUserId() {
+                    return userId;
+                }
+
+                public void setUserId(int userId) {
+                    this.userId = userId;
+                }
             }
         }
 
         public static class TogethersBean {
             /**
-             * orderId : null
-             * orderTitle : null
-             * orderPicture1 : null
-             * orderSize : 0
-             * orderPrice1 : 0
-             * orderPrice0 : 0
-             * avgMark : 0
-             * orderTransactionCount : 0
+             * avgMark : 4.3
+             * orderId : 1
+             * orderPicture1 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
+             * orderPrice0 : 500
+             * orderPrice1 : 300
+             * orderSize : 5
+             * orderTitle : 【2017年8月15日-五人团】岳麓山两日游
+             * orderTransactionCount : 14
              */
 
+            private double avgMark;
             private String orderId;
-            private String orderTitle;
             private String orderPicture1;
-            private int orderSize;
-            private int orderPrice1;
             private int orderPrice0;
-            private int avgMark;
+            private int orderPrice1;
+            private int orderSize;
+            private String orderTitle;
             private int orderTransactionCount;
+
+            public double getAvgMark() {
+                return avgMark;
+            }
+
+            public void setAvgMark(double avgMark) {
+                this.avgMark = avgMark;
+            }
 
             public String getOrderId() {
                 return orderId;
@@ -527,14 +575,6 @@ public class UserDetailModel {
 
             public void setOrderId(String orderId) {
                 this.orderId = orderId;
-            }
-
-            public String getOrderTitle() {
-                return orderTitle;
-            }
-
-            public void setOrderTitle(String orderTitle) {
-                this.orderTitle = orderTitle;
             }
 
             public String getOrderPicture1() {
@@ -545,12 +585,12 @@ public class UserDetailModel {
                 this.orderPicture1 = orderPicture1;
             }
 
-            public int getOrderSize() {
-                return orderSize;
+            public int getOrderPrice0() {
+                return orderPrice0;
             }
 
-            public void setOrderSize(int orderSize) {
-                this.orderSize = orderSize;
+            public void setOrderPrice0(int orderPrice0) {
+                this.orderPrice0 = orderPrice0;
             }
 
             public int getOrderPrice1() {
@@ -561,20 +601,20 @@ public class UserDetailModel {
                 this.orderPrice1 = orderPrice1;
             }
 
-            public int getOrderPrice0() {
-                return orderPrice0;
+            public int getOrderSize() {
+                return orderSize;
             }
 
-            public void setOrderPrice0(int orderPrice0) {
-                this.orderPrice0 = orderPrice0;
+            public void setOrderSize(int orderSize) {
+                this.orderSize = orderSize;
             }
 
-            public int getAvgMark() {
-                return avgMark;
+            public String getOrderTitle() {
+                return orderTitle;
             }
 
-            public void setAvgMark(int avgMark) {
-                this.avgMark = avgMark;
+            public void setOrderTitle(String orderTitle) {
+                this.orderTitle = orderTitle;
             }
 
             public int getOrderTransactionCount() {

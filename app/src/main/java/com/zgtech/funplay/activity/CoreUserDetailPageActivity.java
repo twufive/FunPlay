@@ -213,8 +213,6 @@ public class CoreUserDetailPageActivity extends BaseActivity {
                 default:
                     return taStoryFragment == null ? TaStoryFragment.newInstance() : taStoryFragment;
             }
-
-
         }
 
     }

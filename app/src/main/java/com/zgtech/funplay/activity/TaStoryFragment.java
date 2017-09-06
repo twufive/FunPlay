@@ -2,20 +2,26 @@ package com.zgtech.funplay.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.adapter.PinTuanAllAdapter;
+import com.zgtech.funplay.adapter.TaStoryAdapter;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.model.PinTuanAllModel;
+import com.zgtech.funplay.model.UserDetailModel;
+import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * TA的故事，fragment
@@ -26,8 +32,8 @@ public class TaStoryFragment extends BaseFragment {
     @Bind(R.id.recyclerview)
     RecyclerView recyclerview;
 
-    private PinTuanAllAdapter adapter;
-    private ArrayList<PinTuanAllModel> originList;
+    private TaStoryAdapter adapter;
+    private List<UserDetailModel.ObjBean.SpacesBean> originList = new ArrayList<>();
 
     @Nullable
     @Override
@@ -51,40 +57,42 @@ public class TaStoryFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
 
-
-//        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
-//        recyclerview.setLayoutManager(linearLayoutManager);
-//        recyclerview.setAdapter(adapter);
     }
+
 
     @Override
     protected void initData() {
-        originList = new ArrayList<PinTuanAllModel>();
+        mApiStores.getUserDetailData("12").enqueue(new Callback<UserDetailModel>() {
+            @Override
+            public void onResponse(Call<UserDetailModel> call, Response<UserDetailModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
 
-        PinTuanAllModel pinTuanAllModel = new PinTuanAllModel();
-        pinTuanAllModel.setSiteUrl("http://img1.imgtn.bdimg.com/it/u=3703540791,4182251432&fm=26&gp=0.jpg");
-        pinTuanAllModel.setState("已完成");
-        pinTuanAllModel.setPrice("90");
-        pinTuanAllModel.setTime("2017-08-16 19:37");
-        pinTuanAllModel.setTitle("桃花仑三日游");
+            private void handleServerData(UserDetailModel model) {
+                originList = model.getObj().getSpaces();
+                initTaStory(originList);
+            }
 
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
-        originList.add(pinTuanAllModel);
+            @Override
+            public void onFailure(Call<UserDetailModel> call, Throwable t) {
+                T.showShort(t.toString());
+            }
+        });
+    }
+
+    private void initTaStory(List<UserDetailModel.ObjBean.SpacesBean> originList) {
+        adapter = new TaStoryAdapter(mActivity, R.layout.fp_item_social_main, originList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
+        recyclerview.setLayoutManager(linearLayoutManager);
+        recyclerview.setAdapter(adapter);
     }
 
     public static TaStoryFragment newInstance() {
