@@ -2,6 +2,7 @@ package com.zgtech.funplay.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,10 +12,19 @@ import android.widget.TextView;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.retrofit.RequestBodyBuilder;
+import com.zgtech.funplay.utils.T;
+
+import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * 注册第二页面
@@ -70,7 +80,54 @@ public class RegistBActivity extends BaseActivity {
                 break;
             case R.id.btn_next:
                 toNextActivity(RegistCActivity.class);
+//                doModify();
                 break;
+        }
+    }
+
+    private void doModify() {
+        String nick = etNick.getText().toString();
+        String wxUser = etWxUser.getText().toString();
+        String vocation = etVocation.getText().toString();
+
+        if (TextUtils.isEmpty(nick)) {
+            T.showShort("请填写您的昵称");
+        } else if (TextUtils.isEmpty(wxUser)) {
+            T.showShort("请填写您的微信账号");
+        } else if (TextUtils.isEmpty(vocation)) {
+            T.showShort("请填写您的职业");
+        } else {
+
+            HashMap map = new HashMap();
+            map.put("userRegisterProgress", "0");
+            map.put("userNick", nick);
+//                    map.put("userNick", nick);
+            map.put("userVocation", nick);
+            RequestBody body = RequestBodyBuilder.build(map);
+
+            mApiStores.modifyPersonal(body).enqueue(new Callback<BaseResultModel>() {
+                @Override
+                public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                    if (response.isSuccessful()) {
+                        if (response.body().getCode() == 2) {
+                            handleServerData(response.body());
+                        } else {
+                            T.showShort(response.body().getMsg());
+                        }
+                    } else {
+                        T.showShort(response.toString());
+                    }
+                }
+
+                private void handleServerData(BaseResultModel model) {
+                    toNextActivity(RegistCActivity.class);
+                }
+
+                @Override
+                public void onFailure(Call<BaseResultModel> call, Throwable t) {
+                    T.showShort(t.toString());
+                }
+            });
         }
     }
 

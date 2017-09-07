@@ -90,34 +90,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        HashMap map = new HashMap();
-        map.put("userPhone", "15073001217");
-        map.put("userPwd", "123456");
-        RequestBody body = RequestBodyBuilder.build(map);
 
-        mApiStores.doLogin(body).enqueue(new Callback<LoginModel>() {
-            @Override
-            public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-                if (response.isSuccessful()) {
-                    if (response.body().getCode() == 2) {
-                        handleServerData(response.body());
-                    } else {
-                        T.showShort(response.body().getMsg());
-                    }
-                } else {
-                    T.showShort(response.toString());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LoginModel> call, Throwable t) {
-
-            }
-        });
-    }
-
-    private void handleServerData(LoginModel model) {
-        L.i("loginInfo", model.toString());
     }
 
 

@@ -21,7 +21,6 @@ import butterknife.OnClick;
  */
 
 public class LoginSMSActivity extends BaseActivity {
-
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)

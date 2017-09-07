@@ -121,7 +121,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="泰国留学生/向导翻译/地接"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -154,7 +154,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="女"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -187,7 +187,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="165cm"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -221,7 +221,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="巨蟹座"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -255,7 +255,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="云南，桂林，北京"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -288,7 +288,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
                                 android:layout_marginLeft="8dp"
-                                android:text="向导/翻译/定制行程/吃货"
+                                android:text=""
                                 android:textColor="@color/little_black"
                                 android:textSize="14sp" />
 
@@ -304,7 +304,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@color/little_gray"
                         android:padding="12dp"
-                        android:text="我在泰国，时差一小时，艳阳高照，熟悉当地文化及各大著名景点各大夜市各酒吧特色泰式小吃，全程陪游翻译，可根据个人喜好，为您定制一次轻松舒适的泰国行。"
+                        android:text=""
                         android:textColor="@color/little_black"
                         android:textSize="12sp" />
 
@@ -382,7 +382,7 @@
                         android:text="城市"
                         android:textColor="@color/white"
                         android:textSize="14sp"
-                        android:visibility="visible" />
+                        android:visibility="gone" />
 
                 </RelativeLayout>
 

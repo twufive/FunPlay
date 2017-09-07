@@ -49,10 +49,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_title"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
                     android:hint="请输入拼团标题"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -91,10 +93,13 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_size"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
+                    android:inputType="number"
                     android:hint="请输入拼团人数"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -133,17 +138,19 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_price_new"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:inputType="number"
+                    android:gravity="top"
                     android:hint="请输入拼团价格"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
                     android:textSize="13sp" />
 
             </LinearLayout>
-
 
 
             <LinearLayout
@@ -176,10 +183,13 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_price_old"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
+                    android:inputType="number"
                     android:hint="请输入拼团折扣价"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -218,10 +228,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_order_trip"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
                     android:hint="请输入拼团路线安排"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -259,10 +271,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_order_remark"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
                     android:hint="请输入拼团费用说明"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -301,10 +315,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_order_attention"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
                     android:hint="请输入拼团注意事项"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -342,10 +358,12 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_order_contact"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
                     android:hint="请输入拼团联系人"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -383,10 +401,13 @@
                 android:orientation="vertical">
 
                 <EditText
+                    android:id="@+id/et_order_phone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="8dp"
                     android:background="@null"
+                    android:gravity="top"
+                    android:inputType="number"
                     android:hint="请输入拼团联系方式"
                     android:textColor="@color/black"
                     android:textColorHint="@color/gray"
@@ -419,19 +440,41 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="50dp"
                 android:background="@drawable/bg_corners_theme_white"
                 android:orientation="vertical">
 
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@null"
-                    android:hint="请输入拼团主图，最多九张，最大2M"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray"
-                    android:textSize="13sp" />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传照片:"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <GridView
+                        android:id="@+id/gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:horizontalSpacing="8dp"
+                        android:maxWidth="280dp"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:numColumns="3"
+                        android:padding="5dp"
+                        android:verticalSpacing="8dp" />
+                </LinearLayout>
 
             </LinearLayout>
 

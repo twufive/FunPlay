@@ -10,6 +10,7 @@ import com.zgtech.funplay.model.OrderDetailModel;
 import com.zgtech.funplay.model.PinTuanTogetherModel;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
+import com.zgtech.funplay.model.RegistCodeModel;
 import com.zgtech.funplay.model.UpImgsModel;
 import com.zgtech.funplay.model.UserDetailModel;
 
@@ -48,8 +49,17 @@ public interface ApiStores {
     @POST("user/login")
     Call<LoginModel> doLogin(@Body RequestBody requestBody);//登录
 
+    @GET("user/getRegisterVerifyCode")
+    Call<RegistCodeModel> getRegisterVerifyCode(@Query("mobilPhone") String mobilPhone);//获取未注册时验证码
 
+    @POST("user/add")
+    Call<BaseResultModel> doRegist(@Body RequestBody requestBody);//注册
 
+    @POST("user/modifyPwd")
+    Call<BaseResultModel> modifyPwd(@Body RequestBody requestBody);//修改密码
+
+    @POST("user/edit")
+    Call<BaseResultModel> modifyPersonal(@Body RequestBody requestBody);//修改个人信息
 
     /***首页模块*/
     @GET("order/queryRecommend")
@@ -85,6 +95,8 @@ public interface ApiStores {
     @GET("order/query")
     Call<OrderDetailModel> getOrderDetailData(@Query("orderId") String orderId);//获取某个订单的详情
 
+    @POST("order/add")
+    Call<BaseResultModel> pushNewOrder(@Body RequestBody requestBody);//发布新的拼团订单
 
 
     /***旅游圈模块*/
@@ -93,6 +105,7 @@ public interface ApiStores {
 
     @POST("user/space/add")
     Call<BaseResultModel> pushTalk(@Body RequestBody requestBody);//发布个人说说旅游圈
+
 
 
 

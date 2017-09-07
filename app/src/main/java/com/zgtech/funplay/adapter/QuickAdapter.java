@@ -19,6 +19,8 @@ import com.zgtech.funplay.utils.FunPlayUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 /**
  * 测试适配器
  * Created by Administrator on 2017/6/14.
@@ -35,7 +37,7 @@ public class QuickAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, Base
 
     @Override
     protected void convert(BaseViewHolder helper, FriendTalkData.ListBean individualModel) {
-        ImageView ivAvatar = helper.getView(R.id.iv_avatar);
+        CircleImageView ivAvatar = helper.getView(R.id.iv_avatar);
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvContent = helper.getView(R.id.tv_content);
         TextView tvTime = helper.getView(R.id.tv_time);

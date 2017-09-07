@@ -47,12 +47,12 @@ public class TaStoryAdapter extends BaseQuickAdapter<UserDetailModel.ObjBean.Spa
         tvTime.setText(FunPlayUtils.long2str(individualModel.getModifyTime()));
 
         List<String> imgUrlList = new ArrayList<>();
-//        List<String> originPics = individualModel.getPictures();
-//        for (String singleImgUrl : originPics) {
-//            imgUrlList.add(ApiStores.API_SERVER_URL + singleImgUrl);
-//        }
-//
-//        initImgsUI(helper, individualModel, imgUrlList);
+        List<String> originPics = individualModel.getPictures();
+        for (String singleImgUrl : originPics) {
+            imgUrlList.add(ApiStores.API_SERVER_URL + singleImgUrl);
+        }
+
+        initImgsUI(helper, individualModel, imgUrlList);
     }
 
 

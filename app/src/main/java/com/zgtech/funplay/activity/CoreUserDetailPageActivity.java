@@ -18,6 +18,7 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.model.UserDetailModel;
+import com.zgtech.funplay.utils.FunPlayUtils;
 import com.zgtech.funplay.utils.T;
 
 import butterknife.Bind;
@@ -129,15 +130,15 @@ public class CoreUserDetailPageActivity extends BaseActivity {
 
     private void initElementView(UserDetailModel.ObjBean individualModel) {
         tvName.setText(individualModel.getUserNick() + "");
-        tvCertify.setText(individualModel.getStateIdent() + "");
+        tvCertify.setText(individualModel.getStateIdent() == 0 ? "未认证" : "已认证");
         tvDealCount.setText("成交" + individualModel.getTransactionCount() + "" + "笔");
         tvJob.setText(individualModel.getStateIdentJob() + "");
-        tvSex.setText(individualModel.getUserSex() + "");
-        tvHeight.setText(individualModel.getUserHeight() + "");
-        tvConstellation.setText(individualModel.getUserConstellation() + "");
-        tvServiceSite.setText("未知");
-        tvSign.setText("暂未填写");
-        tvIntroduce.setText("暂未填写");
+        tvSex.setText(individualModel.getUserSex() == 1 ? "男" : "女");
+        tvHeight.setText(individualModel.getUserHeight() + "cm");
+        tvConstellation.setText(FunPlayUtils.code2StrConstellation(individualModel.getUserConstellation()));
+        tvServiceSite.setText(individualModel.getServiceAddress());
+        tvSign.setText(individualModel.getUserSign());
+        tvIntroduce.setText(individualModel.getUserRemark());
     }
 
 
