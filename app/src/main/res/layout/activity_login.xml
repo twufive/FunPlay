@@ -105,9 +105,10 @@
         android:id="@+id/rl_other"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:layout_alignLeft="@+id/rl_to_mobile_login"
+        android:layout_alignStart="@+id/rl_to_mobile_login">
 
         <TextView
             android:id="@+id/tv_to_register"
@@ -136,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rl_other"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="15dp">
 
 
         <TextView

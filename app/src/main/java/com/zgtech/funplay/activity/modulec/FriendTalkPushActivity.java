@@ -84,10 +84,10 @@ public class FriendTalkPushActivity extends BaseActivity {
     private static final String TAG = "Gallery";
     private GalleryConfig galleryConfig;
     private List<String> path = new ArrayList<>();//照片存放路径
-
-    private ImageAdapter imageAdapter;
     private ProgressDialog dialog;
     private ArrayList<String> originPhotoList = new ArrayList<>();
+
+    private ImageAdapter imageAdapter;
     private String exclusiveId;
     private String talkContent;
     private HashMap<Object, Object> originMap = new HashMap<>();

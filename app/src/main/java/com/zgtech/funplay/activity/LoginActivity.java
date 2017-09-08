@@ -74,7 +74,7 @@ public class LoginActivity extends BaseActivity {
                 doRegax();
                 break;
             case R.id.tv_forget_pwd:
-                toNextActivity(ForgetPwdActivity.class);
+                toNextActivity(LoginForgetPwdActivity.class);
                 break;
             case R.id.rl_to_mobile_login:
                 toNextActivity(LoginSMSActivity.class);
@@ -127,7 +127,7 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-
+                T.showShort(t.toString());
             }
         });
     }

@@ -52,6 +52,10 @@ public interface ApiStores {
     @GET("user/getRegisterVerifyCode")
     Call<RegistCodeModel> getRegisterVerifyCode(@Query("mobilPhone") String mobilPhone);//获取未注册时验证码
 
+    @GET("user/getVerifyCode")
+    Call<RegistCodeModel> getVerifyCode(@Query("mobilPhone") String mobilPhone);//获取已注册时验证码
+
+
     @POST("user/add")
     Call<BaseResultModel> doRegist(@Body RequestBody requestBody);//注册
 
@@ -60,6 +64,8 @@ public interface ApiStores {
 
     @POST("user/edit")
     Call<BaseResultModel> modifyPersonal(@Body RequestBody requestBody);//修改个人信息
+
+
 
     /***首页模块*/
     @GET("order/queryRecommend")
