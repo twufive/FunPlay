@@ -2,7 +2,9 @@ package com.zgtech.funplay.retrofit;
 
 import com.zgtech.funplay.model.BaseResultModel;
 import com.zgtech.funplay.model.FriendTalkData;
-import com.zgtech.funplay.model.LoginModel;
+import com.zgtech.funplay.model.LoginBackUserModel;
+import com.zgtech.funplay.model.MineExternalModel;
+import com.zgtech.funplay.model.MyInfoModel;
 import com.zgtech.funplay.model.MyOrderModel;
 import com.zgtech.funplay.model.MyPinTuanModel;
 import com.zgtech.funplay.model.NearbyData;
@@ -39,6 +41,7 @@ public interface ApiStores {
 
 
 
+
     /***通用模块*/
     @Multipart
     @POST("user/upimgs")
@@ -47,7 +50,7 @@ public interface ApiStores {
 
     /***登录注册模块*/
     @POST("user/login")
-    Call<LoginModel> doLogin(@Body RequestBody requestBody);//登录
+    Call<LoginBackUserModel> doLogin(@Body RequestBody requestBody);//登录
 
     @GET("user/getRegisterVerifyCode")
     Call<RegistCodeModel> getRegisterVerifyCode(@Query("mobilPhone") String mobilPhone);//获取未注册时验证码
@@ -59,8 +62,7 @@ public interface ApiStores {
     @POST("user/add")
     Call<BaseResultModel> doRegist(@Body RequestBody requestBody);//注册
 
-    @POST("user/modifyPwd")
-    Call<BaseResultModel> modifyPwd(@Body RequestBody requestBody);//修改密码
+
 
     @POST("user/edit")
     Call<BaseResultModel> modifyPersonal(@Body RequestBody requestBody);//修改个人信息
@@ -116,11 +118,30 @@ public interface ApiStores {
 
 
     /***个人中心模块*/
+    @GET("user/info")
+    Call<MyInfoModel> getMyInfoData();//获取我的个人信息
+
+
+    @GET("user/space/queryUserSpace")
+    Call<MineExternalModel> getMyExternalInfoData(@Query("isMe") String isMe, @Query("userKey") String userKey);//获取我的外部个人信息
+
     @GET("order/queryMeBuy")
     Call<MyOrderModel> getMyOrderData(@Query("cursor") String cursor, @Query("more") String more);//查询我的订单
 
     @GET("order/queryMe")
     Call<MyPinTuanModel> getMyPinTuanData(@Query("cursor") String cursor, @Query("more") String more);//查询我的拼团
 
+    @POST("report/addReport")
+    Call<BaseResultModel> pushReport(@Body RequestBody requestBody);//发出举报内容
+
+    @POST("user/modifyPwd")
+    Call<BaseResultModel> modifyPwd(@Body RequestBody requestBody);//修改密码
+
+    @POST("user/loginOut")
+    Call<BaseResultModel> logout(@Body RequestBody requestBody);//退出登录
+
+
+    @POST("identity/apply")
+    Call<BaseResultModel> doCertify(@Body RequestBody requestBody);//申请认证实名
 
 }

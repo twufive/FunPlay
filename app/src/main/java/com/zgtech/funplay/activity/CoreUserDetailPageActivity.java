@@ -1,5 +1,6 @@
 package com.zgtech.funplay.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,8 +19,14 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.greendao.gen.DaoMaster;
+import com.zgtech.funplay.greendao.gen.DaoSession;
+import com.zgtech.funplay.greendao.gen.HxUserModelDao;
+import com.zgtech.funplay.model.HxUserModel;
 import com.zgtech.funplay.model.UserDetailModel;
+import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.utils.FunPlayUtils;
+import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.T;
 
 import butterknife.Bind;
@@ -68,12 +76,17 @@ public class CoreUserDetailPageActivity extends BaseActivity {
     TextView tvRight;
     @Bind(R.id.fl_send_msg)
     FrameLayout flSendMsg;
+    @Bind(R.id.btn_send_msg)
+    Button btnSendMsg;
 
     private MyPagerAdapter adapter;
     private TaStoryFragment taStoryFragment;
     private TaPinTuanFragment taPinTuanFragment;
     private String userId = "";
     private boolean isMyself = false;
+    private UserDetailModel.ObjBean individualModel;
+
+    private DaoMaster.DevOpenHelper devOpenHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -117,8 +130,20 @@ public class CoreUserDetailPageActivity extends BaseActivity {
             }
 
             private void handleServerData(UserDetailModel model) {
-                UserDetailModel.ObjBean individualModel = model.getObj();
+                individualModel = model.getObj();
                 initElementView(individualModel);
+
+                devOpenHelper = new DaoMaster.DevOpenHelper(CoreUserDetailPageActivity.this, "zayin.db", null);
+                DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDb());
+                DaoSession daoSession = daoMaster.newSession();
+                HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();
+
+                HxUserModel hxUserModel = new HxUserModel();
+                hxUserModel.setImUser(individualModel.getImUser());
+                hxUserModel.setUserId(individualModel.getUserId() + "");
+                hxUserModel.setHxNickname(individualModel.getUserNick());
+                hxUserModel.setHxAvatar(ApiStores.API_SERVER_URL + individualModel.getUserIcon());
+                hxUserModelDao.insertOrReplace(hxUserModel);
             }
 
             @Override
@@ -172,7 +197,7 @@ public class CoreUserDetailPageActivity extends BaseActivity {
         });
     }
 
-    @OnClick({R.id.ll_back, R.id.tv_right, R.id.fl_send_msg})
+    @OnClick({R.id.ll_back, R.id.tv_right, R.id.btn_send_msg})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
@@ -180,7 +205,12 @@ public class CoreUserDetailPageActivity extends BaseActivity {
                 break;
             case R.id.tv_right:
                 break;
-            case R.id.fl_send_msg:
+            case R.id.btn_send_msg:
+                L.i("btn_send_msg_imUser", "ec13742d26");
+
+                Intent intent = new Intent(CoreUserDetailPageActivity.this, ChatActivity.class);
+                intent.putExtra("imUser", "6c01daea76");
+                startActivity(intent);
                 break;
         }
     }

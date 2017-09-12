@@ -12,6 +12,7 @@ import com.zgtech.funplay.utils.ActivityCollectorUtils;
 import com.zgtech.funplay.utils.L;
 
 /**
+ * 基类Activity
  * Created by Administrator on 2017/8/2.
  */
 

@@ -41,7 +41,6 @@ public class RetrofitUtil {
         Context context = FunPlayApplication.getContext();
         androidToken = SPUtils.getString(context, "androidToken", "");
 
-        androidToken = "1234567899";
         //缓存机制
         final File chachefile = new File(FunPlayApplication.getContext().getExternalCacheDir(), "HttpCache");
         final Cache cache = new Cache(chachefile, 1024 * 1024 * 50);//缓存文件

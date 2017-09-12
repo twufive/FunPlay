@@ -13,8 +13,19 @@ public class FunPlayUtils {
     /**
      * 将long值转换成时间的字符串值
      * */
-    public static String long2str(long time) {
+    public static String long2strTime(long time) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        java.util.Date dt = new Date(time);
+        String sDateTime = sdf.format(dt);
+
+        return sDateTime;
+    }
+
+    /**
+     * 将long值转换成时间的字符串值
+     * */
+    public static String long2strTimeShort(long time) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date dt = new Date(time);
         String sDateTime = sdf.format(dt);
 
@@ -48,49 +59,49 @@ public class FunPlayUtils {
      * 将星座的状态码转换成对应的星座字符串
      * */
     public static String code2StrConstellation(int constellationCode) {
-        String str = "";
+        String strConstellation = "";
         switch (constellationCode){
             case 0:
-                str = "未填写";
+                strConstellation = "未填写";
                 break;
             case 1:
-                str = "白羊座";
+                strConstellation = "白羊座";
                 break;
             case 2:
-                str = "金牛座";
+                strConstellation = "金牛座";
                 break;
             case 3:
-                str = "双子座";
+                strConstellation = "双子座";
                 break;
             case 4:
-                str = "巨蟹座";
+                strConstellation = "巨蟹座";
                 break;
             case 5:
-                str = "狮子座";
+                strConstellation = "狮子座";
                 break;
             case 6:
-                str = "处女座";
+                strConstellation = "处女座";
                 break;
             case 7:
-                str = "天秤座";
+                strConstellation = "天秤座";
                 break;
             case 8:
-                str = "天蝎座";
+                strConstellation = "天蝎座";
                 break;
             case 9:
-                str = "射手座";
+                strConstellation = "射手座";
                 break;
             case 10:
-                str = "摩羯座";
+                strConstellation = "摩羯座";
                 break;
             case 11:
-                str = "水瓶座";
+                strConstellation = "水瓶座";
                 break;
             case 12:
-                str = "双鱼座";
+                strConstellation = "双鱼座";
                 break;
         }
-        return str;
+        return strConstellation;
     }
 
 

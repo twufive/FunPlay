@@ -33,20 +33,11 @@ import com.zgtech.funplay.fragment.FindFragment;
 import com.zgtech.funplay.fragment.HomeFragment;
 import com.zgtech.funplay.fragment.MessageFragment;
 import com.zgtech.funplay.fragment.MineFragment;
-import com.zgtech.funplay.model.LoginModel;
-import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.T;
-
-import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import okhttp3.RequestBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 import static com.zgtech.funplay.FunPlayApplication.mContext;
 

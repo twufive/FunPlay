@@ -21,8 +21,8 @@ public class RequestBodyBuilder {
     public static RequestBody build(HashMap<Object, Object> map) {
         Context context = FunPlayApplication.getContext();
         String androidToken = SPUtils.getString(context, "androidToken", "");
-//        map.put("androidToken", androidToken);
-        map.put("androidToken","1234567899");
+
+        map.put("androidToken",androidToken);
 
         Gson gson = new Gson();
         String toJson = gson.toJson(map);

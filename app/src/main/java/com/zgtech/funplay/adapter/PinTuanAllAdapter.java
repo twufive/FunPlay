@@ -46,7 +46,7 @@ public class PinTuanAllAdapter extends BaseQuickAdapter<MyOrderModel.ObjBean, Ba
                 .into(ivSite);
 
         long time = individualModel.getModifyTime();
-        String strTime = FunPlayUtils.long2str(time);
+        String strTime = FunPlayUtils.long2strTime(time);
         tvTime.setText("下单时间:" + strTime);
 
         int stateCode = individualModel.getState();

@@ -46,7 +46,7 @@ public class QuickAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, Base
         initAvatar(ivAvatar, ApiStores.API_SERVER_URL + individualModel.getUserIcon());
         tvTitle.setText(individualModel.getUserNick());
         tvContent.setText(individualModel.getSpaceContent());
-        tvTime.setText(FunPlayUtils.long2str(individualModel.getModifyTime()));
+        tvTime.setText(FunPlayUtils.long2strTime(individualModel.getModifyTime()));
 
         List<String> imgUrlList = new ArrayList<>();
         List<String> originPics = individualModel.getPictures();

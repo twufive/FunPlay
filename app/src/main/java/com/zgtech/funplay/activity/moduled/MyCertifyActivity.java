@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.utils.SPUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -37,12 +38,18 @@ public class MyCertifyActivity extends BaseActivity {
     TextView tvCertifyProfession;
     @Bind(R.id.card_profession)
     CardView cardProfession;
+    private String stateIdent;
+    private String stateIdentJob;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_certify);
         ButterKnife.bind(this);
+
+        stateIdent = SPUtils.getString(this, "stateIdent", "");
+        stateIdentJob = SPUtils.getString(this, "stateIdentJob", "");
+
         initData();
         initView();
     }
@@ -51,6 +58,9 @@ public class MyCertifyActivity extends BaseActivity {
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
         tvToolbar.setText("个人认证");
+
+        tvCertifyIdcard.setText(stateIdent);
+        tvCertifyProfession.setText(stateIdentJob);
     }
 
     @Override
@@ -58,7 +68,7 @@ public class MyCertifyActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.ll_back, R.id.tv_toolbar,R.id.ll_card,R.id.card_profession})
+    @OnClick({R.id.ll_back, R.id.tv_toolbar, R.id.ll_card, R.id.card_profession})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
@@ -67,8 +77,14 @@ public class MyCertifyActivity extends BaseActivity {
             case R.id.tv_toolbar:
                 break;
             case R.id.ll_card:
+                if (stateIdent.equals("未认证")) {
+                    toNextActivity(CertifyIDActivity.class);
+                }
                 break;
             case R.id.card_profession:
+                if (stateIdentJob.equals("未认证")) {
+                    toNextActivity(CertifyVocationActivity.class);
+                }
                 break;
         }
     }

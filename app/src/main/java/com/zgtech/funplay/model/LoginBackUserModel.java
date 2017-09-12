@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Administrator on 2017/8/28.
  */
 
-public class LoginModel {
+public class LoginBackUserModel {
 
     /**
      * code : 2
@@ -705,7 +705,7 @@ public class LoginModel {
 
     @Override
     public String toString() {
-        return "LoginModel{" +
+        return "LoginBackUserModel{" +
                 "code=" + code +
                 ", msg='" + msg + '\'' +
                 ", obj=" + obj +

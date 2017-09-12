@@ -81,6 +81,16 @@ public class UserDetailModel {
         private List<SpacesBean> spaces;
         private List<TogethersBean> togethers;
 
+        private String imUser;
+
+        public String getImUser() {
+            return imUser;
+        }
+
+        public void setImUser(String imUser) {
+            this.imUser = imUser;
+        }
+
         public String getServiceAddress() {
             return serviceAddress;
         }
