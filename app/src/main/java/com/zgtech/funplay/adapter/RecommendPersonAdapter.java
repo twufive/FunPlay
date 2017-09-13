@@ -14,7 +14,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CorePinTuanDetailActivity;
+import com.zgtech.funplay.activity.CoreOrderDetailActivity;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 
@@ -60,7 +60,7 @@ public class RecommendPersonAdapter extends BaseQuickAdapter<RecommendModel.ObjB
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, CorePinTuanDetailActivity.class);
+                Intent intent = new Intent(act, CoreOrderDetailActivity.class);
                 intent.putExtra("orderId", individualModel.getOrderId() + "");
                 act.startActivity(intent);
             }

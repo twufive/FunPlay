@@ -26,7 +26,6 @@ import com.zgtech.funplay.model.HxUserModel;
 import com.zgtech.funplay.model.UserDetailModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.utils.FunPlayUtils;
-import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.T;
 
 import butterknife.Bind;
@@ -87,6 +86,7 @@ public class CoreUserDetailPageActivity extends BaseActivity {
     private UserDetailModel.ObjBean individualModel;
 
     private DaoMaster.DevOpenHelper devOpenHelper;
+    private String imUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -95,7 +95,7 @@ public class CoreUserDetailPageActivity extends BaseActivity {
         ButterKnife.bind(this);
 
 
-        userId = getIntent().getExtras().getString("userId", "12");
+        userId = getIntent().getExtras().getString("userId", "");
         isMyself = getIntent().getBooleanExtra("isMyself", false);
         initData();
         initView();
@@ -154,6 +154,8 @@ public class CoreUserDetailPageActivity extends BaseActivity {
     }
 
     private void initElementView(UserDetailModel.ObjBean individualModel) {
+        imUser = individualModel.getImUser();
+
         tvName.setText(individualModel.getUserNick() + "");
         tvCertify.setText(individualModel.getStateIdent() == 0 ? "未认证" : "已认证");
         tvDealCount.setText("成交" + individualModel.getTransactionCount() + "" + "笔");
@@ -206,10 +208,8 @@ public class CoreUserDetailPageActivity extends BaseActivity {
             case R.id.tv_right:
                 break;
             case R.id.btn_send_msg:
-                L.i("btn_send_msg_imUser", "ec13742d26");
-
                 Intent intent = new Intent(CoreUserDetailPageActivity.this, ChatActivity.class);
-                intent.putExtra("imUser", "6c01daea76");
+                intent.putExtra("imUser", imUser);
                 startActivity(intent);
                 break;
         }

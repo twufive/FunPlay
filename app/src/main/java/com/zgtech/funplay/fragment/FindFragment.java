@@ -27,7 +27,7 @@ import com.yancy.gallerypick.inter.IHandlerCallBack;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.modulec.FriendTalkPushActivity;
-import com.zgtech.funplay.adapter.QuickAdapter;
+import com.zgtech.funplay.adapter.FindAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.global.GlideImageLoader;
 import com.zgtech.funplay.model.FriendTalkData;
@@ -64,7 +64,7 @@ public class FindFragment extends BaseFragment {
     private ArrayList<String> path = new ArrayList<>();//照片存放路径
 
     private List<FriendTalkData.ListBean> originList = new ArrayList<>();
-    private QuickAdapter quickAdapter;
+    private FindAdapter FindAdapter;
 
 
 
@@ -98,9 +98,9 @@ public class FindFragment extends BaseFragment {
     }
 
     private void initFriendTalks(List<FriendTalkData.ListBean> originList) {
-        quickAdapter = new QuickAdapter(getActivity(), R.layout.fp_item_social_main, originList);
+        FindAdapter = new FindAdapter(getActivity(), R.layout.fp_item_social_main, originList);
         recyclerview.setLayoutManager(new LinearLayoutManager(FunPlayApplication.getContext(), LinearLayoutManager.VERTICAL, false));
-        recyclerview.setAdapter(quickAdapter);
+        recyclerview.setAdapter(FindAdapter);
     }
 
     private void initStausBar() {

@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.adapter.PinTuanAllAdapter;
+import com.zgtech.funplay.adapter.MyOrderAllAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.MyOrderModel;
 import com.zgtech.funplay.utils.T;
@@ -28,11 +28,11 @@ import retrofit2.Response;
  * Created by Administrator on 2017/8/16.
  */
 
-public class PinTuanAllFragment extends BaseFragment {
+public class MyOrderAllFragment extends BaseFragment {
     @Bind(R.id.recyclerview)
     RecyclerView recyclerview;
 
-    private PinTuanAllAdapter adapter;
+    private MyOrderAllAdapter adapter;
     private List<MyOrderModel.ObjBean> originList = new ArrayList<>();
 
 
@@ -45,7 +45,6 @@ public class PinTuanAllFragment extends BaseFragment {
         initData();
         initView(view, savedInstanceState);
         return view;
-
     }
 
     @Override
@@ -88,14 +87,14 @@ public class PinTuanAllFragment extends BaseFragment {
     }
 
     private void initPinTuanAll(List<MyOrderModel.ObjBean> originList) {
-        adapter = new PinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
+        adapter = new MyOrderAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
         recyclerview.setLayoutManager(linearLayoutManager);
         recyclerview.setAdapter(adapter);
     }
 
-    public static PinTuanAllFragment newInstance() {
-        PinTuanAllFragment fragment = new PinTuanAllFragment();
+    public static MyOrderAllFragment newInstance() {
+        MyOrderAllFragment fragment = new MyOrderAllFragment();
         return fragment;
     }
 

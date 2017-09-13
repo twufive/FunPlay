@@ -13,7 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.moduled.MyOrderActivity;
 import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.model.BaseResultModel;
 import com.zgtech.funplay.model.OrderDetailModel;
 import com.zgtech.funplay.utils.T;
 
@@ -29,7 +31,7 @@ import retrofit2.Response;
  * Created by Administrator on 2017/8/14.
  */
 
-public class CorePinTuanDetailActivity extends BaseActivity {
+public class CoreOrderDetailActivity extends BaseActivity {
     @Bind(R.id.nestedScrollView)
     NestedScrollView nestedScrollView;
     @Bind(R.id.ll_back)
@@ -108,8 +110,8 @@ public class CorePinTuanDetailActivity extends BaseActivity {
 
     private void initElementView(OrderDetailModel.ObjBean individualModel) {
         tvTitle.setText(individualModel.getOrderTitle() + "");
-        tvPrice.setText("￥"+individualModel.getOrderPrice1() + "");//0是旧价格，1是新价格
-        tvPriceOld.setText("￥"+individualModel.getOrderPrice0() + "");
+        tvPrice.setText("￥" + individualModel.getOrderPrice1() + "");//0是旧价格，1是新价格
+        tvPriceOld.setText("￥" + individualModel.getOrderPrice0() + "");
         tvPrice.getPaint().setFlags(Paint.FAKE_BOLD_TEXT_FLAG);
         tvPriceOld.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
         tvTime.setText(individualModel.getOrderTime() + "");
@@ -137,7 +139,32 @@ public class CorePinTuanDetailActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.btn_pin:
+                mApiStores.joinOrder(orderId).enqueue(new Callback<BaseResultModel>() {
+                    @Override
+                    public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                        if (response.isSuccessful()) {
+                            if (response.body().getCode() == 2) {
+                                handleServerData(response.body());
+                            } else {
+                                T.showShort(response.body().getMsg());
+                            }
+                        } else {
+                            T.showShort(response.toString());
+                        }
+                    }
 
+                    private void handleServerData(BaseResultModel model) {
+                        finish();
+
+                        toNextActivity(MyOrderActivity.class);
+                        T.showShort("下单成功！");
+                    }
+
+                    @Override
+                    public void onFailure(Call<BaseResultModel> call, Throwable t) {
+
+                    }
+                });
                 break;
         }
     }

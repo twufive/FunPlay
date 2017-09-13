@@ -15,7 +15,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CorePinTuanDetailActivity;
+import com.zgtech.funplay.activity.CoreOrderDetailActivity;
 import com.zgtech.funplay.model.UserDetailModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 
@@ -50,6 +50,7 @@ public class UserDetailPinTuanAdapter extends BaseQuickAdapter<UserDetailModel.O
         ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
                 .load(ApiStores.API_SERVER_URL + individualModel.getOrderPicture1())
+                .placeholder(R.drawable.bg_user_detail)
                 .into(ivSite);
 
         tvTitle.setText(individualModel.getOrderTitle());
@@ -68,7 +69,7 @@ public class UserDetailPinTuanAdapter extends BaseQuickAdapter<UserDetailModel.O
         btnRush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, CorePinTuanDetailActivity.class);
+                Intent intent = new Intent(act, CoreOrderDetailActivity.class);
                 intent.putExtra("orderId", individualModel.getOrderId() + "");
                 act.startActivity(intent);
             }

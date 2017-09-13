@@ -12,6 +12,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.adapter.UserDetailPinTuanAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.UserDetailModel;
+import com.zgtech.funplay.utils.SPUtils;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class TaPinTuanFragment extends BaseFragment {
 
     private UserDetailPinTuanAdapter adapter;
     private List<UserDetailModel.ObjBean.TogethersBean> originList = new ArrayList<>();
+    private String otherUserId;
 
     @Nullable
     @Override
@@ -41,10 +43,11 @@ public class TaPinTuanFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_pintuan_all, container, false);
         ButterKnife.bind(this, view);
 
+        otherUserId = SPUtils.getString(mActivity,"otherUserId","");
+
         initData();
         initView(view, savedInstanceState);
         return view;
-
     }
 
     @Override
@@ -67,7 +70,7 @@ public class TaPinTuanFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        mApiStores.getUserDetailData("12").enqueue(new Callback<UserDetailModel>() {
+        mApiStores.getUserDetailData(otherUserId).enqueue(new Callback<UserDetailModel>() {
             @Override
             public void onResponse(Call<UserDetailModel> call, Response<UserDetailModel> response) {
                 if (response.isSuccessful()) {

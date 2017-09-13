@@ -96,7 +96,8 @@ public class CertifyIDActivity extends BaseActivity {
 
     @Override
     public void initView() {
-
+        llBack.setVisibility(View.VISIBLE);
+        tvToolbar.setText("实名认证");
     }
 
     @Override
@@ -108,6 +109,7 @@ public class CertifyIDActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
+                finish();
                 break;
             case R.id.iv_positive:
                 isPositive = true;

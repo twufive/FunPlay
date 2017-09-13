@@ -12,7 +12,7 @@ public class LoginBackUserModel {
     /**
      * code : 2
      * msg : 成功
-     * obj : {"iosToken":"","androidToken":"1234567899","verifyCode":"","checkCode":"","userId":12,"userPhone":"15073001217","userPwd":"信息保密，你看不到的","verifyPwd":"","modifyTime":1503539290000,"state":0,"userType":1,"detail":{"detailId":6,"userPhone":"15073001217","userRegTime":1501137592000,"userCode":"+86","userNick":"cast.zhou","userSex":1,"userBirthday":622137600000,"userHeight":170,"userConstellation":1,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userFp":"10012","userQr":"upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png","userCity":"11_01_01","userSign":"要趣玩，来找我","userStealthSettings":0,"notificationVibration":false,"notificationSound":false,"notificationDisplayDetails":false,"imUser":"ec13742d26","wxUser":"","stateIdent":1,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":0,"userVocation1":1,"userTag2":0,"userVocation2":0,"absolutePath":"E:/upload","userRegisterProgress":0,"userId":12},"balance":{"balanceId":0,"userId":0,"userBalance":0},"pictures":[{"pictureId":2,"userId":12,"pictureUrl":"upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg","pictureRemark":"图片二","modifyTime":1501237182000,"state":0}],"skills":[{"skillId":2,"userId":12,"skillTypeId":1,"skillTypeName":"跑","skillType":0,"skillPrice":5,"skillPriceType":0}]}
+     * obj : {"iosToken":"","androidToken":"b386c3f31de9bcc1b5917832315c3c92","verifyCode":"","checkCode":"","userId":45,"userPhone":"17707470095","userPwd":"信息保密，你看不到的","verifyPwd":"","modifyTime":1505284089000,"state":0,"userType":0,"login":false,"detail":{"detailId":39,"userPhone":"17707470095","userRegTime":1504776705000,"userCode":"+86","userNick":"趣玩啊","userSex":1,"userBirthday":883584000000,"userHeight":174,"userConstellation":9,"userIcon":"upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg","userBackground":"","userFp":"10045","userQr":"upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png","userCity":"11_01_01","userSign":"","userRemark":"lang li ge lang","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"2343562dea","wxUser":"","stateIdent":0,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":45},"balance":{"balanceId":0,"userId":0,"userBalance":0},"pictures":[],"skills":[]}
      */
 
     private int code;
@@ -46,20 +46,21 @@ public class LoginBackUserModel {
     public static class ObjBean {
         /**
          * iosToken :
-         * androidToken : 1234567899
+         * androidToken : b386c3f31de9bcc1b5917832315c3c92
          * verifyCode :
          * checkCode :
-         * userId : 12
-         * userPhone : 15073001217
+         * userId : 45
+         * userPhone : 17707470095
          * userPwd : 信息保密，你看不到的
          * verifyPwd :
-         * modifyTime : 1503539290000
+         * modifyTime : 1505284089000
          * state : 0
-         * userType : 1
-         * detail : {"detailId":6,"userPhone":"15073001217","userRegTime":1501137592000,"userCode":"+86","userNick":"cast.zhou","userSex":1,"userBirthday":622137600000,"userHeight":170,"userConstellation":1,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userFp":"10012","userQr":"upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png","userCity":"11_01_01","userSign":"要趣玩，来找我","userStealthSettings":0,"notificationVibration":false,"notificationSound":false,"notificationDisplayDetails":false,"imUser":"ec13742d26","wxUser":"","stateIdent":1,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":0,"userVocation1":1,"userTag2":0,"userVocation2":0,"absolutePath":"E:/upload","userRegisterProgress":0,"userId":12}
+         * userType : 0
+         * login : false
+         * detail : {"detailId":39,"userPhone":"17707470095","userRegTime":1504776705000,"userCode":"+86","userNick":"趣玩啊","userSex":1,"userBirthday":883584000000,"userHeight":174,"userConstellation":9,"userIcon":"upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg","userBackground":"","userFp":"10045","userQr":"upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png","userCity":"11_01_01","userSign":"","userRemark":"lang li ge lang","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"2343562dea","wxUser":"","stateIdent":0,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":45}
          * balance : {"balanceId":0,"userId":0,"userBalance":0}
-         * pictures : [{"pictureId":2,"userId":12,"pictureUrl":"upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg","pictureRemark":"图片二","modifyTime":1501237182000,"state":0}]
-         * skills : [{"skillId":2,"userId":12,"skillTypeId":1,"skillTypeName":"跑","skillType":0,"skillPrice":5,"skillPriceType":0}]
+         * pictures : []
+         * skills : []
          */
 
         private String iosToken;
@@ -73,10 +74,11 @@ public class LoginBackUserModel {
         private long modifyTime;
         private int state;
         private int userType;
+        private boolean login;
         private DetailBean detail;
         private BalanceBean balance;
-        private List<PicturesBean> pictures;
-        private List<SkillsBean> skills;
+        private List<?> pictures;
+        private List<?> skills;
 
         public String getIosToken() {
             return iosToken;
@@ -166,6 +168,14 @@ public class LoginBackUserModel {
             this.userType = userType;
         }
 
+        public boolean isLogin() {
+            return login;
+        }
+
+        public void setLogin(boolean login) {
+            this.login = login;
+        }
+
         public DetailBean getDetail() {
             return detail;
         }
@@ -182,56 +192,57 @@ public class LoginBackUserModel {
             this.balance = balance;
         }
 
-        public List<PicturesBean> getPictures() {
+        public List<?> getPictures() {
             return pictures;
         }
 
-        public void setPictures(List<PicturesBean> pictures) {
+        public void setPictures(List<?> pictures) {
             this.pictures = pictures;
         }
 
-        public List<SkillsBean> getSkills() {
+        public List<?> getSkills() {
             return skills;
         }
 
-        public void setSkills(List<SkillsBean> skills) {
+        public void setSkills(List<?> skills) {
             this.skills = skills;
         }
 
         public static class DetailBean {
             /**
-             * detailId : 6
-             * userPhone : 15073001217
-             * userRegTime : 1501137592000
+             * detailId : 39
+             * userPhone : 17707470095
+             * userRegTime : 1504776705000
              * userCode : +86
-             * userNick : cast.zhou
+             * userNick : 趣玩啊
              * userSex : 1
-             * userBirthday : 622137600000
-             * userHeight : 170
-             * userConstellation : 1
-             * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-             * userBackground : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-             * userFp : 10012
-             * userQr : upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png
+             * userBirthday : 883584000000
+             * userHeight : 174
+             * userConstellation : 9
+             * userIcon : upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg
+             * userBackground :
+             * userFp : 10045
+             * userQr : upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png
              * userCity : 11_01_01
-             * userSign : 要趣玩，来找我
+             * userSign :
+             * userRemark : lang li ge lang
              * userStealthSettings : 0
-             * notificationVibration : false
-             * notificationSound : false
-             * notificationDisplayDetails : false
-             * imUser : ec13742d26
+             * notificationVibration : true
+             * notificationSound : true
+             * notificationDisplayDetails : true
+             * imUser : 2343562dea
              * wxUser :
-             * stateIdent : 1
+             * stateIdent : 0
              * stateIdentJob : 0
              * userTag :
              * userVocation :
-             * userTag1 : 0
-             * userVocation1 : 1
-             * userTag2 : 0
-             * userVocation2 : 0
+             * userTag1 :
+             * userVocation1 :
+             * userTag2 :
+             * userVocation2 :
              * absolutePath : E:/upload
              * userRegisterProgress : 0
-             * userId : 12
+             * userId : 45
              */
 
             private int detailId;
@@ -249,6 +260,7 @@ public class LoginBackUserModel {
             private String userQr;
             private String userCity;
             private String userSign;
+            private String userRemark;
             private int userStealthSettings;
             private boolean notificationVibration;
             private boolean notificationSound;
@@ -259,10 +271,10 @@ public class LoginBackUserModel {
             private int stateIdentJob;
             private String userTag;
             private String userVocation;
-            private int userTag1;
-            private int userVocation1;
-            private int userTag2;
-            private int userVocation2;
+            private String userTag1;
+            private String userVocation1;
+            private String userTag2;
+            private String userVocation2;
             private String absolutePath;
             private int userRegisterProgress;
             private int userId;
@@ -387,6 +399,14 @@ public class LoginBackUserModel {
                 this.userSign = userSign;
             }
 
+            public String getUserRemark() {
+                return userRemark;
+            }
+
+            public void setUserRemark(String userRemark) {
+                this.userRemark = userRemark;
+            }
+
             public int getUserStealthSettings() {
                 return userStealthSettings;
             }
@@ -467,35 +487,35 @@ public class LoginBackUserModel {
                 this.userVocation = userVocation;
             }
 
-            public int getUserTag1() {
+            public String getUserTag1() {
                 return userTag1;
             }
 
-            public void setUserTag1(int userTag1) {
+            public void setUserTag1(String userTag1) {
                 this.userTag1 = userTag1;
             }
 
-            public int getUserVocation1() {
+            public String getUserVocation1() {
                 return userVocation1;
             }
 
-            public void setUserVocation1(int userVocation1) {
+            public void setUserVocation1(String userVocation1) {
                 this.userVocation1 = userVocation1;
             }
 
-            public int getUserTag2() {
+            public String getUserTag2() {
                 return userTag2;
             }
 
-            public void setUserTag2(int userTag2) {
+            public void setUserTag2(String userTag2) {
                 this.userTag2 = userTag2;
             }
 
-            public int getUserVocation2() {
+            public String getUserVocation2() {
                 return userVocation2;
             }
 
-            public void setUserVocation2(int userVocation2) {
+            public void setUserVocation2(String userVocation2) {
                 this.userVocation2 = userVocation2;
             }
 
@@ -559,156 +579,5 @@ public class LoginBackUserModel {
                 this.userBalance = userBalance;
             }
         }
-
-        public static class PicturesBean {
-            /**
-             * pictureId : 2
-             * userId : 12
-             * pictureUrl : upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg
-             * pictureRemark : 图片二
-             * modifyTime : 1501237182000
-             * state : 0
-             */
-
-            private int pictureId;
-            private int userId;
-            private String pictureUrl;
-            private String pictureRemark;
-            private long modifyTime;
-            private int state;
-
-            public int getPictureId() {
-                return pictureId;
-            }
-
-            public void setPictureId(int pictureId) {
-                this.pictureId = pictureId;
-            }
-
-            public int getUserId() {
-                return userId;
-            }
-
-            public void setUserId(int userId) {
-                this.userId = userId;
-            }
-
-            public String getPictureUrl() {
-                return pictureUrl;
-            }
-
-            public void setPictureUrl(String pictureUrl) {
-                this.pictureUrl = pictureUrl;
-            }
-
-            public String getPictureRemark() {
-                return pictureRemark;
-            }
-
-            public void setPictureRemark(String pictureRemark) {
-                this.pictureRemark = pictureRemark;
-            }
-
-            public long getModifyTime() {
-                return modifyTime;
-            }
-
-            public void setModifyTime(long modifyTime) {
-                this.modifyTime = modifyTime;
-            }
-
-            public int getState() {
-                return state;
-            }
-
-            public void setState(int state) {
-                this.state = state;
-            }
-        }
-
-        public static class SkillsBean {
-            /**
-             * skillId : 2
-             * userId : 12
-             * skillTypeId : 1
-             * skillTypeName : 跑
-             * skillType : 0
-             * skillPrice : 5
-             * skillPriceType : 0
-             */
-
-            private int skillId;
-            private int userId;
-            private int skillTypeId;
-            private String skillTypeName;
-            private int skillType;
-            private int skillPrice;
-            private int skillPriceType;
-
-            public int getSkillId() {
-                return skillId;
-            }
-
-            public void setSkillId(int skillId) {
-                this.skillId = skillId;
-            }
-
-            public int getUserId() {
-                return userId;
-            }
-
-            public void setUserId(int userId) {
-                this.userId = userId;
-            }
-
-            public int getSkillTypeId() {
-                return skillTypeId;
-            }
-
-            public void setSkillTypeId(int skillTypeId) {
-                this.skillTypeId = skillTypeId;
-            }
-
-            public String getSkillTypeName() {
-                return skillTypeName;
-            }
-
-            public void setSkillTypeName(String skillTypeName) {
-                this.skillTypeName = skillTypeName;
-            }
-
-            public int getSkillType() {
-                return skillType;
-            }
-
-            public void setSkillType(int skillType) {
-                this.skillType = skillType;
-            }
-
-            public int getSkillPrice() {
-                return skillPrice;
-            }
-
-            public void setSkillPrice(int skillPrice) {
-                this.skillPrice = skillPrice;
-            }
-
-            public int getSkillPriceType() {
-                return skillPriceType;
-            }
-
-            public void setSkillPriceType(int skillPriceType) {
-                this.skillPriceType = skillPriceType;
-            }
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "LoginBackUserModel{" +
-                "code=" + code +
-                ", msg='" + msg + '\'' +
-                ", obj=" + obj +
-                '}';
     }
 }

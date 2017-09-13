@@ -1,4 +1,4 @@
-package com.zgtech.funplay.activity;
+package com.zgtech.funplay.activity.moduled;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.adapter.TaStoryAdapter;
+import com.zgtech.funplay.adapter.MyPinTuanAllAdapter;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.model.UserDetailModel;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.model.MyPinTuanModel;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -25,17 +24,17 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * TA的故事，fragment
+ * 我的拼团，全部fragment
  * Created by Administrator on 2017/8/16.
  */
 
-public class TaStoryFragment extends BaseFragment {
+public class MyPinTuanAllFragment extends BaseFragment {
     @Bind(R.id.recyclerview)
     RecyclerView recyclerview;
 
-    private TaStoryAdapter adapter;
-    private List<UserDetailModel.ObjBean.SpacesBean> originList = new ArrayList<>();
-    private String otherUserId;
+    private MyPinTuanAllAdapter adapter;
+    private List<MyPinTuanModel.ObjBean> originList = new ArrayList<>();
+
 
     @Nullable
     @Override
@@ -43,12 +42,9 @@ public class TaStoryFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_pintuan_all, container, false);
         ButterKnife.bind(this, view);
 
-        otherUserId = SPUtils.getString(mActivity,"otherUserId","");
-
         initData();
         initView(view, savedInstanceState);
         return view;
-
     }
 
     @Override
@@ -62,12 +58,11 @@ public class TaStoryFragment extends BaseFragment {
 
     }
 
-
     @Override
     protected void initData() {
-        mApiStores.getUserDetailData(otherUserId).enqueue(new Callback<UserDetailModel>() {
+        mApiStores.getMyPinTuanData("0", "false").enqueue(new Callback<MyPinTuanModel>() {
             @Override
-            public void onResponse(Call<UserDetailModel> call, Response<UserDetailModel> response) {
+            public void onResponse(Call<MyPinTuanModel> call, Response<MyPinTuanModel> response) {
                 if (response.isSuccessful()) {
                     if (response.body().getCode() == 2) {
                         handleServerData(response.body());
@@ -79,27 +74,27 @@ public class TaStoryFragment extends BaseFragment {
                 }
             }
 
-            private void handleServerData(UserDetailModel model) {
-                originList = model.getObj().getSpaces();
-                initTaStory(originList);
+            private void handleServerData(MyPinTuanModel model) {
+                originList = model.getObj();
+                initPinTuanAll(originList);
             }
 
             @Override
-            public void onFailure(Call<UserDetailModel> call, Throwable t) {
+            public void onFailure(Call<MyPinTuanModel> call, Throwable t) {
                 T.showShort(t.toString());
             }
         });
     }
 
-    private void initTaStory(List<UserDetailModel.ObjBean.SpacesBean> originList) {
-        adapter = new TaStoryAdapter(mActivity, R.layout.fp_item_social_main, originList);
+    private void initPinTuanAll(List<MyPinTuanModel.ObjBean> originList) {
+        adapter = new MyPinTuanAllAdapter(mActivity, R.layout.fp_item_pintuan_all, originList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
         recyclerview.setLayoutManager(linearLayoutManager);
         recyclerview.setAdapter(adapter);
     }
 
-    public static TaStoryFragment newInstance() {
-        TaStoryFragment fragment = new TaStoryFragment();
+    public static MyPinTuanAllFragment newInstance() {
+        MyPinTuanAllFragment fragment = new MyPinTuanAllFragment();
         return fragment;
     }
 

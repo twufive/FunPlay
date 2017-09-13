@@ -38,7 +38,7 @@ public class MyOrderActivity extends BaseActivity {
     ViewPager viewpager;
 
     private MyPagerAdapter adapter;
-    private PinTuanAllFragment pinTuanAllFragment;
+    private MyOrderAllFragment myOrderAllFragment;
     private PinTuanRefundFragment pinTuanRefundFragment;
     private List<MyOrderModel.ObjBean> originList = new ArrayList<>();
 
@@ -132,11 +132,11 @@ public class MyOrderActivity extends BaseActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
+                    return myOrderAllFragment == null ? MyOrderAllFragment.newInstance() : myOrderAllFragment;
                 case 1:
 //                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
                 default:
-                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
+                    return myOrderAllFragment == null ? MyOrderAllFragment.newInstance() : myOrderAllFragment;
             }
         }
 

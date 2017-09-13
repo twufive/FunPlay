@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,13 +23,14 @@ import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.fragment.childFragment.CertifyFragment;
 import com.zgtech.funplay.activity.modulea.FilterActivity;
+import com.zgtech.funplay.activity.modulea.GuiderQueryActivity;
+import com.zgtech.funplay.base.BaseFragment;
+import com.zgtech.funplay.fragment.childFragment.CertifyFragment;
 import com.zgtech.funplay.fragment.childFragment.HighBeautyFragment;
 import com.zgtech.funplay.fragment.childFragment.NearbyFragment;
 import com.zgtech.funplay.fragment.childFragment.NewPersonFragment;
 import com.zgtech.funplay.fragment.childFragment.RecommendFragment;
-import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.utils.L;
 
 import butterknife.ButterKnife;
@@ -168,16 +168,15 @@ public class HomeFragment extends BaseFragment {
 
             @Override
             public void onClick(View v) {
-                String uid = et_search.getText().toString().trim();
-                if (TextUtils.isEmpty(uid)) {
-                    return;
-                } else {
-//                    searchUser(uid);
-                }
+                String title = et_search.getText().toString();
 
+                Intent intent = new Intent(mActivity, GuiderQueryActivity.class);
+                intent.putExtra("title", title);
+                startActivity(intent);
             }
-
         });
+
+        re_search.setVisibility(View.GONE);
     }
 
 

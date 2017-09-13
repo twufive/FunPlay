@@ -380,6 +380,7 @@ public class MyInfoActivity extends BaseActivity {
                             retrofitParameterBuilder.addParameter("imgFiles", fileList.get(i));
                         }
 
+
                         retrofitParameterBuilder.addParameter("id", "");
                         Map<String, RequestBody> map = retrofitParameterBuilder.bulider();
                         doUp(retrofitParameterBuilder, map);

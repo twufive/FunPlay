@@ -10,6 +10,7 @@ import com.zgtech.funplay.model.MyPinTuanModel;
 import com.zgtech.funplay.model.NearbyData;
 import com.zgtech.funplay.model.OrderDetailModel;
 import com.zgtech.funplay.model.PinTuanTogetherModel;
+import com.zgtech.funplay.model.QueryGuiderModel;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.model.RegistCodeModel;
@@ -68,8 +69,18 @@ public interface ApiStores {
     Call<BaseResultModel> modifyPersonal(@Body RequestBody requestBody);//修改个人信息
 
 
+    /***订单系统*/
+    @GET("order/join")
+    Call<BaseResultModel> joinOrder(@Query("orderId") String orderId);//报名,或者下单
+
+
+
+
 
     /***首页模块*/
+    @POST("order/queryByCondition")
+    Call<QueryGuiderModel> queryGuiderData(@Body RequestBody requestBody);//筛选某一批导游
+
     @GET("order/queryRecommend")
     Call<RecommendModel> getRecommendData();//查询推荐
 
@@ -111,10 +122,18 @@ public interface ApiStores {
     @GET("user/space/queryList")
     Call<FriendTalkData> getFriendTalkData(@Query("cursor") String cursor,@Query("more") String more);//旅游圈最外边列表
 
-    @POST("user/space/add")
-    Call<BaseResultModel> pushTalk(@Body RequestBody requestBody);//发布个人说说旅游圈
+    @POST("uuser/space/add")
+    Call<BaseResultModel> pushTalk(@Body RequestBody requestBody);//发布说说
+
+    @POST("user/space/good")
+    Call<BaseResultModel> addZan(@Body RequestBody requestBody);//给某一个说说点赞
+
+    @POST("user/space/goodCancel")
+    Call<BaseResultModel> cancelZan(@Body RequestBody requestBody);//给某一个说说取消点赞
 
 
+    @POST("user/space/commentAdd")
+    Call<BaseResultModel> addComment(@Body RequestBody requestBody);//评论某一条说说
 
 
     /***个人中心模块*/
@@ -125,11 +144,12 @@ public interface ApiStores {
     @GET("user/space/queryUserSpace")
     Call<MineExternalModel> getMyExternalInfoData(@Query("isMe") String isMe, @Query("userKey") String userKey);//获取我的外部个人信息
 
+    @GET("order/queryMe")
+    Call<MyPinTuanModel> getMyPinTuanData(@Query("cursor") String cursor, @Query("more") String more);//查询我的拼团
+
     @GET("order/queryMeBuy")
     Call<MyOrderModel> getMyOrderData(@Query("cursor") String cursor, @Query("more") String more);//查询我的订单
 
-    @GET("order/queryMe")
-    Call<MyPinTuanModel> getMyPinTuanData(@Query("cursor") String cursor, @Query("more") String more);//查询我的拼团
 
     @POST("report/addReport")
     Call<BaseResultModel> pushReport(@Body RequestBody requestBody);//发出举报内容

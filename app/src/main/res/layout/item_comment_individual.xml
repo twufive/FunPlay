@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_comment_subdivide"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小"
+        android:textColor="@color/theme_light_blue"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_if_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回复"
+        android:textColor="@color/little_black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_receivername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大"
+        android:textColor="@color/theme_light_blue"
+        android:textSize="12sp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/little_black"
+        android:textSize="12sp" />
+
+</LinearLayout>

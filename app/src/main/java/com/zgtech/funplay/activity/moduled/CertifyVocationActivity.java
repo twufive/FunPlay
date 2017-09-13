@@ -100,7 +100,8 @@ public class CertifyVocationActivity extends BaseActivity {
 
     @Override
     public void initView() {
-
+        llBack.setVisibility(View.VISIBLE);
+        tvToolbar.setText("职业认证");
     }
 
     @Override
@@ -112,6 +113,7 @@ public class CertifyVocationActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
+                finish();
                 break;
             case R.id.iv_positive:
                 isPositive = true;

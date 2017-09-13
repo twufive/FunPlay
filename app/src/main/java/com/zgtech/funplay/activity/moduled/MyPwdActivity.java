@@ -101,6 +101,7 @@ public class MyPwdActivity extends BaseActivity {
         map.put("userPhone", myMobile);
         map.put("userPwd", pwdNew);
         map.put("verifyPwd", pwdNew);
+        map.put("login", "false");
         RequestBody body = RequestBodyBuilder.build(map);
         mApiStores.modifyPwd(body).enqueue(new Callback<BaseResultModel>() {
             @Override

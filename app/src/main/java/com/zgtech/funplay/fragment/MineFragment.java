@@ -200,8 +200,11 @@ public class MineFragment extends BaseFragment {
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
+                SPUtils.setString(mActivity, "otherUserId", userId);
+
                 Intent intent = new Intent(mActivity, CoreUserDetailPageActivity.class);
                 intent.putExtra("isMyself", true);
+                intent.putExtra("userId", userId);
                 mActivity.startActivity(intent);
                 break;
             case R.id.rl_mine_collect:

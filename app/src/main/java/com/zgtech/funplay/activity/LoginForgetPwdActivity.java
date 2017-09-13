@@ -112,6 +112,7 @@ public class LoginForgetPwdActivity extends BaseActivity {
         map.put("verifyPwd", newPwd);
         map.put("verifyCode", verifyCode);
         map.put("checkCode", obj);
+        map.put("login", "true");
         RequestBody body = RequestBodyBuilder.build(map);
 
         mApiStores.modifyPwd(body).enqueue(new Callback<BaseResultModel>() {

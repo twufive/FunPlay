@@ -36,10 +36,20 @@ public class FilterActivity extends BaseActivity {
     TextView tvRangePrice;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_filter);
+        ButterKnife.bind(this);
+
+        initView();
+    }
+
+    @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
+        tvRight.setVisibility(View.VISIBLE);
         tvToolbar.setText("筛选");
-        tvRight.setText("保存");
+        tvRight.setText("确定");
 
         rsbAge.setRules(18, 70, 1, 1);
         rsbPrice.setRules(50, 1000, 1, 1);
@@ -54,9 +64,7 @@ public class FilterActivity extends BaseActivity {
                 L.i("min", "" + min);
                 L.i("max", "" + max);
 
-
-
-                tvAgeRange.setText(min + "~" + max);
+                tvAgeRange.setText(Integer.valueOf((int) min) + "~" + Integer.valueOf((int) max));
             }
         });
 
@@ -66,7 +74,8 @@ public class FilterActivity extends BaseActivity {
                 L.i("min", "" + min);
                 L.i("max", "" + max);
 
-                tvRangePrice.setText(min + "~" + max);
+//                tvRangePrice.setText(min + "~" + max);
+                tvRangePrice.setText(Integer.valueOf((int) min) + "~" + Integer.valueOf((int) max));
             }
         });
     }
@@ -76,20 +85,11 @@ public class FilterActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filter);
-        ButterKnife.bind(this);
-        // TODO: add setContentView(...) invocation
-        initView();
-
-    }
-
     @OnClick({R.id.ll_back, R.id.tv_right})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
+                finish();
                 break;
             case R.id.tv_right:
                 break;

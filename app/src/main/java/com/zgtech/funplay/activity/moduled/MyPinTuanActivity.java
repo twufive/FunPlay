@@ -34,7 +34,7 @@ public class MyPinTuanActivity extends BaseActivity {
     ViewPager viewpager;
 
     private MyPagerAdapter adapter;
-    private PinTuanAllFragment pinTuanAllFragment;
+    private MyPinTuanAllFragment myPinTuanAllFragment;
     private PinTuanRefundFragment pinTuanRefundFragment;
 
     @Override
@@ -125,11 +125,11 @@ public class MyPinTuanActivity extends BaseActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
+                    return myPinTuanAllFragment == null ? MyPinTuanAllFragment.newInstance() : myPinTuanAllFragment;
                 case 1:
 //                    return pinTuanRefundFragment == null ? PinTuanRefundFragment.newInstance() : pinTuanRefundFragment;
                 default:
-                    return pinTuanAllFragment == null ? PinTuanAllFragment.newInstance() : pinTuanAllFragment;
+                    return myPinTuanAllFragment == null ? MyPinTuanAllFragment.newInstance() : myPinTuanAllFragment;
             }
         }
 

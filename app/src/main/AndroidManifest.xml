@@ -47,7 +47,9 @@
              android:name=".activity.MainActivity"
              android:windowSoftInputMode="adjustPan" />-->
 
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            />
         <!--<activity android:name=".activity.LoginActivity" />-->
         <activity android:name=".activity.LoginSMSActivity" />
         <activity android:name=".activity.LoginForgetPwdActivity" />
@@ -58,7 +60,7 @@
 
         <activity android:name=".activity.PhotoViewActivity" />
         <activity android:name=".activity.CoreUserDetailPageActivity" />
-        <activity android:name=".activity.CorePinTuanDetailActivity" />
+        <activity android:name=".activity.CoreOrderDetailActivity" />
         <activity android:name=".activity.CoreWanZhuanDiQiuActivity" />
 
 
@@ -68,6 +70,8 @@
         <activity android:name=".activity.modulea.FilterActivity" />
 
         <activity android:name=".activity.modulec.FriendTalkPushActivity" />
+
+        <activity android:name=".activity.modulea.GuiderQueryActivity" />
 
         <activity android:name=".activity.moduled.MyOrderActivity" />
         <activity android:name=".activity.moduled.MyPinTuanActivity" />

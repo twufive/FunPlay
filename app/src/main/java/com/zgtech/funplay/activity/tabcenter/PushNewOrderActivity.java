@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.yancy.gallerypick.inter.IHandlerCallBack;
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.MainActivity;
 import com.zgtech.funplay.activity.PhotoViewActivity;
 import com.zgtech.funplay.adapter.ImageAdapter;
 import com.zgtech.funplay.base.BaseActivity;
@@ -334,6 +335,7 @@ public class PushNewOrderActivity extends BaseActivity {
         originMap.put("orderAttention", orderAttention);
         originMap.put("orderContact", orderContact);
         originMap.put("orderPhone", orderPhone);
+        originMap.put("state", "1");
         addMapParam(urlList);
 
         RequestBody body = RequestBodyBuilder.build(originMap);
@@ -354,11 +356,16 @@ public class PushNewOrderActivity extends BaseActivity {
 
             private void handleServerData(BaseResultModel model) {
                 T.showShort("发布拼团成功!");
+                dialog.dismiss();
+
+                Intent intent = new Intent(PushNewOrderActivity.this, MainActivity.class);
+                intent.putExtra("whichFragment", 0);
+                startActivity(intent);
             }
 
             @Override
             public void onFailure(Call<BaseResultModel> call, Throwable t) {
-
+                T.showShort(t.toString());
             }
         });
 
