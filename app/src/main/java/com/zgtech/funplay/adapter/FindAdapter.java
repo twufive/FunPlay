@@ -73,6 +73,7 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
         TextView tvTitle = helper.getView(R.id.tv_title);
         TextView tvContent = helper.getView(R.id.tv_content);
         TextView tvTime = helper.getView(R.id.tv_time);
+        LinearLayout llZanHeart = helper.getView(R.id.ll_zan_heart);
 
 
         initAvatar(ivAvatar, ApiStores.API_SERVER_URL + individualModel.getUserIcon());
@@ -92,6 +93,11 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
 
         commentOriginList = individualModel.getComments();
         initCommentRecyclerView(helper, commentOriginList);
+
+        int goodId = individualModel.getGoodId();
+        if (goodId != 0) {
+            llZanHeart.setVisibility(View.VISIBLE);
+        }
     }
 
 
@@ -136,10 +142,10 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
                 String userId = SPUtils.getString(context, "userId", "");
 
                 if (type == 1) { // 这里是点赞
-                    String talkId = individuallModel.getSpaceId() + "";
+                    String spaceId = individuallModel.getSpaceId() + "";
                     HashMap map = new HashMap<>();
                     map.put("userId", userId);
-                    map.put("talkId", talkId);
+                    map.put("spaceId", spaceId);
                     final RequestBody body = RequestBodyBuilder.build(map);
                     final LinearLayout llZanHeart = helper.getView(R.id.ll_zan_heart);
                     //点赞或者取消
@@ -500,5 +506,4 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
         context.startActivity(intent);
         context.overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
     }
-
 }

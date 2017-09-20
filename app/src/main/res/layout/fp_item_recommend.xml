@@ -24,13 +24,6 @@
                 android:layout_height="90dp"
                 android:background="@drawable/bg_mine_info" />
 
-            <!--<ImageView-->
-                <!--android:id="@+id/iv_avatar"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_gravity="bottom|center_horizontal"-->
-                <!--android:background="@drawable/icon_default_avatar" />-->
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_avatar"
                 android:layout_width="25dp"
@@ -43,9 +36,10 @@
         <TextView
             android:id="@+id/tv_sign"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:maxLines="2"
             android:padding="3dp"
-            android:text="在这里，你可以享受清风"
+            android:text="在这里，你可以享受清风在这里，你可以享受清风"
             android:textColor="@color/little_black"
             android:textSize="12sp" />
 
@@ -55,12 +49,54 @@
             android:layout_height="35dp"
             android:padding="3dp">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_01"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_star_yellow_a200_24dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_02"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_star_yellow_a200_24dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_03"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_star_yellow_a200_24dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_04"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_star_yellow_a200_24dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_05"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/ic_star_yellow_a200_24dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/iv_star"
                 android:layout_width="70dp"
                 android:layout_height="15dp"
-                android:background="@drawable/icon_star_five" />
+                android:background="@drawable/icon_star_five"
+                android:visibility="gone" />
 
 
             <LinearLayout

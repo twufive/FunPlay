@@ -61,7 +61,7 @@ public class QueryGuiderAdapter extends BaseQuickAdapter<QueryGuiderModel.ObjBea
                     .into(ivSite);
         } else {
             //否则使用默认图片
-            cardview.setVisibility(View.GONE);
+//            cardview.setVisibility(View.GONE);
         }
 
 

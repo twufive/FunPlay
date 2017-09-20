@@ -18,6 +18,7 @@ import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -82,6 +83,13 @@ public class CertifyFragment extends BaseFragment {
 
             private void handleServerData(RecommendOther3Model model) {
                 originList = model.getObj();
+                Iterator<RecommendOther3Model.ObjBean> iterator = originList.iterator();//此处删除没有订单的用户展示数据源
+                while(iterator.hasNext()){
+                    RecommendOther3Model.ObjBean individualModel = iterator.next();
+                    if(individualModel.getOrders() == null || individualModel.getOrders().size() == 0){
+                        iterator.remove();
+                    }
+                }
                 initCertify(originList);
             }
 

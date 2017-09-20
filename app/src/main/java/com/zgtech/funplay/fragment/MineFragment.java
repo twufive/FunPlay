@@ -251,6 +251,8 @@ public class MineFragment extends BaseFragment {
                     }
 
                     private void handleServerData(BaseResultModel model) {
+                        SPUtils.setBoolean(mActivity,"isLogined",false);
+
                         ActivityCollectorUtils.finishAll();
                     }
 

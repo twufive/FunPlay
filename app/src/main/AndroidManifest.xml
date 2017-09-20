@@ -32,10 +32,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity">
-
-            <!--android:theme="@style/AppSplash"-->
-
+        <activity
+            android:name=".activity.SplashNewActivity"
+            android:theme="@style/AppSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,14 +42,11 @@
             </intent-filter>
         </activity>
 
-        <!-- <activity
-             android:name=".activity.MainActivity"
-             android:windowSoftInputMode="adjustPan" />-->
 
-        <activity android:name=".activity.MainActivity"
-            android:windowSoftInputMode="adjustPan"
-            />
-        <!--<activity android:name=".activity.LoginActivity" />-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.LoginSMSActivity" />
         <activity android:name=".activity.LoginForgetPwdActivity" />
         <activity android:name=".activity.RegistAActivity" />
@@ -83,7 +79,6 @@
         <activity android:name=".activity.moduled.MyPwdActivity" />
         <activity android:name=".activity.moduled.CertifyIDActivity" />
         <activity android:name=".activity.moduled.CertifyVocationActivity" />
-
 
 
         //ease ui

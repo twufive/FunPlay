@@ -40,6 +40,11 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
     protected void convert(BaseViewHolder helper, final RecommendModel.ObjBean.AddressListBean individualModel) {
         CircleImageView ivAvatar = helper.getView(R.id.iv_avatar);
         ImageView ivStar = helper.getView(R.id.iv_star);
+        ImageView iv01 = helper.getView(R.id.iv_01);
+        ImageView iv02 = helper.getView(R.id.iv_02);
+        ImageView iv03 = helper.getView(R.id.iv_03);
+        ImageView iv04 = helper.getView(R.id.iv_04);
+        ImageView iv05 = helper.getView(R.id.iv_05);
         ImageView ivSite = helper.getView(R.id.iv_site);
         TextView tvSign = helper.getView(R.id.tv_sign);
         TextView tvRead = helper.getView(R.id.tv_read);
@@ -57,6 +62,51 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
 
         tvSign.setText(individualModel.getOrderTitle() + "");
         tvRead.setText(individualModel.getCommentCount() + "");
+
+        switch (individualModel.getAvgMark()){
+            case 5:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.VISIBLE);
+                iv03.setVisibility(View.VISIBLE);
+                iv04.setVisibility(View.VISIBLE);
+                iv05.setVisibility(View.VISIBLE);
+                break;
+            case 4:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.VISIBLE);
+                iv03.setVisibility(View.VISIBLE);
+                iv04.setVisibility(View.VISIBLE);
+                iv05.setVisibility(View.GONE);
+                break;
+            case 3:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.VISIBLE);
+                iv03.setVisibility(View.VISIBLE);
+                iv04.setVisibility(View.GONE);
+                iv05.setVisibility(View.GONE);
+                break;
+            case 2:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.VISIBLE);
+                iv03.setVisibility(View.GONE);
+                iv04.setVisibility(View.GONE);
+                iv05.setVisibility(View.GONE);
+                break;
+            case 1:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.GONE);
+                iv03.setVisibility(View.GONE);
+                iv04.setVisibility(View.GONE);
+                iv05.setVisibility(View.GONE);
+            case 0:
+                iv01.setVisibility(View.VISIBLE);
+                iv02.setVisibility(View.VISIBLE);
+                iv03.setVisibility(View.VISIBLE);
+                iv04.setVisibility(View.VISIBLE);
+                iv05.setVisibility(View.VISIBLE);
+                break;
+
+        }
 
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override

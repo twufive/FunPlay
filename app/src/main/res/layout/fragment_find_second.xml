@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_little_gray">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_temp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_user_detail">
+
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/icon_camera"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_temp"
+        android:orientation="vertical">
+
+        <com.ajguan.library.EasyRefreshLayout
+            android:id="@+id/easyrefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.ajguan.library.EasyRefreshLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/re_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentTop="true"
+            android:background="#c0c0c0" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="42dp"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:background="#4BC221"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/temp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="#4BC221" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/temp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:background="@null"
+            android:gravity="bottom|left"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

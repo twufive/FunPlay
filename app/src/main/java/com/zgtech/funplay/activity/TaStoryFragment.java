@@ -92,7 +92,7 @@ public class TaStoryFragment extends BaseFragment {
     }
 
     private void initTaStory(List<UserDetailModel.ObjBean.SpacesBean> originList) {
-        adapter = new TaStoryAdapter(mActivity, R.layout.fp_item_social_main, originList);
+        adapter = new TaStoryAdapter(mActivity, R.layout.fp_item_social_main_ta_story, originList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
         recyclerview.setLayoutManager(linearLayoutManager);
         recyclerview.setAdapter(adapter);

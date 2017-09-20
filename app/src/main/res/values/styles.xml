@@ -20,7 +20,7 @@
 
     <!--此处设置为splash的极速相应，取消白屏间隙-->
     <style name="AppSplash" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowBackground">@drawable/splash_qilujia</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 

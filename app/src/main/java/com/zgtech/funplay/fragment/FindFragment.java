@@ -2,11 +2,13 @@ package com.zgtech.funplay.fragment;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +23,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ajguan.library.EasyRefreshLayout;
+import com.google.gson.Gson;
 import com.yancy.gallerypick.config.GalleryConfig;
 import com.yancy.gallerypick.config.GalleryPick;
 import com.yancy.gallerypick.inter.IHandlerCallBack;
@@ -32,6 +36,7 @@ import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.global.GlideImageLoader;
 import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.utils.L;
+import com.zgtech.funplay.utils.SPUtils;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -56,6 +61,8 @@ public class FindFragment extends BaseFragment {
     ImageView ivRight;
     @Bind(R.id.recyclerview)
     RecyclerView recyclerview;
+    @Bind(R.id.easyrefreshlayout)
+    EasyRefreshLayout easyRefreshLayout;
 
     private static String TAG = "FindFragment";
     private static final int REQUEST_CODE = 100;
@@ -64,18 +71,24 @@ public class FindFragment extends BaseFragment {
     private ArrayList<String> path = new ArrayList<>();//照片存放路径
 
     private List<FriendTalkData.ListBean> originList = new ArrayList<>();
-    private FindAdapter FindAdapter;
+    private List<FriendTalkData.ListBean> loadMoreList = new ArrayList<>();
+    private FindAdapter findAdapter;
 
+
+    private int lastSpaceId = 0;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_find, container, false);
+        View view = inflater.inflate(R.layout.fragment_find_second, container, false);
         ButterKnife.bind(this, view);
+
 
         initView(view, savedInstanceState);
         initData();
+
+        initRefreshLoadMore();
         return view;
     }
 
@@ -98,9 +111,9 @@ public class FindFragment extends BaseFragment {
     }
 
     private void initFriendTalks(List<FriendTalkData.ListBean> originList) {
-        FindAdapter = new FindAdapter(getActivity(), R.layout.fp_item_social_main, originList);
+        findAdapter = new FindAdapter(getActivity(), R.layout.fp_item_social_main, originList);
         recyclerview.setLayoutManager(new LinearLayoutManager(FunPlayApplication.getContext(), LinearLayoutManager.VERTICAL, false));
-        recyclerview.setAdapter(FindAdapter);
+        recyclerview.setAdapter(findAdapter);
     }
 
     private void initStausBar() {
@@ -114,7 +127,7 @@ public class FindFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        mApiStores.getFriendTalkData("0","false").enqueue(new Callback<FriendTalkData>() {
+        mApiStores.getFriendTalkData("0", "false").enqueue(new Callback<FriendTalkData>() {
             @Override
             public void onResponse(Call<FriendTalkData> call, Response<FriendTalkData> response) {
                 if (response.isSuccessful()) {
@@ -130,6 +143,7 @@ public class FindFragment extends BaseFragment {
 
             private void handleServerData(FriendTalkData model) {
                 originList = model.getList();
+                lastSpaceId = originList.get(originList.size() - 1).getSpaceId();
                 initFriendTalks(originList);
             }
 
@@ -140,6 +154,131 @@ public class FindFragment extends BaseFragment {
         });
 
     }
+
+
+    private void initRefreshLoadMore() {
+        easyRefreshLayout.addEasyEvent(new EasyRefreshLayout.EasyEvent() {
+            @Override
+            public void onLoadMore() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadMoreData();
+                    }
+                }, 1000);
+
+            }
+
+            @Override
+            public void onRefreshing() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshData();
+                    }
+                }, 1000);
+
+            }
+        });
+    }
+
+    private void refreshData() {
+        mApiStores.getFriendTalkData("0", "false").enqueue(new Callback<FriendTalkData>() {
+            @Override
+            public void onResponse(Call<FriendTalkData> call, Response<FriendTalkData> response) {
+                if (response.isSuccessful()) {
+                    ifSuccess(response);
+                } else {
+                    T.showShort(response.message());
+                }
+            }
+
+            public void ifSuccess(Response<FriendTalkData> response) {
+                if (response.body().getCode() == 2) {
+
+                    if (response.body().getList() != null && response.body().getList().size() != 0) {
+                        List<FriendTalkData.ListBean> refreshList = response.body().getList();
+                        originList.clear();
+                        originList.addAll(refreshList);
+
+                        int size = originList.size();
+                        lastSpaceId = originList.get(size - 1).getSpaceId();
+
+                        findAdapter.setNewData(originList);
+                        if (easyRefreshLayout != null) {
+                            easyRefreshLayout.refreshComplete();
+                        }
+
+                        Gson gson = new Gson();
+                        String toJson = gson.toJson(response.body());
+                        Context context = FunPlayApplication.getContext();
+                        SPUtils.setString(context, "YouQuanCache", toJson);
+                    } else {
+                        if (easyRefreshLayout != null) {
+                            easyRefreshLayout.refreshComplete();
+                        }
+                    }
+                } else {
+                    Context context = FunPlayApplication.getContext();
+                    T.showShort(context, response.body().getMsg());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FriendTalkData> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void loadMoreData() {
+        mApiStores.getFriendTalkData(lastSpaceId + "", "true").enqueue(new Callback<FriendTalkData>() {
+            @Override
+            public void onResponse(Call<FriendTalkData> call, Response<FriendTalkData> response) {
+                if (response.isSuccessful()) {
+                    ifSuccess(response);
+                } else {
+                    T.showShort(response.message());
+                }
+            }
+
+            public void ifSuccess(Response<FriendTalkData> response) {
+                if (response.body().getCode() == 2) {
+                    if (response.body().getList() != null && response.body().getList().size() != 0) {
+                        loadMoreList.clear();
+                        loadMoreList = response.body().getList();
+                        int size = loadMoreList.size();
+                        lastSpaceId = loadMoreList.get(size - 1).getSpaceId();
+                        originList.addAll(loadMoreList);
+                        findAdapter.setNewData(originList);
+                        if (easyRefreshLayout != null) {
+                            easyRefreshLayout.loadMoreComplete(new EasyRefreshLayout.Event() {
+                                @Override
+                                public void complete() {
+                                    findAdapter.notifyDataSetChanged();
+                                }
+                            }, 1000);
+                        }
+                    } else {
+                        if (easyRefreshLayout != null) {
+                            easyRefreshLayout.loadMoreComplete();
+                        }
+
+                    }
+
+                } else {
+                    Context context = FunPlayApplication.getContext();
+                    T.showShort(context, response.body().getMsg());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<FriendTalkData> call, Throwable t) {
+
+            }
+        });
+    }
+
 
     public static FindFragment newInstance() {
         FindFragment fragment = new FindFragment();

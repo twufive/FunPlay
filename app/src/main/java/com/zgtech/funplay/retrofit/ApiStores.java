@@ -14,6 +14,7 @@ import com.zgtech.funplay.model.QueryGuiderModel;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.model.RegistCodeModel;
+import com.zgtech.funplay.model.SpaceOrderModel;
 import com.zgtech.funplay.model.UpImgsModel;
 import com.zgtech.funplay.model.UserDetailModel;
 
@@ -122,7 +123,7 @@ public interface ApiStores {
     @GET("user/space/queryList")
     Call<FriendTalkData> getFriendTalkData(@Query("cursor") String cursor,@Query("more") String more);//旅游圈最外边列表
 
-    @POST("uuser/space/add")
+    @POST("user/space/add")
     Call<BaseResultModel> pushTalk(@Body RequestBody requestBody);//发布说说
 
     @POST("user/space/good")
@@ -134,6 +135,12 @@ public interface ApiStores {
 
     @POST("user/space/commentAdd")
     Call<BaseResultModel> addComment(@Body RequestBody requestBody);//评论某一条说说
+
+
+    @GET("user/space/getOrders")
+    Call<SpaceOrderModel> getSpaceOrdersData();//旅游圈发布说说时，需要用到的订单列表
+
+
 
 
     /***个人中心模块*/

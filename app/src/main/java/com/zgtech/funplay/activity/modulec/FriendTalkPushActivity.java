@@ -30,6 +30,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.hss01248.dialog.StyledDialog;
+import com.hss01248.dialog.interfaces.MyItemDialogListener;
 import com.yancy.gallerypick.config.GalleryConfig;
 import com.yancy.gallerypick.config.GalleryPick;
 import com.yancy.gallerypick.inter.IHandlerCallBack;
@@ -39,6 +41,7 @@ import com.zgtech.funplay.activity.PhotoViewActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.global.GlideImageLoader;
 import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.model.SpaceOrderModel;
 import com.zgtech.funplay.model.UpImgsModel;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.retrofit.RetrofitParameterBuilder;
@@ -78,6 +81,10 @@ public class FriendTalkPushActivity extends BaseActivity {
     EditText etContent;
     @Bind(R.id.gridview)
     GridView gridview;
+    @Bind(R.id.iv_add_order)
+    ImageView ivAddOrder;
+    @Bind(R.id.tv_order_description)
+    TextView tvOrderDescription;
 
     private IHandlerCallBack iHandlerCallBack;
     private static final int REQUEST_CODE = 100;
@@ -91,6 +98,8 @@ public class FriendTalkPushActivity extends BaseActivity {
     private String exclusiveId;
     private String talkContent;
     private HashMap<Object, Object> originMap = new HashMap<>();
+
+    private String orderByChoosed;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -134,12 +143,11 @@ public class FriendTalkPushActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_back, R.id.iv_right, R.id.tv_right})
+    @OnClick({R.id.ll_back, R.id.tv_right, R.id.iv_add_order})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
 //                finish();
-
                 Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
                 intent.putExtra("whichFragment", "4");
                 startActivity(intent);
@@ -158,7 +166,62 @@ public class FriendTalkPushActivity extends BaseActivity {
                     upImgsToServer(originPhotoList);
                 }
                 break;
+            case R.id.iv_add_order:
+                showMyOrderListDialog();
+                break;
         }
+    }
+
+    private void showMyOrderListDialog() {
+        mApiStores.getSpaceOrdersData().enqueue(new Callback<SpaceOrderModel>() {
+            @Override
+            public void onResponse(Call<SpaceOrderModel> call, Response<SpaceOrderModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(SpaceOrderModel model) {
+                if (model.getObj().size() == 0 || model.getObj() == null) {
+                    T.showShort("您暂时还未发布任何订单噢");
+                } else {
+                    List<SpaceOrderModel.ObjBean> myOrderList = model.getObj();
+
+                    List<String> strOrderList = new ArrayList<>();
+                    for (int i = 0; i < myOrderList.size(); i++) {
+                        SpaceOrderModel.ObjBean individualModel = myOrderList.get(i);
+                        String orderTitle = individualModel.getOrderTitle();
+                        int orderSize = individualModel.getOrderSize();
+                        int orderPirce1 = individualModel.getOrderPirce1();
+
+                        strOrderList.add(orderTitle + ";" + orderSize + "人团," + "价格:" + orderPirce1);
+                    }
+
+                    StyledDialog.buildIosSingleChoose(strOrderList, new MyItemDialogListener() {
+                        @Override
+                        public void onItemClick(CharSequence charSequence, int i) {
+                            ivAddOrder.setVisibility(View.GONE);
+                            tvOrderDescription.setVisibility(View.VISIBLE);
+
+                            tvOrderDescription.setText(charSequence);
+
+                            orderByChoosed = String.valueOf(charSequence);
+                        }
+                    }).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SpaceOrderModel> call, Throwable t) {
+
+            }
+        });
     }
 
     // 发布说说
@@ -168,7 +231,7 @@ public class FriendTalkPushActivity extends BaseActivity {
         originMap.put("spaceContentMin", talkContent);
         originMap.put("spacePictrueCount", urlList.size());
         originMap.put("orderId", "1");
-        originMap.put("orderTitle", "1");
+        originMap.put("orderTitle", orderByChoosed);
         originMap.put("orderPrice1", "1");
         originMap.put("orderSize", "1");
         addMapParam(urlList);
@@ -288,6 +351,11 @@ public class FriendTalkPushActivity extends BaseActivity {
 
             }
         });
+    }
+
+    @OnClick(R.id.iv_add_order)
+    public void onViewClicked() {
+
     }
 
     class ImageAdapter extends BaseAdapter {

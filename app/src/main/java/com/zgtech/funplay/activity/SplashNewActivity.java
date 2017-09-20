@@ -1,19 +1,22 @@
 package com.zgtech.funplay.activity;
 
-import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.EaseUser;
-import com.hyphenate.util.DeviceUuidFactory;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.greendao.gen.DaoMaster;
@@ -24,52 +27,34 @@ import com.zgtech.funplay.model.LoginBackUserModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.RegexUtils;
 import com.zgtech.funplay.utils.SPUtils;
-import com.zgtech.funplay.utils.StringUtils;
 import com.zgtech.funplay.utils.T;
 
 import java.util.HashMap;
-import java.util.UUID;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * 登录页面
- * Created by Administrator on 2017/8/9.
+ * 新的闪屏页
+ * Created by Administrator on 2017/9/14.
  */
 
-public class LoginActivity extends BaseActivity {
-    @Bind(R.id.btn_login)
-    Button btnLogin;
-    @Bind(R.id.tv_to_register)
-    TextView tvToRegister;
-    @Bind(R.id.tv_forget_pwd)
-    TextView tvForgetPwd;
-    @Bind(R.id.et_mobile)
-    EditText etMobile;
-    @Bind(R.id.et_pwd)
-    EditText etPwd;
-    @Bind(R.id.rl_to_mobile_login)
-    RelativeLayout rlToMobileLogin;
+public class SplashNewActivity extends BaseActivity {
+    @Bind(R.id.rl_root)
+    RelativeLayout rlRoot;
 
-    private String androidToken;
     private DaoMaster.DevOpenHelper devOpenHelper;
-    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_splash_new);
         ButterKnife.bind(this);
-
-        devOpenHelper = new DaoMaster.DevOpenHelper(LoginActivity.this, "zayin.db", null);
 
         initView();
         initData();
@@ -77,8 +62,20 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        etMobile.setText("17707470095");
-        etPwd.setText("123456");
+        initStatusBarState();
+
+        //闪屏动画合集
+        AnimationSet set = getAnimationSet();
+        setAnimListener(set);
+    }
+
+    private void initStatusBarState() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
     }
 
     @Override
@@ -86,42 +83,78 @@ public class LoginActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_login, R.id.tv_to_register, R.id.tv_forget_pwd,R.id.rl_to_mobile_login})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_login:
-                doRegax();
-                break;
-            case R.id.tv_forget_pwd:
-                toNextActivity(LoginForgetPwdActivity.class);
-                break;
-            case R.id.rl_to_mobile_login:
-                toNextActivity(LoginSMSActivity.class);
-                break;
-            case R.id.tv_to_register:
-                toNextActivity(RegistAActivity.class);
-                break;
-        }
+
+    @NonNull
+    private AnimationSet getAnimationSet() {
+        // 旋转动画
+        RotateAnimation animRotate = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+                0.5f);
+        animRotate.setDuration(2000);// 动画时间
+        animRotate.setFillAfter(true);// 保持动画结束状态
+
+        // 缩放动画
+        ScaleAnimation animScale = new ScaleAnimation(0, 1, 0, 1,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+                0.5f);
+        animScale.setDuration(2000);
+        animScale.setFillAfter(true);// 保持动画结束状态
+
+        // 渐变动画
+        AlphaAnimation animAlpha = new AlphaAnimation(0, 1);
+        animAlpha.setDuration(2000);// 动画时间
+        animAlpha.setFillAfter(true);// 保持动画结束状态
+
+        // 动画集合
+        AnimationSet set = new AnimationSet(true);
+//        set.addAnimation(animRotate);
+        set.addAnimation(animScale);
+        set.addAnimation(animAlpha);
+
+        // 启动动画
+        rlRoot.startAnimation(set);
+        return set;
     }
 
-    private void doRegax() {
-        String mobile = etMobile.getText().toString();
-        String pwd = etPwd.getText().toString();
+    private void setAnimListener(AnimationSet set) {
+        set.setAnimationListener(new Animation.AnimationListener() {
 
-        if (TextUtils.isEmpty(mobile)) {
-            T.showShort("请输入手机号码");
-        } else if (!RegexUtils.isMobilePhoneNumber(mobile)) {
-            T.showShort("请输入正确的手机号码");
-        } else if (TextUtils.isEmpty(pwd)) {
-            T.showShort("请输入密码");
-        } else {
-            doLogin(mobile,pwd);
-        }
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                // 动画结束,跳转页面
+                // 否则跳登陆页面
+                boolean isLogined = SPUtils.getBoolean(SplashNewActivity.this, "isLogined", false);
+
+
+                // 登陆页面
+                if (isLogined) {
+                    //已经输入密码登录过
+                    //登录的时候，要验证用户的真实性
+                    String mobile = SPUtils.getString(SplashNewActivity.this, "myMobile", "");
+                    String pwd = SPUtils.getString(SplashNewActivity.this, "myPwd", "");
+                    String androidToken = SPUtils.getString(SplashNewActivity.this, "androidToken", "");
+
+                    doLogin(mobile,pwd);
+                } else {
+                    Intent intent = new Intent(SplashNewActivity.this, LoginActivity.class);
+                    fadeNextActivity(intent);
+                }
+
+            }
+        });
     }
 
     private void doLogin(final String mobile, final String pwd) {
-        obtainAndSaveDeviceToken(mobile);
-//        showLoginingDialog();
         HashMap map = new HashMap();
         map.put("userPhone", mobile);
         map.put("userPwd", pwd);
@@ -141,8 +174,6 @@ public class LoginActivity extends BaseActivity {
             }
 
             private void handleServerData(LoginBackUserModel model, String mobile, String pwd) {
-                SPUtils.setBoolean(LoginActivity.this,"isLogined",true);
-
                 saveUserInfo(model,mobile,pwd);
                 loginIM(model.getObj().getDetail().getImUser(), "123456");
                 toNextActivityAndCloseThis(MainActivity.class);
@@ -154,6 +185,7 @@ public class LoginActivity extends BaseActivity {
             }
         });
     }
+
 
     private void loginIM( final String myImUser, String pwd) {
         EMClient.getInstance().login(myImUser, pwd, new EMCallBack() {//回调
@@ -172,7 +204,7 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onError(int code, String message) {
-              L.i("IMonError",message);
+                L.i("IMonError",message);
             }
         });
     }
@@ -191,23 +223,23 @@ public class LoginActivity extends BaseActivity {
         String stateIdent = stateIdentCode.equals("0")?"未认证":"已认证";
         String stateIdentJob = stateIdentJobCode.equals("0")?"未认证":"已认证";
 
-        SPUtils.setString(LoginActivity.this, "userId", exclusiveId);
-        SPUtils.setString(LoginActivity.this, "myImUser", myImUser);
-        SPUtils.setString(LoginActivity.this, "myNick", myNick);
-        SPUtils.setString(LoginActivity.this, "myAvatar", myAvatar);
-        SPUtils.setString(LoginActivity.this, "mySex", mySex);
-        SPUtils.setString(LoginActivity.this, "myMobile", mobile);
-        SPUtils.setString(LoginActivity.this, "myPwd", pwd);
-        SPUtils.setString(LoginActivity.this, "androidToken", androidToken);
-
-
-        SPUtils.setString(LoginActivity.this, "stateIdent", stateIdent);//身份认证
-        SPUtils.setString(LoginActivity.this, "stateIdentJob", stateIdentJob);//职业认证
+        SPUtils.setString(SplashNewActivity.this, "userId", exclusiveId);
+        SPUtils.setString(SplashNewActivity.this, "myImUser", myImUser);
+        SPUtils.setString(SplashNewActivity.this, "myNick", myNick);
+        SPUtils.setString(SplashNewActivity.this, "myAvatar", myAvatar);
+        SPUtils.setString(SplashNewActivity.this, "mySex", mySex);
+        SPUtils.setString(SplashNewActivity.this, "myMobile", mobile);
+        SPUtils.setString(SplashNewActivity.this, "myPwd", pwd);
 
 
 
+        SPUtils.setString(SplashNewActivity.this, "stateIdent", stateIdent);//身份认证
+        SPUtils.setString(SplashNewActivity.this, "stateIdentJob", stateIdentJob);//职业认证
 
 
+
+
+        devOpenHelper = new DaoMaster.DevOpenHelper(SplashNewActivity.this, "zayin.db", null);
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDb());
         DaoSession daoSession = daoMaster.newSession();
         HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();
@@ -224,29 +256,5 @@ public class LoginActivity extends BaseActivity {
         easeUser.setAvatar(ApiStores.API_SERVER_URL + myAvatar);
         return myImUser;
     }
-
-    private void obtainAndSaveDeviceToken(String mobile) {
-        DeviceUuidFactory deviceUuidFactory = new DeviceUuidFactory(this);
-        UUID deviceUuid = deviceUuidFactory.getDeviceUuid();
-        String strUUID = String.valueOf(deviceUuid);
-        androidToken = StringUtils.MD5(strUUID + mobile);
-        SPUtils.setString(this, "androidToken", androidToken);
-
-        L.d("szImei", "" + deviceUuid);
-        L.d("androidToken", "" + androidToken);
-    }
-
-    private void showLoginingDialog() {
-        dialog = new ProgressDialog(this);
-        dialog.setCanceledOnTouchOutside(false);
-        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        dialog.setMessage("正在登录...");
-        dialog.show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        devOpenHelper.close();
-    }
+    
 }

@@ -71,11 +71,17 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview"
+            <com.ajguan.library.EasyRefreshLayout
+                android:id="@+id/easyrefreshlayout"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                android:layout_height="match_parent" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.ajguan.library.EasyRefreshLayout>
 
         </LinearLayout>
 

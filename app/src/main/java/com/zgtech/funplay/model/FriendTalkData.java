@@ -106,6 +106,16 @@ public class FriendTalkData {
         private List<String> pictures;
         private List<CommentsBean> comments;
 
+        private int goodId;
+
+        public int getGoodId() {
+            return goodId;
+        }
+
+        public void setGoodId(int goodId) {
+            this.goodId = goodId;
+        }
+
         public int getSpaceId() {
             return spaceId;
         }
