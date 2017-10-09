@@ -9,10 +9,11 @@ import java.util.List;
 
 public class LoginBackUserModel {
 
+
     /**
      * code : 2
      * msg : 成功
-     * obj : {"iosToken":"","androidToken":"b386c3f31de9bcc1b5917832315c3c92","verifyCode":"","checkCode":"","userId":45,"userPhone":"17707470095","userPwd":"信息保密，你看不到的","verifyPwd":"","modifyTime":1505284089000,"state":0,"userType":0,"login":false,"detail":{"detailId":39,"userPhone":"17707470095","userRegTime":1504776705000,"userCode":"+86","userNick":"趣玩啊","userSex":1,"userBirthday":883584000000,"userHeight":174,"userConstellation":9,"userIcon":"upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg","userBackground":"","userFp":"10045","userQr":"upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png","userCity":"11_01_01","userSign":"","userRemark":"lang li ge lang","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"2343562dea","wxUser":"","stateIdent":0,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":45},"balance":{"balanceId":0,"userId":0,"userBalance":0},"pictures":[],"skills":[]}
+     * obj : {"iosToken":"","androidToken":"1234567899","verifyCode":"","checkCode":"","userId":12,"userPhone":"15073001217","userPwd":"信息保密，你看不到的","verifyPwd":"","modifyTime":1505987103000,"state":0,"userType":1,"login":false,"detail":{"detailId":6,"userPhone":"15073001217","userRegTime":1501137592000,"userCode":"+86","userNick":"趣玩啊","userSex":2,"userBirthday":854755200000,"userHeight":169,"userConstellation":0,"userIcon":"upload/user/img/20170913/93a7bc97856b4f84a368e520960e3166.jpg","userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userFp":"10012","userQr":"upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png","userCity":"11_01_01","userSign":"要趣玩，来找我","userRemark":"hahahahahahaha","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"ec13742d26","wxUser":"","stateIdent":1,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":12},"balance":{"balanceId":0,"userId":0,"userBalance":0},"pictures":[{"pictureId":2,"userId":12,"pictureUrl":"upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg","pictureRemark":"图片二","modifyTime":1501237182000,"state":0}],"skills":[{"skillId":2,"userId":12,"skillTypeId":1,"skillTypeName":"跑","skillType":0,"skillPrice":5,"skillPriceType":0}]}
      */
 
     private int code;
@@ -46,21 +47,21 @@ public class LoginBackUserModel {
     public static class ObjBean {
         /**
          * iosToken :
-         * androidToken : b386c3f31de9bcc1b5917832315c3c92
+         * androidToken : 1234567899
          * verifyCode :
          * checkCode :
-         * userId : 45
-         * userPhone : 17707470095
+         * userId : 12
+         * userPhone : 15073001217
          * userPwd : 信息保密，你看不到的
          * verifyPwd :
-         * modifyTime : 1505284089000
+         * modifyTime : 1505987103000
          * state : 0
-         * userType : 0
+         * userType : 1
          * login : false
-         * detail : {"detailId":39,"userPhone":"17707470095","userRegTime":1504776705000,"userCode":"+86","userNick":"趣玩啊","userSex":1,"userBirthday":883584000000,"userHeight":174,"userConstellation":9,"userIcon":"upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg","userBackground":"","userFp":"10045","userQr":"upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png","userCity":"11_01_01","userSign":"","userRemark":"lang li ge lang","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"2343562dea","wxUser":"","stateIdent":0,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":45}
+         * detail : {"detailId":6,"userPhone":"15073001217","userRegTime":1501137592000,"userCode":"+86","userNick":"趣玩啊","userSex":2,"userBirthday":854755200000,"userHeight":169,"userConstellation":0,"userIcon":"upload/user/img/20170913/93a7bc97856b4f84a368e520960e3166.jpg","userBackground":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userFp":"10012","userQr":"upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png","userCity":"11_01_01","userSign":"要趣玩，来找我","userRemark":"hahahahahahaha","userStealthSettings":0,"notificationVibration":true,"notificationSound":true,"notificationDisplayDetails":true,"imUser":"ec13742d26","wxUser":"","stateIdent":1,"stateIdentJob":0,"userTag":"","userVocation":"","userTag1":"","userVocation1":"","userTag2":"","userVocation2":"","absolutePath":"E:/upload","userRegisterProgress":0,"userId":12}
          * balance : {"balanceId":0,"userId":0,"userBalance":0}
-         * pictures : []
-         * skills : []
+         * pictures : [{"pictureId":2,"userId":12,"pictureUrl":"upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg","pictureRemark":"图片二","modifyTime":1501237182000,"state":0}]
+         * skills : [{"skillId":2,"userId":12,"skillTypeId":1,"skillTypeName":"跑","skillType":0,"skillPrice":5,"skillPriceType":0}]
          */
 
         private String iosToken;
@@ -77,8 +78,8 @@ public class LoginBackUserModel {
         private boolean login;
         private DetailBean detail;
         private BalanceBean balance;
-        private List<?> pictures;
-        private List<?> skills;
+        private List<PicturesBean> pictures;
+        private List<SkillsBean> skills;
 
         public String getIosToken() {
             return iosToken;
@@ -192,47 +193,47 @@ public class LoginBackUserModel {
             this.balance = balance;
         }
 
-        public List<?> getPictures() {
+        public List<PicturesBean> getPictures() {
             return pictures;
         }
 
-        public void setPictures(List<?> pictures) {
+        public void setPictures(List<PicturesBean> pictures) {
             this.pictures = pictures;
         }
 
-        public List<?> getSkills() {
+        public List<SkillsBean> getSkills() {
             return skills;
         }
 
-        public void setSkills(List<?> skills) {
+        public void setSkills(List<SkillsBean> skills) {
             this.skills = skills;
         }
 
         public static class DetailBean {
             /**
-             * detailId : 39
-             * userPhone : 17707470095
-             * userRegTime : 1504776705000
+             * detailId : 6
+             * userPhone : 15073001217
+             * userRegTime : 1501137592000
              * userCode : +86
              * userNick : 趣玩啊
-             * userSex : 1
-             * userBirthday : 883584000000
-             * userHeight : 174
-             * userConstellation : 9
-             * userIcon : upload/user/img/20170913/07133fe1d4ba45d69fda2d9463f7cc0a.jpg
-             * userBackground :
-             * userFp : 10045
-             * userQr : upload/qrimg/20170907/47b85564cb334e1a890ad725bcf38537.png
+             * userSex : 2
+             * userBirthday : 854755200000
+             * userHeight : 169
+             * userConstellation : 0
+             * userIcon : upload/user/img/20170913/93a7bc97856b4f84a368e520960e3166.jpg
+             * userBackground : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
+             * userFp : 10012
+             * userQr : upload/qrimg/20170727/5a8067c61dfc42b59f6681cb33cde478.png
              * userCity : 11_01_01
-             * userSign :
-             * userRemark : lang li ge lang
+             * userSign : 要趣玩，来找我
+             * userRemark : hahahahahahaha
              * userStealthSettings : 0
              * notificationVibration : true
              * notificationSound : true
              * notificationDisplayDetails : true
-             * imUser : 2343562dea
+             * imUser : ec13742d26
              * wxUser :
-             * stateIdent : 0
+             * stateIdent : 1
              * stateIdentJob : 0
              * userTag :
              * userVocation :
@@ -242,7 +243,7 @@ public class LoginBackUserModel {
              * userVocation2 :
              * absolutePath : E:/upload
              * userRegisterProgress : 0
-             * userId : 45
+             * userId : 12
              */
 
             private int detailId;
@@ -577,6 +578,148 @@ public class LoginBackUserModel {
 
             public void setUserBalance(int userBalance) {
                 this.userBalance = userBalance;
+            }
+        }
+
+        public static class PicturesBean {
+            /**
+             * pictureId : 2
+             * userId : 12
+             * pictureUrl : upload/user_img/20170721/1e47bdd89e214e738a81157379567689.jpg
+             * pictureRemark : 图片二
+             * modifyTime : 1501237182000
+             * state : 0
+             */
+
+            private int pictureId;
+            private int userId;
+            private String pictureUrl;
+            private String pictureRemark;
+            private long modifyTime;
+            private int state;
+
+            public int getPictureId() {
+                return pictureId;
+            }
+
+            public void setPictureId(int pictureId) {
+                this.pictureId = pictureId;
+            }
+
+            public int getUserId() {
+                return userId;
+            }
+
+            public void setUserId(int userId) {
+                this.userId = userId;
+            }
+
+            public String getPictureUrl() {
+                return pictureUrl;
+            }
+
+            public void setPictureUrl(String pictureUrl) {
+                this.pictureUrl = pictureUrl;
+            }
+
+            public String getPictureRemark() {
+                return pictureRemark;
+            }
+
+            public void setPictureRemark(String pictureRemark) {
+                this.pictureRemark = pictureRemark;
+            }
+
+            public long getModifyTime() {
+                return modifyTime;
+            }
+
+            public void setModifyTime(long modifyTime) {
+                this.modifyTime = modifyTime;
+            }
+
+            public int getState() {
+                return state;
+            }
+
+            public void setState(int state) {
+                this.state = state;
+            }
+        }
+
+        public static class SkillsBean {
+            /**
+             * skillId : 2
+             * userId : 12
+             * skillTypeId : 1
+             * skillTypeName : 跑
+             * skillType : 0
+             * skillPrice : 5
+             * skillPriceType : 0
+             */
+
+            private int skillId;
+            private int userId;
+            private int skillTypeId;
+            private String skillTypeName;
+            private int skillType;
+            private int skillPrice;
+            private int skillPriceType;
+
+            public int getSkillId() {
+                return skillId;
+            }
+
+            public void setSkillId(int skillId) {
+                this.skillId = skillId;
+            }
+
+            public int getUserId() {
+                return userId;
+            }
+
+            public void setUserId(int userId) {
+                this.userId = userId;
+            }
+
+            public int getSkillTypeId() {
+                return skillTypeId;
+            }
+
+            public void setSkillTypeId(int skillTypeId) {
+                this.skillTypeId = skillTypeId;
+            }
+
+            public String getSkillTypeName() {
+                return skillTypeName;
+            }
+
+            public void setSkillTypeName(String skillTypeName) {
+                this.skillTypeName = skillTypeName;
+            }
+
+            public int getSkillType() {
+                return skillType;
+            }
+
+            public void setSkillType(int skillType) {
+                this.skillType = skillType;
+            }
+
+            public int getSkillPrice() {
+                return skillPrice;
+            }
+
+            public void setSkillPrice(int skillPrice) {
+                this.skillPrice = skillPrice;
+            }
+
+            public int getSkillPriceType() {
+                return skillPriceType;
+            }
+
+            public void setSkillPriceType(int skillPriceType) {
+                this.skillPriceType = skillPriceType;
             }
         }
     }

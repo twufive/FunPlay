@@ -26,7 +26,11 @@ import com.zgtech.funplay.activity.moduled.MyPwdActivity;
 import com.zgtech.funplay.activity.moduled.MyReportActivity;
 import com.zgtech.funplay.activity.moduled.MySuggestActivity;
 import com.zgtech.funplay.base.BaseFragment;
+import com.zgtech.funplay.greendao.gen.DaoMaster;
+import com.zgtech.funplay.greendao.gen.DaoSession;
+import com.zgtech.funplay.greendao.gen.HxUserModelDao;
 import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.model.HxUserModel;
 import com.zgtech.funplay.model.MineExternalModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
@@ -88,6 +92,7 @@ public class MineFragment extends BaseFragment {
     RelativeLayout rlLogout;
     private String userId;
 
+    private DaoMaster.DevOpenHelper devOpenHelper;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -110,6 +115,8 @@ public class MineFragment extends BaseFragment {
     public void onDestroy() {
         super.onDestroy();
         L.i("MineFragment", "onDestroy");
+
+        devOpenHelper.close();
     }
 
 
@@ -169,6 +176,21 @@ public class MineFragment extends BaseFragment {
         tvSign.setText(individualModel.getUserSign());
         tvCare.setText("关注  " + individualModel.getUserHotCount() + "");
         tvFans.setText("粉丝  " + individualModel.getUserCollectionCount() + "");
+
+
+        devOpenHelper = new DaoMaster.DevOpenHelper(mActivity, "zayin.db", null);
+        DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDb());
+        DaoSession daoSession = daoMaster.newSession();
+        HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();
+
+        String myImUser = SPUtils.getString(mActivity, "myImUser", "");
+
+        HxUserModel hxUserModel = new HxUserModel();
+        hxUserModel.setImUser(myImUser);
+        hxUserModel.setUserId(individualModel.getUserId() + "");
+        hxUserModel.setHxNickname(individualModel.getUserNick());
+        hxUserModel.setHxAvatar(ApiStores.API_SERVER_URL + individualModel.getUserIcon());
+        hxUserModelDao.insertOrReplace(hxUserModel);
     }
 
     public static MineFragment newInstance() {
@@ -251,7 +273,7 @@ public class MineFragment extends BaseFragment {
                     }
 
                     private void handleServerData(BaseResultModel model) {
-                        SPUtils.setBoolean(mActivity,"isLogined",false);
+                        SPUtils.setBoolean(mActivity, "isLogined", false);
 
                         ActivityCollectorUtils.finishAll();
                     }

@@ -91,6 +91,10 @@ public class MyInfoActivity extends BaseActivity {
     EditText etIntroduce;
     @Bind(R.id.btn_save)
     Button btnSave;
+    @Bind(R.id.et_nick)
+    EditText etNick;
+    @Bind(R.id.rl_nick)
+    RelativeLayout rlNick;
 
     private IHandlerCallBack iHandlerCallBack;
     private static final int REQUEST_CODE = 100;
@@ -107,6 +111,7 @@ public class MyInfoActivity extends BaseActivity {
     private String paramBirth;
     private String paramConstellation;
     private String paramIntroduce;
+    private String paramNick;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -175,6 +180,8 @@ public class MyInfoActivity extends BaseActivity {
         tvConstellation.setText(strConstellation);
 
         etIntroduce.setText(individualModel.getUserRemark());
+
+        etNick.setText(individualModel.getUserNick());
     }
 
     @OnClick({R.id.ll_back, R.id.rl_avatar, R.id.rl_sex, R.id.rl_stature, R.id.rl_age, R.id.rl_constellation, R.id.rl_bg_pic, R.id.rl_introduce, R.id.btn_save})
@@ -236,49 +243,59 @@ public class MyInfoActivity extends BaseActivity {
 
                 break;
             case R.id.btn_save:
-                paramIntroduce = etIntroduce.getText().toString();
-
-                HashMap map = new HashMap();
-                map.put("userSex", paramSex);
-                map.put("userHeight", paramHeight);
-                map.put("userBirthday", paramBirth);
-                map.put("userConstellation", paramConstellation);
-                map.put("userRemark", paramIntroduce);
-
-
-                if (!TextUtils.isEmpty(userIcon)) {
-                    map.put("userIcon",userIcon);//如果有触发上传头像，那就把更换之后的头像的url链接放入请求参数map之中
-                    //如果是空的，那就说明没更新头像，那就什么都不做，不放入这个请求参数
+                paramNick = etNick.getText().toString();
+                if (TextUtils.isEmpty(paramNick)) {
+                    T.showShort("昵称不能为空!");
+                } else {
+                    doChange();
                 }
-                RequestBody body = RequestBodyBuilder.build(map);
-
-                mApiStores.modifyPersonal(body).enqueue(new Callback<BaseResultModel>() {
-                    @Override
-                    public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
-                        if (response.isSuccessful()) {
-                            if (response.body().getCode() == 2) {
-                                handleServerData(response.body());
-                            } else {
-                                T.showShort(response.body().getMsg());
-                            }
-                        } else {
-                            T.showShort(response.toString());
-                        }
-                    }
-
-                    private void handleServerData(BaseResultModel model) {
-                        Intent intent = new Intent(MyInfoActivity.this, MainActivity.class);
-                        intent.putExtra("whichFragment",4);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onFailure(Call<BaseResultModel> call, Throwable t) {
-                        T.showShort(t.toString());
-                    }
-                });
                 break;
         }
+    }
+
+    private void doChange() {
+        paramIntroduce = etIntroduce.getText().toString();
+
+        HashMap map = new HashMap();
+        map.put("userNick", paramNick);
+        map.put("userSex", paramSex);
+        map.put("userHeight", paramHeight);
+        map.put("userBirthday", paramBirth);
+        map.put("userConstellation", paramConstellation);
+        map.put("userRemark", paramIntroduce);
+
+
+        if (!TextUtils.isEmpty(userIcon)) {
+            map.put("userIcon", userIcon);//如果有触发上传头像，那就把更换之后的头像的url链接放入请求参数map之中
+            //如果是空的，那就说明没更新头像，那就什么都不做，不放入这个请求参数
+        }
+        RequestBody body = RequestBodyBuilder.build(map);
+
+        mApiStores.modifyPersonal(body).enqueue(new Callback<BaseResultModel>() {
+            @Override
+            public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(BaseResultModel model) {
+                Intent intent = new Intent(MyInfoActivity.this, MainActivity.class);
+                intent.putExtra("whichFragment", 4);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onFailure(Call<BaseResultModel> call, Throwable t) {
+                T.showShort(t.toString());
+            }
+        });
     }
 
     private void monitorGalleryPick() {
@@ -412,7 +429,7 @@ public class MyInfoActivity extends BaseActivity {
                     retrofitParameterBuilder.cleanParams();
 
                     Glide.with(MyInfoActivity.this)
-                            .load(ApiStores.API_SERVER_URL+userIcon)
+                            .load(ApiStores.API_SERVER_URL + userIcon)
                             .into(ivAvatar);
 
                     dialog.dismiss();
@@ -427,5 +444,6 @@ public class MyInfoActivity extends BaseActivity {
             }
         });
     }
+
 
 }

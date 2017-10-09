@@ -87,8 +87,7 @@ public class RegistAActivity extends BaseActivity {
                 }
                 break;
             case R.id.btn_regist:
-                toNextActivity(RegistBActivity.class);
-//                doRegist();
+                doRegist();
                 break;
             case R.id.tv_protocol:
                 //打开用户协议webView

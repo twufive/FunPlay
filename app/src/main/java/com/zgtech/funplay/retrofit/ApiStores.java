@@ -37,6 +37,7 @@ import retrofit2.http.Query;
 public interface ApiStores {
     /*** baseUrl*/
     String API_SERVER_URL = "http://192.168.188.196/";
+//    String API_SERVER_URL = "http://192.168.188.71:8080/";
 //    String API_SERVER_URL = "http://192.168.188.70/";
 //    String API_SERVER_URL = "http://www.azgyf.com/";
 

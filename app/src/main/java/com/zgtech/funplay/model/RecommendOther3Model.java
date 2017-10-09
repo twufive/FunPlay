@@ -13,7 +13,7 @@ public class RecommendOther3Model {
     /**
      * code : 2
      * msg : 成功
-     * obj : [{"userId":12,"userNick":"cast.zhou","userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userTag1":0,"userTag2":0,"avgPrice":"300.00","avgMark":4,"userVocation1":1,"userVocation2":0,"transactionCount":2,"commentCount":17,"orders":[{"orderId":9,"orderTitle":"火车站十人团两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":8,"orderTitle":"【2017年8月21日-两人团】植物园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":7,"orderTitle":"【2017年8月20日-五人团】烈士公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":6,"orderTitle":"【2017年8月20日-两人团】月湖公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":5,"orderTitle":"【2017年8月19日-两人团】洋湖公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"}]},{"userId":42,"userNick":"趣玩-42","userIcon":"upload/default.jpg","userTag1":0,"userTag2":0,"avgPrice":"0.00","avgMark":0,"userVocation1":0,"userVocation2":0,"transactionCount":0,"commentCount":0,"orders":[]},{"userId":41,"userNick":"趣玩-41","userIcon":"upload/default.jpg","userTag1":0,"userTag2":0,"avgPrice":"0.00","avgMark":0,"userVocation1":0,"userVocation2":0,"transactionCount":0,"commentCount":0,"orders":[]},{"userId":40,"userNick":"趣玩-40","userIcon":"upload/default.jpg","userTag1":0,"userTag2":0,"avgPrice":"0.00","avgMark":0,"userVocation1":0,"userVocation2":0,"transactionCount":0,"commentCount":0,"orders":[]},{"userId":39,"userNick":"趣玩-39","userIcon":"upload/default.jpg","userTag1":0,"userTag2":0,"avgPrice":"0.00","avgMark":0,"userVocation1":0,"userVocation2":0,"transactionCount":0,"commentCount":0,"orders":[]}]
+     * obj : [{"avgMark":4,"avgPrice":300,"commentCount":17,"orders":[{"orderId":41,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"岳麓山两五4rrfrer人团两日游"},{"orderId":40,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"岳麓山两五人团两日游"},{"orderId":39,"orderPicture1":"upload/user/img/20170913/da28855d85a643e288cd45a95c71f143.jpg","orderTitle":"Changsha"},{"orderId":9,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"火车站十人团两日游"},{"orderId":8,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"【2017年8月21日-两人团】植物园两日游"}],"transactionCount":18,"userIcon":"upload/user/img/20170913/93a7bc97856b4f84a368e520960e3166.jpg","userId":12,"userNick":"趣玩啊","userTag1":"","userTag2":"","userVocation1":"","userVocation2":""},{"avgMark":0,"avgPrice":0,"commentCount":0,"orders":[],"transactionCount":0,"userIcon":"upload/default.jpg","userId":53,"userNick":"趣玩啊","userTag1":"0","userTag2":"0","userVocation1":"升级了","userVocation2":""},{"avgMark":0,"avgPrice":0,"commentCount":0,"orders":[],"transactionCount":0,"userIcon":"upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg","userId":52,"userNick":"cast18507455265","userTag1":"0","userTag2":"0","userVocation1":"哈哈哈","userVocation2":"嘿嘿嘿"},{"avgMark":0,"avgPrice":0,"commentCount":0,"orders":[],"transactionCount":0,"userIcon":"upload/default.jpg","userId":51,"userNick":"趣玩-51","userTag1":"0","userTag2":"0","userVocation1":"0","userVocation2":"0"}]
      */
 
     private int code;
@@ -46,32 +46,72 @@ public class RecommendOther3Model {
 
     public static class ObjBean {
         /**
-         * userId : 12
-         * userNick : cast.zhou
-         * userIcon : upload/user_img/20170721/0ade284541ed433a8cbaedd845e5f1f1.jpg
-         * userTag1 : 0
-         * userTag2 : 0
-         * avgPrice : 300.00
          * avgMark : 4
-         * userVocation1 : 1
-         * userVocation2 : 0
-         * transactionCount : 2
+         * avgPrice : 300
          * commentCount : 17
-         * orders : [{"orderId":9,"orderTitle":"火车站十人团两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":8,"orderTitle":"【2017年8月21日-两人团】植物园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":7,"orderTitle":"【2017年8月20日-五人团】烈士公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":6,"orderTitle":"【2017年8月20日-两人团】月湖公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"},{"orderId":5,"orderTitle":"【2017年8月19日-两人团】洋湖公园两日游","orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg"}]
+         * orders : [{"orderId":41,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"岳麓山两五4rrfrer人团两日游"},{"orderId":40,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"岳麓山两五人团两日游"},{"orderId":39,"orderPicture1":"upload/user/img/20170913/da28855d85a643e288cd45a95c71f143.jpg","orderTitle":"Changsha"},{"orderId":9,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"火车站十人团两日游"},{"orderId":8,"orderPicture1":"upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg","orderTitle":"【2017年8月21日-两人团】植物园两日游"}]
+         * transactionCount : 18
+         * userIcon : upload/user/img/20170913/93a7bc97856b4f84a368e520960e3166.jpg
+         * userId : 12
+         * userNick : 趣玩啊
+         * userTag1 :
+         * userTag2 :
+         * userVocation1 :
+         * userVocation2 :
          */
 
+        private int avgMark;
+        private int avgPrice;
+        private int commentCount;
+        private int transactionCount;
+        private String userIcon;
         private int userId;
         private String userNick;
-        private String userIcon;
-        private int userTag1;
-        private int userTag2;
-        private String avgPrice;
-        private int avgMark;
-        private int userVocation1;
-        private int userVocation2;
-        private int transactionCount;
-        private int commentCount;
+        private String userTag1;
+        private String userTag2;
+        private String userVocation1;
+        private String userVocation2;
         private List<OrdersBean> orders;
+
+        public int getAvgMark() {
+            return avgMark;
+        }
+
+        public void setAvgMark(int avgMark) {
+            this.avgMark = avgMark;
+        }
+
+        public int getAvgPrice() {
+            return avgPrice;
+        }
+
+        public void setAvgPrice(int avgPrice) {
+            this.avgPrice = avgPrice;
+        }
+
+        public int getCommentCount() {
+            return commentCount;
+        }
+
+        public void setCommentCount(int commentCount) {
+            this.commentCount = commentCount;
+        }
+
+        public int getTransactionCount() {
+            return transactionCount;
+        }
+
+        public void setTransactionCount(int transactionCount) {
+            this.transactionCount = transactionCount;
+        }
+
+        public String getUserIcon() {
+            return userIcon;
+        }
+
+        public void setUserIcon(String userIcon) {
+            this.userIcon = userIcon;
+        }
 
         public int getUserId() {
             return userId;
@@ -89,76 +129,36 @@ public class RecommendOther3Model {
             this.userNick = userNick;
         }
 
-        public String getUserIcon() {
-            return userIcon;
-        }
-
-        public void setUserIcon(String userIcon) {
-            this.userIcon = userIcon;
-        }
-
-        public int getUserTag1() {
+        public String getUserTag1() {
             return userTag1;
         }
 
-        public void setUserTag1(int userTag1) {
+        public void setUserTag1(String userTag1) {
             this.userTag1 = userTag1;
         }
 
-        public int getUserTag2() {
+        public String getUserTag2() {
             return userTag2;
         }
 
-        public void setUserTag2(int userTag2) {
+        public void setUserTag2(String userTag2) {
             this.userTag2 = userTag2;
         }
 
-        public String getAvgPrice() {
-            return avgPrice;
-        }
-
-        public void setAvgPrice(String avgPrice) {
-            this.avgPrice = avgPrice;
-        }
-
-        public int getAvgMark() {
-            return avgMark;
-        }
-
-        public void setAvgMark(int avgMark) {
-            this.avgMark = avgMark;
-        }
-
-        public int getUserVocation1() {
+        public String getUserVocation1() {
             return userVocation1;
         }
 
-        public void setUserVocation1(int userVocation1) {
+        public void setUserVocation1(String userVocation1) {
             this.userVocation1 = userVocation1;
         }
 
-        public int getUserVocation2() {
+        public String getUserVocation2() {
             return userVocation2;
         }
 
-        public void setUserVocation2(int userVocation2) {
+        public void setUserVocation2(String userVocation2) {
             this.userVocation2 = userVocation2;
-        }
-
-        public int getTransactionCount() {
-            return transactionCount;
-        }
-
-        public void setTransactionCount(int transactionCount) {
-            this.transactionCount = transactionCount;
-        }
-
-        public int getCommentCount() {
-            return commentCount;
-        }
-
-        public void setCommentCount(int commentCount) {
-            this.commentCount = commentCount;
         }
 
         public List<OrdersBean> getOrders() {
@@ -171,14 +171,14 @@ public class RecommendOther3Model {
 
         public static class OrdersBean {
             /**
-             * orderId : 9
-             * orderTitle : 火车站十人团两日游
+             * orderId : 41
              * orderPicture1 : upload/user_img/20170703/8322fe273d3743f4a3867e267f6986eb.jpg
+             * orderTitle : 岳麓山两五4rrfrer人团两日游
              */
 
             private int orderId;
-            private String orderTitle;
             private String orderPicture1;
+            private String orderTitle;
 
             public int getOrderId() {
                 return orderId;
@@ -188,20 +188,20 @@ public class RecommendOther3Model {
                 this.orderId = orderId;
             }
 
-            public String getOrderTitle() {
-                return orderTitle;
-            }
-
-            public void setOrderTitle(String orderTitle) {
-                this.orderTitle = orderTitle;
-            }
-
             public String getOrderPicture1() {
                 return orderPicture1;
             }
 
             public void setOrderPicture1(String orderPicture1) {
                 this.orderPicture1 = orderPicture1;
+            }
+
+            public String getOrderTitle() {
+                return orderTitle;
+            }
+
+            public void setOrderTitle(String orderTitle) {
+                this.orderTitle = orderTitle;
             }
         }
     }
