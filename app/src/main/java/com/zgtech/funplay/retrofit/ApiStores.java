@@ -1,6 +1,7 @@
 package com.zgtech.funplay.retrofit;
 
 import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.model.ChargeModel;
 import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.model.LoginBackUserModel;
 import com.zgtech.funplay.model.MineExternalModel;
@@ -36,10 +37,11 @@ import retrofit2.http.Query;
 
 public interface ApiStores {
     /*** baseUrl*/
-    String API_SERVER_URL = "http://192.168.188.196/";
+//    String API_SERVER_URL = "http://192.168.188.196/";
 //    String API_SERVER_URL = "http://192.168.188.71:8080/";
 //    String API_SERVER_URL = "http://192.168.188.70/";
 //    String API_SERVER_URL = "http://www.azgyf.com/";
+    String API_SERVER_URL = "http://www.qwanapp.com/";
 
 
 
@@ -50,6 +52,9 @@ public interface ApiStores {
     @POST("user/upimgs")
     Call<UpImgsModel> upImgs(@PartMap Map<String, RequestBody> params); //批量上传图片
 
+
+    @POST("order/join")
+    Call<ChargeModel> initCharge(@Query("orderId") String orderId);//获取支付的charge对象
 
     /***登录注册模块*/
     @POST("user/login")

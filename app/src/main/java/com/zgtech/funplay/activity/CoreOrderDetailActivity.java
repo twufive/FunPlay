@@ -1,5 +1,7 @@
 package com.zgtech.funplay.activity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
@@ -12,11 +14,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.pingplusplus.android.Pingpp;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.moduled.MyOrderActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.model.BaseResultModel;
+import com.zgtech.funplay.model.ChargeModel;
 import com.zgtech.funplay.model.OrderDetailModel;
+import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.T;
 
 import butterknife.Bind;
@@ -81,6 +87,82 @@ public class CoreOrderDetailActivity extends BaseActivity {
 
     @Override
     public void initData() {
+        initPageData();
+    }
+
+
+    @OnClick({R.id.ll_back, R.id.btn_pin})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_back:
+                finish();
+                break;
+            case R.id.btn_pin:
+//                doPinTuan();
+                //除QQ钱包外，其他渠道调起支付方式：
+                //参数一：Activity 表示当前调起支付的Activity
+                //参数二：data 表示获取到的charge或order的JSON字符串
+                mApiStores.initCharge(orderId).enqueue(new Callback<ChargeModel>() {
+                    @Override
+                    public void onResponse(Call<ChargeModel> call, Response<ChargeModel> response) {
+                        if (response.isSuccessful()) {
+                            if (response.body().getCode() == 2) {
+                                handleServerData(response.body());
+                            } else {
+                                T.showShort(response.body().getMsg());
+                            }
+                        } else {
+                            T.showShort(response.toString());
+                        }
+                    }
+
+                    private void handleServerData(ChargeModel body) {
+                        ChargeModel.ObjBean charge = body.getObj();
+
+
+                        Gson gson = new Gson();
+                        String chargeJson = gson.toJson(charge);
+                        Pingpp.createPayment(CoreOrderDetailActivity.this, chargeJson);
+                    }
+
+                    @Override
+                    public void onFailure(Call<ChargeModel> call, Throwable t) {
+                        T.showShort(t.toString());
+                    }
+                });
+
+
+                break;
+        }
+    }
+
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //支付页面返回处理
+        if (requestCode == Pingpp.REQUEST_CODE_PAYMENT) {
+            if (resultCode == Activity.RESULT_OK) {
+                String result = data.getExtras().getString("pay_result");
+            /* 处理返回值
+             * "success" - 支付成功
+             * "fail"    - 支付失败
+             * "cancel"  - 取消支付
+             * "invalid" - 支付插件未安装（一般是微信客户端未安装的情况）
+             * "unknown" - app进程异常被杀死(一般是低内存状态下,app进程被杀死)
+             */
+                String errorMsg = data.getExtras().getString("error_msg"); // 错误信息
+                String extraMsg = data.getExtras().getString("extra_msg"); // 错误信息
+//                showMsg(result, errorMsg, extraMsg);
+                L.i(result);
+                L.i(errorMsg);
+                L.i(extraMsg);
+
+
+            }
+        }
+    }
+
+
+    private void initPageData() {
         mApiStores.getOrderDetailData(orderId).enqueue(new Callback<OrderDetailModel>() {
             @Override
             public void onResponse(Call<OrderDetailModel> call, Response<OrderDetailModel> response) {
@@ -105,8 +187,8 @@ public class CoreOrderDetailActivity extends BaseActivity {
 
             }
         });
-
     }
+
 
     private void initElementView(OrderDetailModel.ObjBean individualModel) {
         tvTitle.setText(individualModel.getOrderTitle() + "");
@@ -120,8 +202,38 @@ public class CoreOrderDetailActivity extends BaseActivity {
         tvOrderAttention.setText(individualModel.getOrderAttention() + "");
         tvName.setText(individualModel.getOrderContact() + "");
         tvMobile.setText(individualModel.getOrderPhone() + "");
+
     }
 
+
+    private void doPinTuan() {
+        mApiStores.joinOrder(orderId).enqueue(new Callback<BaseResultModel>() {
+            @Override
+            public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(BaseResultModel model) {
+                finish();
+
+                toNextActivity(MyOrderActivity.class);
+                T.showShort("下单成功！");
+            }
+
+            @Override
+            public void onFailure(Call<BaseResultModel> call, Throwable t) {
+
+            }
+        });
+    }
 
     private void initStatusBarState() {
         if (Build.VERSION.SDK_INT >= 21) {
@@ -129,43 +241,6 @@ public class CoreOrderDetailActivity extends BaseActivity {
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
             decorView.setSystemUiVisibility(option);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-    }
-
-    @OnClick({R.id.ll_back, R.id.btn_pin})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.ll_back:
-                finish();
-                break;
-            case R.id.btn_pin:
-                mApiStores.joinOrder(orderId).enqueue(new Callback<BaseResultModel>() {
-                    @Override
-                    public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
-                        if (response.isSuccessful()) {
-                            if (response.body().getCode() == 2) {
-                                handleServerData(response.body());
-                            } else {
-                                T.showShort(response.body().getMsg());
-                            }
-                        } else {
-                            T.showShort(response.toString());
-                        }
-                    }
-
-                    private void handleServerData(BaseResultModel model) {
-                        finish();
-
-                        toNextActivity(MyOrderActivity.class);
-                        T.showShort("下单成功！");
-                    }
-
-                    @Override
-                    public void onFailure(Call<BaseResultModel> call, Throwable t) {
-
-                    }
-                });
-                break;
         }
     }
 }

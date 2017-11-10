@@ -72,10 +72,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        ivTabPost.bringToFront();
-        initTabBottom();
-
         NOW_FRAGMENT = getIntent().getIntExtra("whichFragment", 0);
+        ivTabPost.bringToFront();
+
+        initTabBottom();
         initTabListener(NOW_FRAGMENT);
     }
 

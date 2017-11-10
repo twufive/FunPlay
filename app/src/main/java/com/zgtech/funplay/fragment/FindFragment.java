@@ -110,7 +110,7 @@ public class FindFragment extends BaseFragment {
         initStausBar();
     }
 
-    private void initFriendTalks(List<FriendTalkData.ListBean> originList) {
+    private void initRecyclerView(List<FriendTalkData.ListBean> originList) {
         findAdapter = new FindAdapter(getActivity(), R.layout.fp_item_social_main, originList);
         recyclerview.setLayoutManager(new LinearLayoutManager(FunPlayApplication.getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerview.setAdapter(findAdapter);
@@ -144,7 +144,7 @@ public class FindFragment extends BaseFragment {
             private void handleServerData(FriendTalkData model) {
                 originList = model.getList();
                 lastSpaceId = originList.get(originList.size() - 1).getSpaceId();
-                initFriendTalks(originList);
+                initRecyclerView(originList);
             }
 
             @Override

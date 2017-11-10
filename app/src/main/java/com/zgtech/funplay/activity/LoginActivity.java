@@ -77,7 +77,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        etMobile.setText("17707470095");
+        etMobile.setText("15073001217");
         etPwd.setText("123456");
     }
 

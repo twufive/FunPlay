@@ -148,6 +148,8 @@ public class SplashNewActivity extends BaseActivity {
                 } else {
                     Intent intent = new Intent(SplashNewActivity.this, LoginActivity.class);
                     fadeNextActivity(intent);
+
+//                    toNextActivityAndCloseThis(MainActivity.class);
                 }
 
             }

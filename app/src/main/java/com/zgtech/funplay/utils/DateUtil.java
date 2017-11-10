@@ -431,4 +431,26 @@ public class DateUtil {
         return (int) (t / 1000 - t1 / 1000) / 3600 / 24;
 
     }
+
+    /**
+     * 将long值转换成时间的字符串值
+     * */
+    public static String long2strTime(long time) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        java.util.Date dt = new Date(time);
+        String sDateTime = sdf.format(dt);
+
+        return sDateTime;
+    }
+
+    /**
+     * 将long值转换成时间的字符串值
+     * */
+    public static String long2strTimeShort(long time) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date dt = new Date(time);
+        String sDateTime = sdf.format(dt);
+
+        return sDateTime;
+    }
 }

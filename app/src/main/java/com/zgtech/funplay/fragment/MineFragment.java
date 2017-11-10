@@ -99,6 +99,8 @@ public class MineFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_mine, container, false);
         ButterKnife.bind(this, view);
 
+        devOpenHelper = new DaoMaster.DevOpenHelper(mActivity, "zayin.db", null);
+
         userId = SPUtils.getString(mActivity, "userId", "");
         initData();
         initView(view, savedInstanceState);
@@ -178,7 +180,7 @@ public class MineFragment extends BaseFragment {
         tvFans.setText("粉丝  " + individualModel.getUserCollectionCount() + "");
 
 
-        devOpenHelper = new DaoMaster.DevOpenHelper(mActivity, "zayin.db", null);
+
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDb());
         DaoSession daoSession = daoMaster.newSession();
         HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();

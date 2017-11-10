@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="pingpp-alipay-2.1.14">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/1c40a3bd1c86c9ed278a107ac6cbfaeba373ce0e/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/1c40a3bd1c86c9ed278a107ac6cbfaeba373ce0e/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/1c40a3bd1c86c9ed278a107ac6cbfaeba373ce0e/output/jars/libs/alipaySdk-20170725.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pingxx/pingpp-alipay/2.1.14/3b2668760de8e1787b2986f94a5e8c18cd373323/pingpp-alipay-2.1.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
