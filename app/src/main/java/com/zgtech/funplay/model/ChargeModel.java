@@ -1,15 +1,18 @@
 package com.zgtech.funplay.model;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/11/9.
  */
 
 public class ChargeModel {
 
+
     /**
      * code : 2
      * msg : 成功
-     * obj : {"id":"ch_HOOezDSyLyT4O00eHC0G0KKK","object":"charge","created":1510199438,"livemode":false,"paid":false,"refunded":false,"reversed":false,"app":"app_LKqnTGb50W9Cq5uj","channel":"alipay","orderNo":"12407506","clientIp":"58.20.12.191","amount":30000,"amountSettle":30000,"currency":"cny","subject":"火车站十人团两日游","body":"火车站十人团两日游,湖南18妹子做导游，原价5百块，现在3百块，贵不贵？意不意外？惊不惊喜？速速报名。","timePaid":null,"timeExpire":1510285838,"timeSettle":null,"transactionNo":null,"refunds":{"object":"list","url":"/v1/charges/ch_HOOezDSyLyT4O00eHC0G0KKK/refunds","hasMore":false,"data":[]},"amountRefunded":0,"failureCode":null,"failureMsg":null,"metadata":{},"credential":{"object":"credential","alipay":{"orderInfo":"_input_charset=\"utf-8\"&body=\"火车站十人团两日游,湖南18妹子做导游，原价5百块，现在3百块，贵不贵？意不意外？惊不惊喜？速速报名。\"&it_b_pay=\"2017-11-10 11:50:38\"¬ify_url=\"https%3A%2F%2Fnotify.pingxx.com%2Fnotify%2Fcharges%2Fch_HOOezDSyLyT4O00eHC0G0KKK\"&out_trade_no=\"12407506\"&partner=\"2008338532517812\"&payment_type=\"1\"&seller_id=\"2008338532517812\"&service=\"mobile.securitypay.pay\"&subject=\"火车站十人团两日游\"&total_fee=\"300.00\"&sign=\"ZkgwNEs4MUNPcTlDeW4xaUg0UGlyNUc0\"&sign_type=\"RSA\""}},"extra":{},"description":null}
+     * obj : {"id":"ch_1KSGqH9uzrj5L88yjL08O0aP","object":"charge","created":1510538192,"livemode":true,"paid":false,"refunded":false,"reversed":false,"app":"app_LKqnTGb50W9Cq5uj","channel":"alipay","orderNo":"12158073","clientIp":"58.20.12.191","amount":1,"amountSettle":1,"currency":"cny","subject":"Changsha","body":"sanriyou","timePaid":null,"timeExpire":1510624592,"timeSettle":null,"transactionNo":null,"refunds":{"object":"list","url":"/v1/charges/ch_1KSGqH9uzrj5L88yjL08O0aP/refunds","hasMore":false,"data":[]},"amountRefunded":0,"failureCode":null,"failureMsg":null,"metadata":{},"credential":{"object":"credential","alipay":{"orderInfo":"haha"}},"extra":{},"description":null}
      */
 
     private int code;
@@ -42,32 +45,32 @@ public class ChargeModel {
 
     public static class ObjBean {
         /**
-         * id : ch_HOOezDSyLyT4O00eHC0G0KKK
+         * id : ch_1KSGqH9uzrj5L88yjL08O0aP
          * object : charge
-         * created : 1510199438
-         * livemode : false
+         * created : 1510538192
+         * livemode : true
          * paid : false
          * refunded : false
          * reversed : false
          * app : app_LKqnTGb50W9Cq5uj
          * channel : alipay
-         * orderNo : 12407506
+         * orderNo : 12158073
          * clientIp : 58.20.12.191
-         * amount : 30000
-         * amountSettle : 30000
+         * amount : 1
+         * amountSettle : 1
          * currency : cny
-         * subject : 火车站十人团两日游
-         * body : 火车站十人团两日游,湖南18妹子做导游，原价5百块，现在3百块，贵不贵？意不意外？惊不惊喜？速速报名。
+         * subject : Changsha
+         * body : sanriyou
          * timePaid : null
-         * timeExpire : 1510285838
+         * timeExpire : 1510624592
          * timeSettle : null
          * transactionNo : null
-         * refunds : {"object":"list","url":"/v1/charges/ch_HOOezDSyLyT4O00eHC0G0KKK/refunds","hasMore":false,"data":[]}
+         * refunds : {"object":"list","url":"/v1/charges/ch_1KSGqH9uzrj5L88yjL08O0aP/refunds","hasMore":false,"data":[]}
          * amountRefunded : 0
          * failureCode : null
          * failureMsg : null
          * metadata : {}
-         * credential : {"object":"credential","alipay":{"orderInfo":"_input_charset=\"utf-8\"&body=\"火车站十人团两日游,湖南18妹子做导游，原价5百块，现在3百块，贵不贵？意不意外？惊不惊喜？速速报名。\"&it_b_pay=\"2017-11-10 11:50:38\"¬ify_url=\"https%3A%2F%2Fnotify.pingxx.com%2Fnotify%2Fcharges%2Fch_HOOezDSyLyT4O00eHC0G0KKK\"&out_trade_no=\"12407506\"&partner=\"2008338532517812\"&payment_type=\"1\"&seller_id=\"2008338532517812\"&service=\"mobile.securitypay.pay\"&subject=\"火车站十人团两日游\"&total_fee=\"300.00\"&sign=\"ZkgwNEs4MUNPcTlDeW4xaUg0UGlyNUc0\"&sign_type=\"RSA\""}}
+         * credential : {"object":"credential","alipay":{"orderInfo":"haha"}}
          * extra : {}
          * description : null
          */
@@ -326,13 +329,93 @@ public class ChargeModel {
         }
 
         public static class RefundsBean {
+            /**
+             * object : list
+             * url : /v1/charges/ch_1KSGqH9uzrj5L88yjL08O0aP/refunds
+             * hasMore : false
+             * data : []
+             */
+
+            private String object;
+            private String url;
+            private boolean hasMore;
+            private List<?> data;
+
+            public String getObject() {
+                return object;
+            }
+
+            public void setObject(String object) {
+                this.object = object;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public boolean isHasMore() {
+                return hasMore;
+            }
+
+            public void setHasMore(boolean hasMore) {
+                this.hasMore = hasMore;
+            }
+
+            public List<?> getData() {
+                return data;
+            }
+
+            public void setData(List<?> data) {
+                this.data = data;
+            }
         }
 
         public static class MetadataBean {
         }
 
         public static class CredentialBean {
+            /**
+             * object : credential
+             * alipay : {"orderInfo":"haha"}
+             */
+
+            private String object;
+            private AlipayBean alipay;
+
+            public String getObject() {
+                return object;
+            }
+
+            public void setObject(String object) {
+                this.object = object;
+            }
+
+            public AlipayBean getAlipay() {
+                return alipay;
+            }
+
+            public void setAlipay(AlipayBean alipay) {
+                this.alipay = alipay;
+            }
+
             public static class AlipayBean {
+                /**
+                 * orderInfo : haha
+                 */
+
+                private String orderInfo;
+
+                public String getOrderInfo() {
+                    return orderInfo;
+                }
+
+                public void setOrderInfo(String orderInfo) {
+                    this.orderInfo = orderInfo;
+                }
             }
         }
 

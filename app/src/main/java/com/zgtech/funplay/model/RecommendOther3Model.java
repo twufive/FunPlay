@@ -61,7 +61,7 @@ public class RecommendOther3Model {
          */
 
         private int avgMark;
-        private int avgPrice;
+        private double avgPrice;
         private int commentCount;
         private int transactionCount;
         private String userIcon;
@@ -81,11 +81,11 @@ public class RecommendOther3Model {
             this.avgMark = avgMark;
         }
 
-        public int getAvgPrice() {
+        public double getAvgPrice() {
             return avgPrice;
         }
 
-        public void setAvgPrice(int avgPrice) {
+        public void setAvgPrice(double avgPrice) {
             this.avgPrice = avgPrice;
         }
 

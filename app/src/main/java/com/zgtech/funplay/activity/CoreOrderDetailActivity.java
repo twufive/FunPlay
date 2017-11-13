@@ -98,42 +98,44 @@ public class CoreOrderDetailActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.btn_pin:
-//                doPinTuan();
-                //除QQ钱包外，其他渠道调起支付方式：
-                //参数一：Activity 表示当前调起支付的Activity
-                //参数二：data 表示获取到的charge或order的JSON字符串
-                mApiStores.initCharge(orderId).enqueue(new Callback<ChargeModel>() {
-                    @Override
-                    public void onResponse(Call<ChargeModel> call, Response<ChargeModel> response) {
-                        if (response.isSuccessful()) {
-                            if (response.body().getCode() == 2) {
-                                handleServerData(response.body());
-                            } else {
-                                T.showShort(response.body().getMsg());
-                            }
-                        } else {
-                            T.showShort(response.toString());
-                        }
-                    }
-
-                    private void handleServerData(ChargeModel body) {
-                        ChargeModel.ObjBean charge = body.getObj();
-
-
-                        Gson gson = new Gson();
-                        String chargeJson = gson.toJson(charge);
-                        Pingpp.createPayment(CoreOrderDetailActivity.this, chargeJson);
-                    }
-
-                    @Override
-                    public void onFailure(Call<ChargeModel> call, Throwable t) {
-                        T.showShort(t.toString());
-                    }
-                });
-
-
+                initPayModule();
                 break;
         }
+    }
+
+
+    /**
+     * 除QQ钱包外，其他渠道调起支付方式：
+     * 参数一：Activity 表示当前调起支付的Activity
+     * 参数二：data 表示获取到的charge或order的JSON字符串
+     */
+    private void initPayModule() {
+        mApiStores.initCharge(orderId).enqueue(new Callback<ChargeModel>() {
+            @Override
+            public void onResponse(Call<ChargeModel> call, Response<ChargeModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(ChargeModel body) {
+                ChargeModel.ObjBean charge = body.getObj();
+                Gson gson = new Gson();
+                String chargeJson = gson.toJson(charge);
+                Pingpp.createPayment(CoreOrderDetailActivity.this, chargeJson);
+            }
+
+            @Override
+            public void onFailure(Call<ChargeModel> call, Throwable t) {
+                T.showShort(t.toString());
+            }
+        });
     }
 
 
@@ -151,11 +153,24 @@ public class CoreOrderDetailActivity extends BaseActivity {
              */
                 String errorMsg = data.getExtras().getString("error_msg"); // 错误信息
                 String extraMsg = data.getExtras().getString("extra_msg"); // 错误信息
-//                showMsg(result, errorMsg, extraMsg);
                 L.i(result);
                 L.i(errorMsg);
                 L.i(extraMsg);
 
+
+                if (result.toString().equals("success")) {
+                    doPinTuan();
+                } else if (result.toString().equals("cancel")) {
+                    T.showShort("您取消了支付");
+                } else if (result.toString().equals("fail")) {
+                    T.showShort("支付失败！");
+                } else if (result.toString().equals("invalid")) {
+                    if (errorMsg.equals("wx_app_not_installed")) {
+                        T.showShort("请您先安装微信！");
+                    } else {
+                        T.showShort("支付插件未安装");
+                    }
+                }
 
             }
         }

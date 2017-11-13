@@ -60,7 +60,7 @@ public class NearbyData {
         private String userIcon;
         private String userTag1;
         private String userTag2;
-        private int avgPrice;
+        private double avgPrice;
         private int avgMark;
 
         public int getUserId() {
@@ -103,11 +103,11 @@ public class NearbyData {
             this.userTag2 = userTag2;
         }
 
-        public int getAvgPrice() {
+        public double getAvgPrice() {
             return avgPrice;
         }
 
-        public void setAvgPrice(int avgPrice) {
+        public void setAvgPrice(double avgPrice) {
             this.avgPrice = avgPrice;
         }
 

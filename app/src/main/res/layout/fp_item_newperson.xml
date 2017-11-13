@@ -156,7 +156,7 @@
             android:id="@+id/iv_site"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@drawable/bg_mine_info" />
+            />
 
         <LinearLayout
             android:layout_width="match_parent"

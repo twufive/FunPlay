@@ -22,7 +22,7 @@
                 android:id="@+id/iv_site"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:background="@drawable/bg_mine_info" />
+                 />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_avatar"
@@ -39,7 +39,7 @@
             android:layout_height="38dp"
             android:maxLines="2"
             android:padding="3dp"
-            android:text="在这里，你可以享受清风在这里，你可以享受清风"
+            android:text=""
             android:textColor="@color/little_black"
             android:textSize="12sp" />
 

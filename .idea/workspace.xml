@@ -15,412 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56e1d6a-d900-478b-ad48-3838a58c4505" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_add_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_add_white_36dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_card_giftcard_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_credit_card_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_star_yellow_a200_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_add_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_add_white_36dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_card_giftcard_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_credit_card_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_star_yellow_a200_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_add_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_add_white_36dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_card_giftcard_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_credit_card_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_star_yellow_a200_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_add_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_add_white_36dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_card_giftcard_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_credit_card_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_star_yellow_a200_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_card_giftcard_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_credit_card_pink_500_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_star_yellow_a200_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/BaiduLBS_Android.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/HwPush_SDK_V2705_nomap.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/MiPush_SDK_Client_2_2_19.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/glide-3.6.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/google-play-services.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/hyphenatechat_3.3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/libs/org.apache.http.legacy.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libhyphenate.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libhyphenate_av.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libhyphenate_av_recorder.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/arm64-v8a/libsqlite.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libhyphenate.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libhyphenate_av.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libhyphenate_av_recorder.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/armeabi-v7a/libsqlite.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libBaiduMapSDK_base_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libBaiduMapSDK_map_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libBaiduMapSDK_util_v4_0_0.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libhyphenate.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libhyphenate_av.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libhyphenate_av_recorder.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/liblocSDK7.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/jniLibs/x86/libsqlite.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_app_panel_video_icon.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_appitem_del_btn_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_appitem_del_btn_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chat_face_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chat_face_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chat_video_mask_to.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_bg_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_bg_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_voice_playing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_voice_playing_f1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_voice_playing_f2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatfrom_voice_playing_f3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_biaoqing_btn_enable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_biaoqing_btn_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_setmode_keyboard_btn_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_setmode_keyboard_btn_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_setmode_voice_btn_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatting_setmode_voice_btn_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_bg_focused.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_bg_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_voice_playing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_voice_playing_f1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_voice_playing_f2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_voice_playing_f3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_contact_list_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_contact_list_selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_conversation_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_conversation_selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_default_avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_default_image.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_dx_checkbox_gray_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_dx_checkbox_off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_dx_checkbox_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_groups_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_icon_marka.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_input_bar_bg_active.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_input_bar_bg_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_location_msg.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_login_error_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_listitem_disable.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_listitem_grey_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_listitem_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_listitem_simple.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_title_back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_mm_title_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_msg_state_fail_resend.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_msg_state_fail_resend_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_new_friends_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_seabar_input.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_search_bar_icon_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_search_clear_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_search_clear_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_settings_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_settings_selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_show_head_toast_bg.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_slidetab_bg_press.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_to_group_details_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_type_select_btn_nor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_type_select_btn_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_unread_count_bg.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_video_download_btn_nor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_video_play_btn_small_nor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_video_recorder_start_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_video_recorder_stop_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ease_voice_unread.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_31.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_33.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_34.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_35.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-hdpi/ee_9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_blue_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_edit_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_image_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_image_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_item_file.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_location_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_location_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_press_speak_btn_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_press_speak_btn_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_send_btn_normal.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_send_btn_pressed.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_takepic_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_takepic_pressed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_video_call_receive.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_video_call_self.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_voice_call_receive.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_voice_call_self.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chatting_biaoqing_btn_enable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_chatting_biaoqing_btn_normal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_close_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_default_avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_default_expression.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_delete_expression.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_dot_emojicon_selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_dot_emojicon_unselected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_group_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_groups_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_mm_title_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_new_friends_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_open_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/ease_unread_dot.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable-xhdpi/fx_default_useravatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/pingpp_alipay_2_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/pingpp_core_2_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/wechat_sdk_android_without_mta_1_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/view/CusView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/easeUI_CN.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/lint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/EaseConstant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EaseContactAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EaseConversationAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EaseExpressionPagerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EaseMessageAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EmojiconGridAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/adapter/EmojiconPagerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/controller/EaseUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/domain/EaseEmojicon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/domain/EaseEmojiconGroupEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/domain/EaseUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EaseAtMessageHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EaseDefaultEmojiconDatas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EaseImageCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EaseNotifier.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EasePreferenceManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/model/EaseVoiceRecorder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseBaiduMapActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseBaseActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseBaseFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseChatFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseChatRoomListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseContactListFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseConversationListFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseGroupListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseShowBigImageActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseShowNormalFileActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/ui/EaseShowVideoActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/utils/EaseCommonUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/utils/EaseImageUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/utils/EaseLoadLocalBigImgTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/utils/EaseSmileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/utils/EaseUserUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseAlertDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseChatExtendMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseChatInputMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseChatMessageList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseChatPrimaryMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseChatPrimaryMenuBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseContactList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseConversationList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseExpandGridView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseSidebar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseSwitchButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseTitleBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/EaseVoiceRecorderView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowBigExpression.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowImage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowLocation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowVideo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowVoice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseChatRowVoicePlayClickListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/chatrow/EaseCustomChatRowProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/emojicon/EaseEmojiconIndicatorView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/emojicon/EaseEmojiconMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/emojicon/EaseEmojiconMenuBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/emojicon/EaseEmojiconPagerView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/emojicon/EaseEmojiconScrollTabBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/Compat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/EasePhotoView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/IPhotoView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/PhotoViewAttacher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/SDK16.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/ScrollerProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/java/com/hyphenate/easeui/widget/photoview/VersionedGestureDetector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/fade_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/fade_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/head_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/head_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/hold.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_bottom_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_bottom_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_top_in.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_top_in2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_top_out.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/push_top_out2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/slide_in_from_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/slide_in_from_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/slide_out_to_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/slide_out_to_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/voice_from_icon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/anim/voice_to_icon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_blue_normal_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_blue_pressed_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_blue_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_cancel_bj.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_cancel_normal_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_btn_cancel_pressed_shape.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chat_image_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chat_location_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chat_press_speak_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chat_send_btn_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chat_takepic_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chatfrom_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chatting_setmode_keyboard_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chatting_setmode_voice_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_chatto_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_common_tab_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_edit_text_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_mm_listitem.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_mm_listitem_grey.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_msg_state_failed_resend.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_recording_hint_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_recording_text_hint_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_search_clear.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_sidebar_background_pressed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_timestampe_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/drawable/ease_type_select_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_activity_baidumap.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_activity_show_big_image.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_activity_show_file.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_alert_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_chat_menu_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_chat_message_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_commom_back_btn.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_conversation_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_emojicon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_expression_gridview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_fragment_chat.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_fragment_contact_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_fragment_conversation_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_layout_chat_primary_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_layout_emojicon_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_big_expression.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_chat_history.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_contact.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_expression.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_bigexpression.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_file.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_location.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_message.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_video.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_video_call.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_voice.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_received_voice_call.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_bigexpression.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_file.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_location.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_message.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_video.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_video_call.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_voice.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_row_sent_voice_call.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_scroll_tab_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_search_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_search_bar_with_padding.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_showvideo_activity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_chat_input_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_chat_primary_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_contact_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_emojicon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_emojicon_tab_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_switch_button.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_title_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/ease_widget_voice_recorder.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/layout/fx_group_avatar9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values-large/ease_dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values-v11/ease_styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values-w820dp/ease_dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values-xlarge/ease_dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values-zh-rCN/ease_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values/ease_attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values/ease_colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values/ease_dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values/ease_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/easeUI_CN/src/main/res/values/ease_styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/fastjson_1_1_65_android.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/MgqUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/FunPlayApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/FunPlayApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/SplashNewActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/SplashNewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/DateUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/DateUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml" />
     </list>
     <ignored path="FunPlay.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -456,12 +63,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CoreOrderDetailActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java">
+      <file leaf-file-name="BaseActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="527">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3442,7 +3051,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="E:\ProjectFunPlayTWO\FunPlay" value="6025787286163" />
+        <entry key="E:\ProjectFunPlayTWO\FunPlay" value="6026131586405" />
         <entry key="E:\ProjectFunPlay\FunPlay" value="4505660212895" />
       </map>
     </option>
@@ -3945,9 +3554,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/pop/TitlePopup.java" />
-        <option value="$PROJECT_DIR$/easeUI_CN/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_new.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/TaStoryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_social_main_ta_story.xml" />
@@ -3956,8 +3562,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/HighBeautyFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NewPersonFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_find.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendSiteAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendPersonAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/SpaceOrderModel.java" />
@@ -3968,9 +3572,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/FriendTalkData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/RegistAActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/moduled/MyInfoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/LoginBackUserModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginSMSActivity.java" />
@@ -3987,15 +3588,23 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/FindAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/FunPlayApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/SplashNewActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/view/CusView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/MgqUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java" />
       </list>
     </option>
   </component>
@@ -4052,7 +3661,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -4063,11 +3674,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4085,11 +3694,8 @@
     <property name="ExportApk.SignV2" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\ProjectFunPlayTWO\FunPlay\easeUI_CN\src\main\res\drawable" />
-      <recent name="E:\ProjectFunPlayTWO\FunPlay\easeUI_CN\src\main\res\anim" />
-      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable-xxhdpi" />
-      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\mipmap-hdpi" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zgtech.funplay.activity.center" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zgtech.funplay.activity" />
@@ -4104,14 +3710,17 @@
       <recent name="E:\ProjectFunPlayTWO\FunPlay\app\src\main\res\xml" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zgtech.funplay.utils" />
       <recent name="com.zgtech.funplay.adapter" />
       <recent name="com.zgtech.funplay.activity.moduled" />
       <recent name="com.zgtech.funplay.activity" />
       <recent name="com.zgtech.funplay.global" />
-      <recent name="com.zgtech.funplay.utils" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zgtech.funplay.activity.center" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProjectFunPlayTWO\FunPlay\easeUI_CN\src\main\res\drawable" />
+      <recent name="E:\ProjectFunPlayTWO\FunPlay\easeUI_CN\src\main\res\anim" />
+      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\drawable-xxhdpi" />
+      <recent name="E:\ProjectFunPlay\FunPlay\app\src\main\res\mipmap-hdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -4365,7 +3974,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -4570,7 +4179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1507532916664</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="PAY TEST">
+      <created>1510309057483</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1510309057483</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4583,8 +4199,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2753623" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
@@ -4592,28 +4208,28 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5021322" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303233" sideWeight="0.49573562" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28411514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59977704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38127092" sideWeight="0.49573562" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59977704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2865106" sideWeight="0.5042644" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.4950495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.4950495" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13712375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41137123" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1945629" sideWeight="0.5049505" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46599776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13712375" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28411514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -4663,285 +4279,16 @@
     <MESSAGE value="ready to finish" />
     <MESSAGE value="end" />
     <MESSAGE value="happy ending" />
-    <option name="LAST_COMMIT_MESSAGE" value="happy ending" />
+    <MESSAGE value="PAY TEST" />
+    <option name="LAST_COMMIT_MESSAGE" value="PAY TEST" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="141" />
+      <option name="time" value="151" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/global/GlideImageLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/RegistCActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1573">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_certify_id.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/moduled/CertifyIDActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/moduled/MyInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="111" column="38" selection-start-line="109" selection-start-column="3" selection-end-line="111" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_nearby.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="68" column="47" selection-start-line="66" selection-start-column="8" selection-end-line="68" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fx_activity_publish_moments.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="44" selection-start-line="28" selection-start-column="7" selection-end-line="37" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/modulec/FriendTalkPushActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="413" column="0" selection-start-line="413" selection-start-column="0" selection-end-line="413" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fx_item_gridview_image.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/ChatActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MessageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_message.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/FunPlayUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="444" column="0" selection-start-line="444" selection-start-column="0" selection-end-line="444" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_find_second.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="96" column="21" selection-start-line="48" selection-start-column="4" selection-end-line="96" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fx_popwindow_moments.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="44" column="12" selection-start-line="40" selection-start-column="3" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/pop/AddPopWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/global/OptionsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1365">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1509">
-          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3797">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/moduled/MyPwdActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_pwd.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/MineFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="262" column="30" selection-start-line="262" selection-start-column="30" selection-end-line="262" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wanjian/cockroach/0.0.5/59b82c2321c0a29e9520710b4404021de2c5df84/cockroach-0.0.5-sources.jar!/com/wanjian/cockroach/Cockroach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/FunPlayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_social_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="206" column="67" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="67" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/CommentAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/FindAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/FindFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -4961,7 +4308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4976,19 +4322,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="820" column="16" selection-start-line="820" selection-start-column="16" selection-end-line="820" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4997,35 +4334,25 @@
         <state relative-caret-position="608">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ashokvarma.android/bottom-navigation-bar/2.0.1/c6439b2d2b67125139646095ac23ea8445c4c840/bottom-navigation-bar-2.0.1-sources.jar!/com/ashokvarma/bottomnavigation/BottomNavigationBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11158" column="19" selection-start-line="11158" selection-start-column="19" selection-end-line="11158" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5033,37 +4360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5071,7 +4367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-952">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5079,26 +4374,473 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_center_push_new_order.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="707">
           <caret line="192" column="52" selection-start-line="192" selection-start-column="52" selection-end-line="192" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/RequestBodyBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/utils/MgqUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/ChargeModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="408" column="0" selection-start-line="408" selection-start-column="0" selection-end-line="408" selection-end-column="0" />
+          <folding>
+            <element signature="e#972#973#0" expanded="false" />
+            <element signature="e#999#1000#0" expanded="false" />
+            <element signature="e#1036#1037#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#1124#1125#0" expanded="false" />
+            <element signature="e#1162#1163#0" expanded="false" />
+            <element signature="e#1192#1193#0" expanded="false" />
+            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#1249#1250#0" expanded="false" />
+            <element signature="e#1288#1289#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+            <element signature="e#3306#3307#0" expanded="false" />
+            <element signature="e#3339#3340#0" expanded="false" />
+            <element signature="e#3379#3380#0" expanded="false" />
+            <element signature="e#3415#3416#0" expanded="false" />
+            <element signature="e#3452#3453#0" expanded="false" />
+            <element signature="e#3489#3490#0" expanded="false" />
+            <element signature="e#3537#3538#0" expanded="false" />
+            <element signature="e#3581#3582#0" expanded="false" />
+            <element signature="e#3616#3617#0" expanded="false" />
+            <element signature="e#3654#3655#0" expanded="false" />
+            <element signature="e#3701#3702#0" expanded="false" />
+            <element signature="e#3747#3748#0" expanded="false" />
+            <element signature="e#3786#3787#0" expanded="false" />
+            <element signature="e#3825#3826#0" expanded="false" />
+            <element signature="e#3878#3879#0" expanded="false" />
+            <element signature="e#3926#3927#0" expanded="false" />
+            <element signature="e#3961#3962#0" expanded="false" />
+            <element signature="e#3996#3997#0" expanded="false" />
+            <element signature="e#4041#4042#0" expanded="false" />
+            <element signature="e#4081#4082#0" expanded="false" />
+            <element signature="e#4120#4121#0" expanded="false" />
+            <element signature="e#4159#4160#0" expanded="false" />
+            <element signature="e#4212#4213#0" expanded="false" />
+            <element signature="e#4260#4261#0" expanded="false" />
+            <element signature="e#4299#4300#0" expanded="false" />
+            <element signature="e#4338#4339#0" expanded="false" />
+            <element signature="e#4391#4392#0" expanded="false" />
+            <element signature="e#4439#4440#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
+            <element signature="e#4507#4508#0" expanded="false" />
+            <element signature="e#4549#4550#0" expanded="false" />
+            <element signature="e#4587#4588#0" expanded="false" />
+            <element signature="e#4625#4626#0" expanded="false" />
+            <element signature="e#4663#4664#0" expanded="false" />
+            <element signature="e#4713#4714#0" expanded="false" />
+            <element signature="e#4759#4760#0" expanded="false" />
+            <element signature="e#4797#4798#0" expanded="false" />
+            <element signature="e#4835#4836#0" expanded="false" />
+            <element signature="e#4885#4886#0" expanded="false" />
+            <element signature="e#4931#4932#0" expanded="false" />
+            <element signature="e#4970#4971#0" expanded="false" />
+            <element signature="e#5009#5010#0" expanded="false" />
+            <element signature="e#5061#5062#0" expanded="false" />
+            <element signature="e#5109#5110#0" expanded="false" />
+            <element signature="e#5143#5144#0" expanded="false" />
+            <element signature="e#5180#5181#0" expanded="false" />
+            <element signature="e#5225#5226#0" expanded="false" />
+            <element signature="e#5269#5270#0" expanded="false" />
+            <element signature="e#5309#5310#0" expanded="false" />
+            <element signature="e#5352#5353#0" expanded="false" />
+            <element signature="e#5409#5410#0" expanded="false" />
+            <element signature="e#5465#5466#0" expanded="false" />
+            <element signature="e#5504#5505#0" expanded="false" />
+            <element signature="e#5543#5544#0" expanded="false" />
+            <element signature="e#5595#5596#0" expanded="false" />
+            <element signature="e#5643#5644#0" expanded="false" />
+            <element signature="e#5681#5682#0" expanded="false" />
+            <element signature="e#5719#5720#0" expanded="false" />
+            <element signature="e#5769#5770#0" expanded="false" />
+            <element signature="e#5815#5816#0" expanded="false" />
+            <element signature="e#5850#5851#0" expanded="false" />
+            <element signature="e#5885#5886#0" expanded="false" />
+            <element signature="e#5929#5930#0" expanded="false" />
+            <element signature="e#5969#5970#0" expanded="false" />
+            <element signature="e#6008#6009#0" expanded="false" />
+            <element signature="e#6047#6048#0" expanded="false" />
+            <element signature="e#6099#6100#0" expanded="false" />
+            <element signature="e#6147#6148#0" expanded="false" />
+            <element signature="e#6185#6186#0" expanded="false" />
+            <element signature="e#6226#6227#0" expanded="false" />
+            <element signature="e#6279#6280#0" expanded="false" />
+            <element signature="e#6331#6332#0" expanded="false" />
+            <element signature="e#6372#6373#0" expanded="false" />
+            <element signature="e#6413#6414#0" expanded="false" />
+            <element signature="e#6469#6470#0" expanded="false" />
+            <element signature="e#6521#6522#0" expanded="false" />
+            <element signature="e#6565#6566#0" expanded="false" />
+            <element signature="e#6609#6610#0" expanded="false" />
+            <element signature="e#6671#6672#0" expanded="false" />
+            <element signature="e#6729#6730#0" expanded="false" />
+            <element signature="e#6772#6773#0" expanded="false" />
+            <element signature="e#6810#6811#0" expanded="false" />
+            <element signature="e#6865#6866#0" expanded="false" />
+            <element signature="e#6911#6912#0" expanded="false" />
+            <element signature="e#6953#6954#0" expanded="false" />
+            <element signature="e#6998#6999#0" expanded="false" />
+            <element signature="e#7059#7060#0" expanded="false" />
+            <element signature="e#7119#7120#0" expanded="false" />
+            <element signature="e#7161#7162#0" expanded="false" />
+            <element signature="e#7203#7204#0" expanded="false" />
+            <element signature="e#7261#7262#0" expanded="false" />
+            <element signature="e#7315#7316#0" expanded="false" />
+            <element signature="e#7356#7357#0" expanded="false" />
+            <element signature="e#7397#7398#0" expanded="false" />
+            <element signature="e#7453#7454#0" expanded="false" />
+            <element signature="e#7505#7506#0" expanded="false" />
+            <element signature="e#7550#7551#0" expanded="false" />
+            <element signature="e#7589#7590#0" expanded="false" />
+            <element signature="e#7647#7648#0" expanded="false" />
+            <element signature="e#7695#7696#0" expanded="false" />
+            <element signature="e#7744#7745#0" expanded="false" />
+            <element signature="e#7785#7786#0" expanded="false" />
+            <element signature="e#7849#7850#0" expanded="false" />
+            <element signature="e#7901#7902#0" expanded="false" />
+            <element signature="e#7940#7941#0" expanded="false" />
+            <element signature="e#7976#7977#0" expanded="false" />
+            <element signature="e#8025#8026#0" expanded="false" />
+            <element signature="e#8067#8068#0" expanded="false" />
+            <element signature="e#8109#8110#0" expanded="false" />
+            <element signature="e#8151#8152#0" expanded="false" />
+            <element signature="e#8209#8210#0" expanded="false" />
+            <element signature="e#8263#8264#0" expanded="false" />
+            <element signature="e#8672#8673#0" expanded="false" />
+            <element signature="e#8717#8718#0" expanded="false" />
+            <element signature="e#8769#8770#0" expanded="false" />
+            <element signature="e#8821#8822#0" expanded="false" />
+            <element signature="e#8859#8860#0" expanded="false" />
+            <element signature="e#8901#8902#0" expanded="false" />
+            <element signature="e#8947#8948#0" expanded="false" />
+            <element signature="e#8993#8994#0" expanded="false" />
+            <element signature="e#9035#9036#0" expanded="false" />
+            <element signature="e#9081#9082#0" expanded="false" />
+            <element signature="e#9136#9137#0" expanded="false" />
+            <element signature="e#9190#9191#0" expanded="false" />
+            <element signature="e#9230#9231#0" expanded="false" />
+            <element signature="e#9273#9274#0" expanded="false" />
+            <element signature="e#9322#9323#0" expanded="false" />
+            <element signature="e#9370#9371#0" expanded="false" />
+            <element signature="e#9708#9709#0" expanded="false" />
+            <element signature="e#9753#9754#0" expanded="false" />
+            <element signature="e#9805#9806#0" expanded="false" />
+            <element signature="e#9857#9858#0" expanded="false" />
+            <element signature="e#9902#9903#0" expanded="false" />
+            <element signature="e#9947#9948#0" expanded="false" />
+            <element signature="e#10003#10004#0" expanded="false" />
+            <element signature="e#10055#10056#0" expanded="false" />
+            <element signature="e#10268#10269#0" expanded="false" />
+            <element signature="e#10324#10325#0" expanded="false" />
+            <element signature="e#10386#10387#0" expanded="false" />
+            <element signature="e#10452#10453#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/PinTuanAllModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="229" column="23" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendPersonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/RecommendSiteAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NewPersonAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/RecommendOther3Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/adapter/NearbyAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/NearbyData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/model/QueryGuiderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_recommend.xml">
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/RecommendFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="105" column="73" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NewPersonFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_newperson.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/fragment/childFragment/NearbyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fp_item_nearby.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/activity/CoreOrderDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="14">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/retrofit/ApiStores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/25.3.1/appcompat-v7-25.3.1-sources.jar!/android/support/v7/app/AppCompatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/BaseFragmentActivityJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/BaseFragmentActivityHoneycomb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.3.1/support-fragment-25.3.1-sources.jar!/android/support/v4/app/BaseFragmentActivityGingerbread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-compat/25.3.1/support-compat-25.3.1-sources.jar!/android/support/v4/app/SupportActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/MotionEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3753">
+          <caret line="194" column="28" selection-start-line="194" selection-start-column="28" selection-end-line="194" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="3063" column="22" selection-start-line="3063" selection-start-column="22" selection-end-line="3063" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="10001" column="50" selection-start-line="10001" selection-start-column="50" selection-end-line="10001" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/InputEventConsistencyVerifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.3.1/support-core-ui-25.3.1-sources.jar!/android/support/v4/view/ViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/widget/RemoteViews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="209" column="22" selection-start-line="209" selection-start-column="22" selection-end-line="209" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/widget/FrameLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="418" column="52" selection-start-line="418" selection-start-column="52" selection-end-line="418" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/pop/AddPopWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-25/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="7132" column="48" selection-start-line="7132" selection-start-column="36" selection-end-line="7132" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/zgtech/funplay/base/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
