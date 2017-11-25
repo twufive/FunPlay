@@ -18,7 +18,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
 import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.retrofit.ApiStores;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.util.List;
 
@@ -84,7 +84,7 @@ public class NewPersonAdapter extends BaseQuickAdapter<RecommendOther3Model.ObjB
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SPUtils.setString(act, "otherUserId", individualModel.getUserId() + "");
+                SP.setString(act, "otherUserId", individualModel.getUserId() + "");
 
                 Intent intent = new Intent(act, CoreUserDetailPageActivity.class);
                 intent.putExtra("userId", individualModel.getUserId() + "");
@@ -95,7 +95,7 @@ public class NewPersonAdapter extends BaseQuickAdapter<RecommendOther3Model.ObjB
         btnSeek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SPUtils.setString(act, "otherUserId", individualModel.getUserId() + "");
+                SP.setString(act, "otherUserId", individualModel.getUserId() + "");
 
                 Intent intent = new Intent(act, CoreUserDetailPageActivity.class);
                 intent.putExtra("userId", individualModel.getUserId() + "");

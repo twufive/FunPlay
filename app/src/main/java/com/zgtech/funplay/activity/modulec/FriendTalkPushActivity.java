@@ -45,7 +45,7 @@ import com.zgtech.funplay.model.SpaceOrderModel;
 import com.zgtech.funplay.model.UpImgsModel;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.retrofit.RetrofitParameterBuilder;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.io.File;
@@ -109,7 +109,7 @@ public class FriendTalkPushActivity extends BaseActivity {
         originPhotoList = getIntent().getStringArrayListExtra("photoList");
         initView();
 
-        exclusiveId = SPUtils.getString(this, "exclusiveId", "");
+        exclusiveId = SP.getString(this, "exclusiveId", "");
     }
 
     public void initView() {
@@ -224,6 +224,7 @@ public class FriendTalkPushActivity extends BaseActivity {
         });
     }
 
+
     // 发布说说
     private void sendTalk(String talkContent, List<String> urlList) {
         originMap = new HashMap<>();
@@ -255,7 +256,7 @@ public class FriendTalkPushActivity extends BaseActivity {
             private void handleServerData(BaseResultModel model) {
                 dialog.dismiss();
 
-                SPUtils.setString(FriendTalkPushActivity.this, "YouQuanCache", "");
+                SP.setString(FriendTalkPushActivity.this, "YouQuanCache", "");
 
                 Intent intent = new Intent(FriendTalkPushActivity.this, MainActivity.class);
                 intent.putExtra("whichFragment", 3);

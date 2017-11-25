@@ -27,7 +27,7 @@ import com.zgtech.funplay.model.LoginBackUserModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.HashMap;
@@ -133,16 +133,16 @@ public class SplashNewActivity extends BaseActivity {
             public void onAnimationEnd(Animation animation) {
                 // 动画结束,跳转页面
                 // 否则跳登陆页面
-                boolean isLogined = SPUtils.getBoolean(SplashNewActivity.this, "isLogined", false);
+                boolean isLogined = SP.getBoolean(SplashNewActivity.this, "isLogined", false);
 
 
                 // 登陆页面
                 if (isLogined) {
                     //已经输入密码登录过
                     //登录的时候，要验证用户的真实性
-                    String mobile = SPUtils.getString(SplashNewActivity.this, "myMobile", "");
-                    String pwd = SPUtils.getString(SplashNewActivity.this, "myPwd", "");
-                    String androidToken = SPUtils.getString(SplashNewActivity.this, "androidToken", "");
+                    String mobile = SP.getString(SplashNewActivity.this, "myMobile", "");
+                    String pwd = SP.getString(SplashNewActivity.this, "myPwd", "");
+                    String androidToken = SP.getString(SplashNewActivity.this, "androidToken", "");
 
                     doLogin(mobile,pwd);
                 } else {
@@ -225,18 +225,18 @@ public class SplashNewActivity extends BaseActivity {
         String stateIdent = stateIdentCode.equals("0")?"未认证":"已认证";
         String stateIdentJob = stateIdentJobCode.equals("0")?"未认证":"已认证";
 
-        SPUtils.setString(SplashNewActivity.this, "userId", exclusiveId);
-        SPUtils.setString(SplashNewActivity.this, "myImUser", myImUser);
-        SPUtils.setString(SplashNewActivity.this, "myNick", myNick);
-        SPUtils.setString(SplashNewActivity.this, "myAvatar", myAvatar);
-        SPUtils.setString(SplashNewActivity.this, "mySex", mySex);
-        SPUtils.setString(SplashNewActivity.this, "myMobile", mobile);
-        SPUtils.setString(SplashNewActivity.this, "myPwd", pwd);
+        SP.setString(SplashNewActivity.this, "userId", exclusiveId);
+        SP.setString(SplashNewActivity.this, "myImUser", myImUser);
+        SP.setString(SplashNewActivity.this, "myNick", myNick);
+        SP.setString(SplashNewActivity.this, "myAvatar", myAvatar);
+        SP.setString(SplashNewActivity.this, "mySex", mySex);
+        SP.setString(SplashNewActivity.this, "myMobile", mobile);
+        SP.setString(SplashNewActivity.this, "myPwd", pwd);
 
 
 
-        SPUtils.setString(SplashNewActivity.this, "stateIdent", stateIdent);//身份认证
-        SPUtils.setString(SplashNewActivity.this, "stateIdentJob", stateIdentJob);//职业认证
+        SP.setString(SplashNewActivity.this, "stateIdent", stateIdent);//身份认证
+        SP.setString(SplashNewActivity.this, "stateIdentJob", stateIdentJob);//职业认证
 
 
 

@@ -1,5 +1,6 @@
 package com.zgtech.funplay.fragment.childFragment;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -40,6 +41,7 @@ public class RecommendFragment extends BaseFragment {
 
     private List<RecommendModel.ObjBean.AddressListBean> addressList = new ArrayList<>();
     private List<RecommendModel.ObjBean.FoodListBean> foodList = new ArrayList<>();
+    private ProgressDialog dialog;
 
 
     @Nullable
@@ -47,6 +49,8 @@ public class RecommendFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View thisView = inflater.inflate(R.layout.fragment_recommend, container, false);
         ButterKnife.bind(this, thisView);
+
+        showProgressDialog();
 
         initView(thisView, savedInstanceState);
         initData();
@@ -108,6 +112,8 @@ public class RecommendFragment extends BaseFragment {
         linearLayoutManagerSite.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewSite.setLayoutManager(linearLayoutManagerSite);
         recyclerViewSite.setAdapter(siteAdapter);
+
+        dialog.dismiss();
     }
 
     private void initPerson() {
@@ -116,6 +122,14 @@ public class RecommendFragment extends BaseFragment {
         linearLayoutManagerPerson.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewPerson.setLayoutManager(linearLayoutManagerPerson);
         recyclerViewPerson.setAdapter(personAdapter);
+    }
+
+    private void showProgressDialog() {
+        dialog = new ProgressDialog(mActivity);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setMessage("正在加载...");
+        dialog.show();
     }
 
     public static RecommendFragment newInstance() {

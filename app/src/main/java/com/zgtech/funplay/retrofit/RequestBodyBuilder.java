@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.zgtech.funplay.FunPlayApplication;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.util.HashMap;
 
@@ -20,7 +20,7 @@ public class RequestBodyBuilder {
 
     public static RequestBody build(HashMap<Object, Object> map) {
         Context context = FunPlayApplication.getContext();
-        String androidToken = SPUtils.getString(context, "androidToken", "");
+        String androidToken = SP.getString(context, "androidToken", "");
 
         map.put("androidToken",androidToken);
 

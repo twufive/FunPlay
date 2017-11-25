@@ -96,8 +96,6 @@ dependencies {
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.1.6' // 使用微信支付时添加,具体版本参考微信官方文档
     compile 'com.pingxx:pingpp-alipay:2.1.14' // 使用支付宝时添加
 
-    //fastjson
-    compile 'com.alibaba:fastjson:1.1.65.android'
     //cockroach
     compile 'com.wanjian:cockroach:0.0.5'
 }

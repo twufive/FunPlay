@@ -16,7 +16,7 @@ import java.util.HashMap;
  * Created by zayin on 2016/4/4.
  * Time:04月04日   11:01
  */
-public class SPUtils {
+public class SP {
     public static void setString(Context ctx, String key, String value) {
         SharedPreferences sp = ctx.getSharedPreferences("config",
                 Context.MODE_PRIVATE);

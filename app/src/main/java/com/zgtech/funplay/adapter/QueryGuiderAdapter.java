@@ -57,7 +57,6 @@ public class QueryGuiderAdapter extends BaseQuickAdapter<QueryGuiderModel.ObjBea
         if (individualModel.getOrders() != null && individualModel.getOrders().size() != 0) {
             Glide.with(FunPlayApplication.getContext())
                     .load(ApiStores.API_SERVER_URL + individualModel.getOrders().get(0).getOrderPicture1())
-//                .load("http://img4.imgtn.bdimg.com/it/u=3050884629,2611088519&fm=26&gp=0.jpg")
                     .into(ivSite);
         } else {
             //否则使用默认图片

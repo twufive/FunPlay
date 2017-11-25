@@ -1,21 +1,16 @@
 package com.zgtech.funplay.activity;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -34,16 +29,15 @@ import com.zgtech.funplay.fragment.HomeFragment;
 import com.zgtech.funplay.fragment.MessageFragment;
 import com.zgtech.funplay.fragment.MineFragment;
 import com.zgtech.funplay.utils.L;
+import com.zgtech.funplay.utils.P;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.zgtech.funplay.FunPlayApplication.mContext;
+import static com.zgtech.funplay.utils.ActivityCollectorUtils.finishAll;
 
 public class MainActivity extends BaseActivity {
-    private static String TAG = "MainActivity";
-    private static final int REQUEST_CODE = 100;
     @Bind(R.id.frame_container)
     FrameLayout frameContainer;
     @Bind(R.id.bnb_main)
@@ -51,6 +45,8 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.iv_tab_post)
     ImageView ivTabPost;
 
+    private static String TAG = "MainActivity";
+    String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO};
     private HomeFragment homeFragment;
     private MessageFragment messageFragment;
     private FindFragment findFragment;
@@ -58,14 +54,14 @@ public class MainActivity extends BaseActivity {
     private int NOW_FRAGMENT;
     private boolean popupWindowIsShow = false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        initPermission();
-
+        P.initPerMissions(this, permissions);
         initData();
         initView();
     }
@@ -88,11 +84,15 @@ public class MainActivity extends BaseActivity {
     private void initTabBottom() {
         bnbMain.setMode(BottomNavigationBar.MODE_FIXED);
         bnbMain.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_a, "首页").setActiveColorResource(R.color.colorPrimary));
-        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_b, "消息").setActiveColorResource(R.color.colorPrimary));
+//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_a, "首页").setActiveColorResource(R.color.colorPrimary));
+//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_b, "消息").setActiveColorResource(R.color.colorPrimary));
+//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_c, "旅游圈").setActiveColorResource(R.color.colorPrimary));
+//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_d, "我的").setActiveColorResource(R.color.colorPrimary));
+        bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_home_black_24dp, "首页").setActiveColorResource(R.color.colorPrimary));
+        bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_message_black_24dp, "消息").setActiveColorResource(R.color.colorPrimary));
         bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_white, "").setActiveColorResource(R.color.white).setInActiveColorResource(R.color.white));
-        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_c, "旅游圈").setActiveColorResource(R.color.colorPrimary));
-        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_d, "我的").setActiveColorResource(R.color.colorPrimary));
+        bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_friend_circle, "旅游圈").setActiveColorResource(R.color.colorPrimary));
+        bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_person_black_24dp, "我的").setActiveColorResource(R.color.colorPrimary));
         bnbMain.initialise();
     }
 
@@ -234,6 +234,15 @@ public class MainActivity extends BaseActivity {
         });
 
 
+        //跳入首页
+        llSeekGuider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pop.dismiss();
+                bnbMain.selectTab(0);
+            }
+        });
+
     }
 
     private void toTargetActivity(PopupWindow pop, Class targetActivity) {
@@ -242,60 +251,7 @@ public class MainActivity extends BaseActivity {
         pop.dismiss();
     }
 
-    /**
-     * 获取状态通知栏高度
-     *
-     * @param activity
-     * @return
-     */
-    public static int getStatusBarHeight(Activity activity) {
-        Rect frame = new Rect();
-        activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
-        Log.d(TAG, "statusBarHeight:" + frame.top + "px");
-        return frame.top;
-    }
 
-    private void initPermission() {
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            Log.i(TAG, "需要授权 ");
-            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.CAMERA)) {
-                Log.i(TAG, "拒绝过了");
-                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的拍照授权开启拍照功能。", Toast.LENGTH_SHORT).show();
-            } else {
-                Log.i(TAG, "进行授权");
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA}, REQUEST_CODE);
-            }
-        } else {
-            Log.i(TAG, "不需要授权 ");
-        }
-
-
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            Log.i(TAG, "需要授权 ");
-            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                Log.i(TAG, "拒绝过了");
-                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的储存授权开启相册功能。", Toast.LENGTH_SHORT).show();
-            } else {
-                Log.i(TAG, "进行授权");
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
-            }
-        } else {
-            Log.i(TAG, "不需要授权 ");
-        }
-
-        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            Log.i(TAG, "需要授权 ");
-            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.RECORD_AUDIO)) {
-                Log.i(TAG, "拒绝过了");
-                Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的录音授权开启语音聊天功能。", Toast.LENGTH_SHORT).show();
-            } else {
-                Log.i(TAG, "进行授权");
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.RECORD_AUDIO}, REQUEST_CODE);
-            }
-        } else {
-            Log.i(TAG, "不需要授权 ");
-        }
-    }
 
     @Override
     public void onBackPressed() {
@@ -311,5 +267,26 @@ public class MainActivity extends BaseActivity {
         } else {
 
         }
+    }
+
+    /*****************
+     * 双击退出程序
+     ************************************************/
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (KeyEvent.KEYCODE_BACK == keyCode) {
+            // 判断是否在两秒之内连续点击返回键，是则退出，否则不退出
+            if (System.currentTimeMillis() - exitTime > 2000) {
+                Toast.makeText(getApplicationContext(), "再按一次退出趣玩", Toast.LENGTH_SHORT).show();
+                // 将系统当前的时间赋值给exitTime
+                exitTime = System.currentTimeMillis();
+            } else {
+                finishAll();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

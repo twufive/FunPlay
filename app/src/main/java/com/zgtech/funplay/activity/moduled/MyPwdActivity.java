@@ -15,7 +15,7 @@ import com.zgtech.funplay.activity.MainActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.model.BaseResultModel;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.HashMap;
@@ -56,7 +56,7 @@ public class MyPwdActivity extends BaseActivity {
         ButterKnife.bind(this);
 
 
-        myMobile = SPUtils.getString(MyPwdActivity.this,"myMobile","");
+        myMobile = SP.getString(MyPwdActivity.this,"myMobile","");
         initData();
         initView();
     }
@@ -101,7 +101,7 @@ public class MyPwdActivity extends BaseActivity {
         map.put("userPhone", myMobile);
         map.put("userPwd", pwdNew);
         map.put("verifyPwd", pwdNew);
-        map.put("login", "false");
+        map.put("login", "true");
         RequestBody body = RequestBodyBuilder.build(map);
         mApiStores.modifyPwd(body).enqueue(new Callback<BaseResultModel>() {
             @Override

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 
 import com.zgtech.funplay.FunPlayApplication;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.io.File;
 import java.util.HashMap;
@@ -95,7 +95,7 @@ public class RetrofitParameterBuilder {
      */
     public Map<String, RequestBody> bulider() {
         Context context = FunPlayApplication.getContext();
-        String androidToken = SPUtils.getString(context, "androidToken", "");
+        String androidToken = SP.getString(context, "androidToken", "");
         //添加公共的参数，如Token验证
         RequestBody body = RequestBody.create(MediaType.parse("text/plain"), androidToken);
         params.put("androidToken", body);

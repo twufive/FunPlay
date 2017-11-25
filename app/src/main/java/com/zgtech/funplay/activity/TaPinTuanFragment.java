@@ -12,7 +12,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.adapter.UserDetailPinTuanAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.UserDetailModel;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ public class TaPinTuanFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_pintuan_all, container, false);
         ButterKnife.bind(this, view);
 
-        otherUserId = SPUtils.getString(mActivity,"otherUserId","");
+        otherUserId = SP.getString(mActivity,"otherUserId","");
 
         initData();
         initView(view, savedInstanceState);

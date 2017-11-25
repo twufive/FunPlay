@@ -28,7 +28,7 @@ import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.retrofit.RetrofitParameterBuilder;
 import com.zgtech.funplay.utils.CameraUtils;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.io.File;
@@ -102,7 +102,7 @@ public class PushNewOrderActivity extends BaseActivity {
         setContentView(R.layout.activity_center_push_new_order);
         ButterKnife.bind(this);
 
-        exclusiveId = SPUtils.getString(this, "exclusiveId", "");
+        exclusiveId = SP.getString(this, "exclusiveId", "");
 
         initView();
         initData();
@@ -369,13 +369,12 @@ public class PushNewOrderActivity extends BaseActivity {
             }
         });
 
-
     }
 
     private void addMapParam(List<String> urlList) {
         for (int i = 0; i < urlList.size(); i++) {
             int temp = i + 1;
-            originMap.put("spacePicture" + temp, urlList.get(i));
+            originMap.put("orderPicture" + temp, urlList.get(i));
         }
     }
 }

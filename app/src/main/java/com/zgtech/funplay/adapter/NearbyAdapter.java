@@ -17,7 +17,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
 import com.zgtech.funplay.model.NearbyData;
 import com.zgtech.funplay.retrofit.ApiStores;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.util.List;
 
@@ -65,7 +65,7 @@ public class NearbyAdapter extends BaseQuickAdapter<NearbyData.ObjBean, BaseView
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SPUtils.setString(act, "otherUserId", individualModel.getUserId() + "");
+                SP.setString(act, "otherUserId", individualModel.getUserId() + "");
 
                 Intent intent = new Intent(act, CoreUserDetailPageActivity.class);
                 intent.putExtra("userId", individualModel.getUserId() + "");

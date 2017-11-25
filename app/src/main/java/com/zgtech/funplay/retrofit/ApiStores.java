@@ -81,7 +81,8 @@ public interface ApiStores {
     Call<BaseResultModel> joinOrder(@Query("orderId") String orderId);//报名,或者下单
 
 
-
+    @GET("order/joinSuccess")
+    Call<BaseResultModel> joinOrderSuccess(@Query("orderTransactionNo") String orderTransactionNo);//确认支付成功的回调
 
 
     /***首页模块*/

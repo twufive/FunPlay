@@ -31,7 +31,7 @@ import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.retrofit.RetrofitUtil;
 import com.zgtech.funplay.utils.FunPlayUtils;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -115,7 +115,7 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
             public void onClick(View v) {
                 String userId = individuallModel.getUserId() + "";
 
-                SPUtils.setString(context, "otherUserId", userId);
+                SP.setString(context, "otherUserId", userId);
                 Intent intent = new Intent(mContext, CoreUserDetailPageActivity.class);
                 intent.putExtra("userId", userId);
 //                mContext.startActivity(intent);
@@ -139,7 +139,7 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
             @Override
             public void clicked(int type) {
 
-                String userId = SPUtils.getString(context, "userId", "");
+                String userId = SP.getString(context, "userId", "");
 
                 if (type == 1) { // 这里是点赞
                     String spaceId = individuallModel.getSpaceId() + "";
@@ -200,7 +200,7 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
     public void showCommentEditText(final BaseViewHolder helper, final FriendTalkData.ListBean individuallModel) {
         if (re_edittext == null || re_edittext.getVisibility() != View.VISIBLE) {
 
-            final String userId = SPUtils.getString(context, "userId", "");
+            final String userId = SP.getString(context, "userId", "");
 
             re_edittext = (RelativeLayout) context.findViewById(R.id.re_edittext);
             re_edittext.setVisibility(View.VISIBLE);
@@ -276,8 +276,8 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
                 if (response.body().getCode() == 2) {
                     FriendTalkData.ListBean.CommentsBean commentListBean = new FriendTalkData.ListBean.CommentsBean();
 
-                    String userId = SPUtils.getString(context, "userId", "");
-                    String myNick = SPUtils.getString(context, "myNick", "");
+                    String userId = SP.getString(context, "userId", "");
+                    String myNick = SP.getString(context, "myNick", "");
 
                     commentListBean.setUserId(Integer.parseInt(userId));
                     commentListBean.setCommentUserNick(myNick);
@@ -286,7 +286,7 @@ public class FindAdapter extends BaseQuickAdapter<FriendTalkData.ListBean, BaseV
 
                     individuallModel.getComments().add(commentListBean);
                     notifyDataSetChanged();
-                    SPUtils.setString(context, "YouQuanCache", "");
+                    SP.setString(context, "YouQuanCache", "");
 
                 } else {
                     T.showShort(context, response.body().getMsg());

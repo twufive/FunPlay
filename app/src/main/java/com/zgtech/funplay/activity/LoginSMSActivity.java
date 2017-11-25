@@ -19,7 +19,7 @@ import com.zgtech.funplay.model.RegistCodeModel;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.RegexUtils;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.StringUtils;
 import com.zgtech.funplay.utils.T;
 import com.zgtech.funplay.utils.TimeCountDownUtils;
@@ -149,7 +149,7 @@ public class LoginSMSActivity extends BaseActivity {
             }
 
             private void handleServerData(LoginBackUserModel model, String mobile, String pwd) {
-                SPUtils.setBoolean(LoginSMSActivity.this, "isLogined", true);
+                SP.setBoolean(LoginSMSActivity.this, "isLogined", true);
 
                 loginIM(model.getObj().getDetail().getImUser(), "123456");
                 toNextActivityAndCloseThis(MainActivity.class);
@@ -219,7 +219,7 @@ public class LoginSMSActivity extends BaseActivity {
         UUID deviceUuid = deviceUuidFactory.getDeviceUuid();
         String strUUID = String.valueOf(deviceUuid);
         androidToken = StringUtils.MD5(strUUID + mobile);
-        SPUtils.setString(this, "androidToken", androidToken);
+        SP.setString(this, "androidToken", androidToken);
 
         L.d("szImei", "" + deviceUuid);
         L.d("androidToken", "" + androidToken);

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.base.BaseActivity;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -47,8 +47,8 @@ public class MyCertifyActivity extends BaseActivity {
         setContentView(R.layout.activity_my_certify);
         ButterKnife.bind(this);
 
-        stateIdent = SPUtils.getString(this, "stateIdent", "");
-        stateIdentJob = SPUtils.getString(this, "stateIdentJob", "");
+        stateIdent = SP.getString(this, "stateIdent", "");
+        stateIdentJob = SP.getString(this, "stateIdentJob", "");
 
         initData();
         initView();

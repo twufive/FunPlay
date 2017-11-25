@@ -66,6 +66,7 @@ public class CoreOrderDetailActivity extends BaseActivity {
     Button btnPin;
 
     private String orderId;
+    private String orderNo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -126,6 +127,8 @@ public class CoreOrderDetailActivity extends BaseActivity {
 
             private void handleServerData(ChargeModel body) {
                 ChargeModel.ObjBean charge = body.getObj();
+                orderNo = charge.getOrderNo();
+
                 Gson gson = new Gson();
                 String chargeJson = gson.toJson(charge);
                 Pingpp.createPayment(CoreOrderDetailActivity.this, chargeJson);
@@ -139,6 +142,7 @@ public class CoreOrderDetailActivity extends BaseActivity {
     }
 
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //支付页面返回处理
         if (requestCode == Pingpp.REQUEST_CODE_PAYMENT) {
@@ -159,7 +163,7 @@ public class CoreOrderDetailActivity extends BaseActivity {
 
 
                 if (result.toString().equals("success")) {
-                    doPinTuan();
+                    ifJoinSuccess();
                 } else if (result.toString().equals("cancel")) {
                     T.showShort("您取消了支付");
                 } else if (result.toString().equals("fail")) {
@@ -174,6 +178,33 @@ public class CoreOrderDetailActivity extends BaseActivity {
 
             }
         }
+    }
+
+    private void ifJoinSuccess() {
+        String orderTransactionNo = orderNo;
+
+        mApiStores.joinOrderSuccess(orderTransactionNo).enqueue(new Callback<BaseResultModel>() {
+            @Override
+            public void onResponse(Call<BaseResultModel> call, Response<BaseResultModel> response) {
+                if (response.isSuccessful()) {
+                    if (response.body().getCode() == 2) {
+                        handleServerData(response.body());
+                    } else {
+                        T.showShort(response.body().getMsg());
+                    }
+                } else {
+                    T.showShort(response.toString());
+                }
+            }
+
+            private void handleServerData(BaseResultModel body) {
+                doPinTuan();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResultModel> call, Throwable t) {
+            }
+        });
     }
 
 

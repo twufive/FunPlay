@@ -55,8 +55,8 @@ public class PinTuanTogetherModel {
         private String orderTitle;
         private String orderPicture1;
         private int orderSize;
-        private int orderPrice1;
-        private int orderPrice0;
+        private double orderPrice1;
+        private double orderPrice0;
         private double avgMark;
         private int orderTransactionCount;
 
@@ -92,19 +92,19 @@ public class PinTuanTogetherModel {
             this.orderSize = orderSize;
         }
 
-        public int getOrderPrice1() {
+        public double getOrderPrice1() {
             return orderPrice1;
         }
 
-        public void setOrderPrice1(int orderPrice1) {
+        public void setOrderPrice1(double orderPrice1) {
             this.orderPrice1 = orderPrice1;
         }
 
-        public int getOrderPrice0() {
+        public double getOrderPrice0() {
             return orderPrice0;
         }
 
-        public void setOrderPrice0(int orderPrice0) {
+        public void setOrderPrice0(double orderPrice0) {
             this.orderPrice0 = orderPrice0;
         }
 

@@ -2,6 +2,7 @@ package com.zgtech.funplay.fragment;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -36,7 +37,7 @@ import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.global.GlideImageLoader;
 import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
@@ -76,6 +77,7 @@ public class FindFragment extends BaseFragment {
 
 
     private int lastSpaceId = 0;
+    private ProgressDialog dialog;
 
 
     @Nullable
@@ -85,6 +87,7 @@ public class FindFragment extends BaseFragment {
         ButterKnife.bind(this, view);
 
 
+        showProgressDialog();
         initView(view, savedInstanceState);
         initData();
 
@@ -114,6 +117,8 @@ public class FindFragment extends BaseFragment {
         findAdapter = new FindAdapter(getActivity(), R.layout.fp_item_social_main, originList);
         recyclerview.setLayoutManager(new LinearLayoutManager(FunPlayApplication.getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerview.setAdapter(findAdapter);
+
+        dialog.dismiss();
     }
 
     private void initStausBar() {
@@ -212,7 +217,7 @@ public class FindFragment extends BaseFragment {
                         Gson gson = new Gson();
                         String toJson = gson.toJson(response.body());
                         Context context = FunPlayApplication.getContext();
-                        SPUtils.setString(context, "YouQuanCache", toJson);
+                        SP.setString(context, "YouQuanCache", toJson);
                     } else {
                         if (easyRefreshLayout != null) {
                             easyRefreshLayout.refreshComplete();
@@ -387,32 +392,32 @@ public class FindFragment extends BaseFragment {
     private void initPermissions(boolean isCamera) {
         if (isCamera) {
             if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                Log.i(TAG, "需要授权 ");
                 if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.CAMERA)) {
-                    Log.i(TAG, "拒绝过了");
                     Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的拍照授权。", Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.i(TAG, "进行授权");
                     ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, REQUEST_CODE);
                 }
             } else {
-                Log.i(TAG, "不需要授权 ");
                 GalleryPick.getInstance().setGalleryConfig(galleryConfig).open(getActivity());
             }
         } else {
             if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                Log.i(TAG, "需要授权 ");
                 if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                    Log.i(TAG, "拒绝过了");
                     Toast.makeText(mContext, "请在 设置-应用管理 中开启此应用的储存授权。", Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.i(TAG, "进行授权");
                     ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
                 }
             } else {
-                Log.i(TAG, "不需要授权 ");
                 GalleryPick.getInstance().setGalleryConfig(galleryConfig).open(getActivity());
             }
         }
+    }
+
+    private void showProgressDialog() {
+        dialog = new ProgressDialog(mActivity);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        dialog.setMessage("正在加载...");
+        dialog.show();
     }
 }

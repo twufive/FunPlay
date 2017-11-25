@@ -21,7 +21,7 @@ import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.ChatActivity;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class MessageFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_message, container, false);
         ButterKnife.bind(this, view);
 
-        userId = SPUtils.getString(getActivity(), "userId", "0");
+        userId = SP.getString(getActivity(), "userId", "0");
         emChatManager = EMClient.getInstance().chatManager();
 
         initView(view, savedInstanceState);

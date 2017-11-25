@@ -566,8 +566,8 @@ public class UserDetailModel {
             private double avgMark;
             private String orderId;
             private String orderPicture1;
-            private int orderPrice0;
-            private int orderPrice1;
+            private double orderPrice0;
+            private double orderPrice1;
             private int orderSize;
             private String orderTitle;
             private int orderTransactionCount;
@@ -596,19 +596,19 @@ public class UserDetailModel {
                 this.orderPicture1 = orderPicture1;
             }
 
-            public int getOrderPrice0() {
+            public double getOrderPrice0() {
                 return orderPrice0;
             }
 
-            public void setOrderPrice0(int orderPrice0) {
+            public void setOrderPrice0(double orderPrice0) {
                 this.orderPrice0 = orderPrice0;
             }
 
-            public int getOrderPrice1() {
+            public double getOrderPrice1() {
                 return orderPrice1;
             }
 
-            public void setOrderPrice1(int orderPrice1) {
+            public void setOrderPrice1(double orderPrice1) {
                 this.orderPrice1 = orderPrice1;
             }
 

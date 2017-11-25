@@ -103,8 +103,8 @@ public class MyPinTuanModel {
         private String orderPicture7;
         private String orderPicture8;
         private String orderPicture9;
-        private int orderPrice0;
-        private int orderPrice1;
+        private double orderPrice0;
+        private double orderPrice1;
         private String orderPro;
         private String orderRemark;
         private int orderSize;
@@ -293,19 +293,19 @@ public class MyPinTuanModel {
             this.orderPicture9 = orderPicture9;
         }
 
-        public int getOrderPrice0() {
+        public double getOrderPrice0() {
             return orderPrice0;
         }
 
-        public void setOrderPrice0(int orderPrice0) {
+        public void setOrderPrice0(double orderPrice0) {
             this.orderPrice0 = orderPrice0;
         }
 
-        public int getOrderPrice1() {
+        public double getOrderPrice1() {
             return orderPrice1;
         }
 
-        public void setOrderPrice1(int orderPrice1) {
+        public void setOrderPrice1(double orderPrice1) {
             this.orderPrice1 = orderPrice1;
         }
 

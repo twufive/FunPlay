@@ -33,7 +33,6 @@ import retrofit2.Response;
  */
 
 public class GuiderQueryActivity extends BaseActivity {
-
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
@@ -82,9 +81,9 @@ public class GuiderQueryActivity extends BaseActivity {
 
     private void searchTitle(String title) {
         HashMap map = new HashMap();
-        map.put("title", title);
         map.put("cursor", 0);
         map.put("more", "false");
+        map.put("title", "");
         RequestBody body = RequestBodyBuilder.build(map);
         mApiStores.queryGuiderData(body).enqueue(new Callback<QueryGuiderModel>() {
             @Override

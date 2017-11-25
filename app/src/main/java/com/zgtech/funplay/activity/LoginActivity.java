@@ -25,7 +25,7 @@ import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.RegexUtils;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.StringUtils;
 import com.zgtech.funplay.utils.T;
 
@@ -141,7 +141,7 @@ public class LoginActivity extends BaseActivity {
             }
 
             private void handleServerData(LoginBackUserModel model, String mobile, String pwd) {
-                SPUtils.setBoolean(LoginActivity.this,"isLogined",true);
+                SP.setBoolean(LoginActivity.this,"isLogined",true);
 
                 saveUserInfo(model,mobile,pwd);
                 loginIM(model.getObj().getDetail().getImUser(), "123456");
@@ -191,18 +191,18 @@ public class LoginActivity extends BaseActivity {
         String stateIdent = stateIdentCode.equals("0")?"未认证":"已认证";
         String stateIdentJob = stateIdentJobCode.equals("0")?"未认证":"已认证";
 
-        SPUtils.setString(LoginActivity.this, "userId", exclusiveId);
-        SPUtils.setString(LoginActivity.this, "myImUser", myImUser);
-        SPUtils.setString(LoginActivity.this, "myNick", myNick);
-        SPUtils.setString(LoginActivity.this, "myAvatar", myAvatar);
-        SPUtils.setString(LoginActivity.this, "mySex", mySex);
-        SPUtils.setString(LoginActivity.this, "myMobile", mobile);
-        SPUtils.setString(LoginActivity.this, "myPwd", pwd);
-        SPUtils.setString(LoginActivity.this, "androidToken", androidToken);
+        SP.setString(LoginActivity.this, "userId", exclusiveId);
+        SP.setString(LoginActivity.this, "myImUser", myImUser);
+        SP.setString(LoginActivity.this, "myNick", myNick);
+        SP.setString(LoginActivity.this, "myAvatar", myAvatar);
+        SP.setString(LoginActivity.this, "mySex", mySex);
+        SP.setString(LoginActivity.this, "myMobile", mobile);
+        SP.setString(LoginActivity.this, "myPwd", pwd);
+        SP.setString(LoginActivity.this, "androidToken", androidToken);
 
 
-        SPUtils.setString(LoginActivity.this, "stateIdent", stateIdent);//身份认证
-        SPUtils.setString(LoginActivity.this, "stateIdentJob", stateIdentJob);//职业认证
+        SP.setString(LoginActivity.this, "stateIdent", stateIdent);//身份认证
+        SP.setString(LoginActivity.this, "stateIdentJob", stateIdentJob);//职业认证
 
 
 
@@ -230,7 +230,7 @@ public class LoginActivity extends BaseActivity {
         UUID deviceUuid = deviceUuidFactory.getDeviceUuid();
         String strUUID = String.valueOf(deviceUuid);
         androidToken = StringUtils.MD5(strUUID + mobile);
-        SPUtils.setString(this, "androidToken", androidToken);
+        SP.setString(this, "androidToken", androidToken);
 
         L.d("szImei", "" + deviceUuid);
         L.d("androidToken", "" + androidToken);

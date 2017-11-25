@@ -36,7 +36,7 @@ import com.zgtech.funplay.retrofit.ApiStores;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.ActivityCollectorUtils;
 import com.zgtech.funplay.utils.L;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 import com.zgtech.funplay.utils.T;
 
 import java.util.HashMap;
@@ -101,7 +101,7 @@ public class MineFragment extends BaseFragment {
 
         devOpenHelper = new DaoMaster.DevOpenHelper(mActivity, "zayin.db", null);
 
-        userId = SPUtils.getString(mActivity, "userId", "");
+        userId = SP.getString(mActivity, "userId", "");
         initData();
         initView(view, savedInstanceState);
         return view;
@@ -185,7 +185,7 @@ public class MineFragment extends BaseFragment {
         DaoSession daoSession = daoMaster.newSession();
         HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();
 
-        String myImUser = SPUtils.getString(mActivity, "myImUser", "");
+        String myImUser = SP.getString(mActivity, "myImUser", "");
 
         HxUserModel hxUserModel = new HxUserModel();
         hxUserModel.setImUser(myImUser);
@@ -224,7 +224,7 @@ public class MineFragment extends BaseFragment {
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
-                SPUtils.setString(mActivity, "otherUserId", userId);
+                SP.setString(mActivity, "otherUserId", userId);
 
                 Intent intent = new Intent(mActivity, CoreUserDetailPageActivity.class);
                 intent.putExtra("isMyself", true);
@@ -256,7 +256,7 @@ public class MineFragment extends BaseFragment {
         StyledDialog.buildMdAlert("退出登录", "您确定要退出登录吗?", new MyDialogListener() {
             @Override
             public void onFirst() {
-                String androidToken = SPUtils.getString(mActivity, "androidToken", "");
+                String androidToken = SP.getString(mActivity, "androidToken", "");
                 HashMap map = new HashMap();
                 map.put("androidToken", androidToken);
                 RequestBody body = RequestBodyBuilder.build(map);
@@ -275,7 +275,7 @@ public class MineFragment extends BaseFragment {
                     }
 
                     private void handleServerData(BaseResultModel model) {
-                        SPUtils.setBoolean(mActivity, "isLogined", false);
+                        SP.setBoolean(mActivity, "isLogined", false);
 
                         ActivityCollectorUtils.finishAll();
                     }

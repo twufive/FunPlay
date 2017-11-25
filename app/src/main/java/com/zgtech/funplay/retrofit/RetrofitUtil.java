@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.utils.NetConditionUtils;
-import com.zgtech.funplay.utils.SPUtils;
+import com.zgtech.funplay.utils.SP;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +39,7 @@ public class RetrofitUtil {
 
     public static ApiStores initApiStores() {
         Context context = FunPlayApplication.getContext();
-        androidToken = SPUtils.getString(context, "androidToken", "");
+        androidToken = SP.getString(context, "androidToken", "");
 
         //缓存机制
         final File chachefile = new File(FunPlayApplication.getContext().getExternalCacheDir(), "HttpCache");
