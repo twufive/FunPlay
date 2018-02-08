@@ -120,6 +120,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void doLogin(final String mobile, final String pwd) {
+//        toNextActivityAndCloseThis(MainActivity.class);
         obtainAndSaveDeviceToken(mobile);
 //        showLoginingDialog();
         HashMap map = new HashMap();

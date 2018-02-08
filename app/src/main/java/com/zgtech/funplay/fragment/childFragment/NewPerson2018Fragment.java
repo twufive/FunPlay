@@ -1,24 +1,22 @@
 package com.zgtech.funplay.fragment.childFragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.adapter.NewPersonAdapter;
+import com.zgtech.funplay.adapter.NearbyAdapter;
 import com.zgtech.funplay.base.BaseFragment;
-import com.zgtech.funplay.model.RecommendOther3Model;
+import com.zgtech.funplay.model.NearbyData;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.T;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 import butterknife.ButterKnife;
@@ -28,19 +26,20 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * 新人子模块
+ * 附近子模块
+ *
+ * 后改为新人
  * Created by Administrator on 2017/8/1.
  */
 
-public class NewPersonFragment extends BaseFragment {
+public class NewPerson2018Fragment extends BaseFragment {
     private RecyclerView recyclerView;
-    private NewPersonAdapter newPersonAdapter;
-    private List<RecommendOther3Model.ObjBean> originList = new ArrayList<>();
+    private NearbyAdapter nearbyAdapter;
+    private List<NearbyData.ObjBean> originList = new ArrayList<>();
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_newperson, container, false);
+        View view = inflater.inflate(R.layout.fragment_nearby, container, false);
         ButterKnife.bind(this, view);
 
         initView(view, savedInstanceState);
@@ -56,7 +55,7 @@ public class NewPersonFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        L.i("NewPersonFragment", "onDestroy");
+        L.i("NewPerson2018Fragment", "onDestroy");
     }
 
 
@@ -65,22 +64,23 @@ public class NewPersonFragment extends BaseFragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
     }
 
-    private void initNewPerson(List<RecommendOther3Model.ObjBean> originList) {
-        newPersonAdapter = new NewPersonAdapter(mActivity, R.layout.fp_item_newperson, originList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(newPersonAdapter);
+    private void initNearBy(List<NearbyData.ObjBean> originList) {
+        nearbyAdapter = new NearbyAdapter(mActivity, R.layout.fp_item_nearby, originList);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(mActivity, 2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(nearbyAdapter);
     }
 
     @Override
     protected void initData() {
+//        NearbyData.ObjBean.setImgUrl("http://img4.imgtn.bdimg.com/it/u=3050884629,2611088519&fm=26&gp=0.jpg");
         HashMap map = new HashMap();
         map.put("cursor", "0");
         map.put("more", "false");
         RequestBody body = RequestBodyBuilder.build(map);
-        mApiStores.getNewPersonData(body).enqueue(new Callback<RecommendOther3Model>() {
+        mApiStores.getNearbyData(body).enqueue(new Callback<NearbyData>() {
             @Override
-            public void onResponse(Call<RecommendOther3Model> call, Response<RecommendOther3Model> response) {
+            public void onResponse(Call<NearbyData> call, Response<NearbyData> response) {
                 if (response.isSuccessful()) {
                     if (response.body().getCode() == 2) {
                         handleServerData(response.body());
@@ -92,27 +92,20 @@ public class NewPersonFragment extends BaseFragment {
                 }
             }
 
-            private void handleServerData(RecommendOther3Model model) {
+            private void handleServerData(NearbyData model) {
                 originList = model.getObj();
-                Iterator<RecommendOther3Model.ObjBean> iterator = originList.iterator();//此处删除没有订单的用户展示数据源
-                while(iterator.hasNext()){
-                    RecommendOther3Model.ObjBean individualModel = iterator.next();
-                    if(individualModel.getOrders() == null || individualModel.getOrders().size() == 0){
-                        iterator.remove();
-                    }
-                }
-                initNewPerson(originList);
+                initNearBy(originList);
             }
 
             @Override
-            public void onFailure(Call<RecommendOther3Model> call, Throwable t) {
+            public void onFailure(Call<NearbyData> call, Throwable t) {
                 T.showShort(t.toString());
             }
         });
     }
 
-    public static NewPersonFragment newInstance() {
-        NewPersonFragment fragment = new NewPersonFragment();
+    public static NewPerson2018Fragment newInstance() {
+        NewPerson2018Fragment fragment = new NewPerson2018Fragment();
         return fragment;
     }
 

@@ -29,6 +29,8 @@ import retrofit2.Response;
 
 /**
  * 已认证子模块
+ *
+ * 已废弃
  * Created by Administrator on 2017/8/1.
  */
 

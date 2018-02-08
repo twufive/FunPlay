@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">趣玩</string>
+
+    <string-array name="year_array">
+        <item>1年</item>
+        <item>2年</item>
+        <item>3年</item>
+        <item>大于3年</item>
+    </string-array>
+
 </resources>

@@ -29,10 +29,12 @@ import retrofit2.Response;
 
 /**
  * 高颜值子模块
+ *
+ * 后改为当地人
  * Created by Administrator on 2017/8/1.
  */
 
-public class HighBeautyFragment extends BaseFragment{
+public class LocalPerson2018Fragment extends BaseFragment{
     private RecyclerView recyclerView;
     private NewPersonAdapter newPersonAdapter;
     private List<RecommendOther3Model.ObjBean> originList= new ArrayList<>();
@@ -57,7 +59,7 @@ public class HighBeautyFragment extends BaseFragment{
     @Override
     public void onDestroy() {
         super.onDestroy();
-        L.i("HighBeautyFragment", "onDestroy");
+        L.i("LocalPerson2018Fragment", "onDestroy");
     }
 
 
@@ -112,8 +114,8 @@ public class HighBeautyFragment extends BaseFragment{
         });
     }
 
-    public static HighBeautyFragment newInstance() {
-        HighBeautyFragment fragment = new HighBeautyFragment();
+    public static LocalPerson2018Fragment newInstance() {
+        LocalPerson2018Fragment fragment = new LocalPerson2018Fragment();
         return fragment;
     }
 

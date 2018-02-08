@@ -94,6 +94,7 @@ public class MessageFragment extends BaseFragment {
                 intent.putExtra("isGroup", false);
                 intent.putExtra("imUser", otherHxId);
                 intent.putExtra("isFromConversationList", true);
+                intent.putExtra("userId", userId);
                 startActivity(intent);
             }
         });

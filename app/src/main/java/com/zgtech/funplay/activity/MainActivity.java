@@ -166,6 +166,8 @@ public class MainActivity extends BaseActivity {
                 popupWindowIsShow = true;
                 showPop();
                 break;
+            default:
+                break;
         }
     }
 
@@ -250,7 +252,6 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
         pop.dismiss();
     }
-
 
 
     @Override

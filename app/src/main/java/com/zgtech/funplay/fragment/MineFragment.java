@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.hss01248.dialog.StyledDialog;
 import com.hss01248.dialog.interfaces.MyDialogListener;
+import com.hyphenate.chat.EMClient;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
 import com.zgtech.funplay.activity.moduled.MyCertifyActivity;
@@ -180,7 +181,6 @@ public class MineFragment extends BaseFragment {
         tvFans.setText("粉丝  " + individualModel.getUserCollectionCount() + "");
 
 
-
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDb());
         DaoSession daoSession = daoMaster.newSession();
         HxUserModelDao hxUserModelDao = daoSession.getHxUserModelDao();
@@ -277,6 +277,9 @@ public class MineFragment extends BaseFragment {
                     private void handleServerData(BaseResultModel model) {
                         SP.setBoolean(mActivity, "isLogined", false);
 
+
+                        EMClient emClient = EMClient.getInstance();
+                        emClient.logout(true);
                         ActivityCollectorUtils.finishAll();
                     }
 

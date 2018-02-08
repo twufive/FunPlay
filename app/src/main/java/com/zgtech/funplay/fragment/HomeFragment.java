@@ -22,18 +22,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.zaaach.citypicker.CityPickerActivity;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.modulea.FilterActivity;
 import com.zgtech.funplay.activity.modulea.GuiderQueryActivity;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.fragment.childFragment.CertifyFragment;
-import com.zgtech.funplay.fragment.childFragment.HighBeautyFragment;
-import com.zgtech.funplay.fragment.childFragment.NearbyFragment;
-import com.zgtech.funplay.fragment.childFragment.NewPersonFragment;
+import com.zgtech.funplay.fragment.childFragment.HotAccompanyEndFragment;
+import com.zgtech.funplay.fragment.childFragment.LocalPerson2018Fragment;
+import com.zgtech.funplay.fragment.childFragment.NewPerson2018Fragment;
 import com.zgtech.funplay.fragment.childFragment.RecommendFragment;
 import com.zgtech.funplay.utils.L;
 
 import butterknife.ButterKnife;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * 首页模块
@@ -49,9 +52,9 @@ public class HomeFragment extends BaseFragment {
     private TextView tvSeek;
 
     private RecommendFragment recommendFragment;
-    private NewPersonFragment newPersonFragment;
-    private HighBeautyFragment highBeautyFragment;
-    private NearbyFragment nearbyFragment;
+    private HotAccompanyEndFragment hotAccompanyEndFragment;
+    private LocalPerson2018Fragment localPerson2018Fragment;
+    private NewPerson2018Fragment newPerson2018Fragment;
     private CertifyFragment certifyFragment;
     private MyPagerAdapter adapter;
     private TextView tvFilter;
@@ -86,7 +89,6 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         initStatusBar();
-
         initTop(view);
         initViewPager(view);
     }
@@ -113,6 +115,8 @@ public class HomeFragment extends BaseFragment {
         initTopClickListener();
     }
 
+    private static final int REQUEST_CODE_PICK_CITY = 0;
+
     private void initTopClickListener() {
         tvFilter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +125,25 @@ public class HomeFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
+
+        tvCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //启动
+                startActivityForResult(new Intent(getActivity(), CityPickerActivity.class), REQUEST_CODE_PICK_CITY);
+                //重写onActivityResult方法
+            }
+        });
+    }
+
+    @Override
+    public void onActivityResult ( int requestCode, int resultCode, Intent data){
+        if (requestCode == REQUEST_CODE_PICK_CITY && resultCode == RESULT_OK) {
+            if (data != null) {
+                String city = data.getStringExtra(CityPickerActivity.KEY_PICKED_CITY);
+                tvCity.setText(city);
+            }
+        }
     }
 
     private void initViewPager(View view) {
@@ -140,7 +163,7 @@ public class HomeFragment extends BaseFragment {
 
     private void initEditTextChangeListener(final RelativeLayout re_search, final TextView tv_search, final EditText et_search) {
         et_search.addTextChangedListener(new TextWatcher() {
-
+            @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() > 0) {
                     re_search.setVisibility(View.VISIBLE);
@@ -152,10 +175,12 @@ public class HomeFragment extends BaseFragment {
 
             }
 
+            @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
+            @Override
             public void afterTextChanged(Editable s) {
 
             }
@@ -276,7 +301,8 @@ public class HomeFragment extends BaseFragment {
 
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"推荐", "新人", "高颜值", "附近", "已认证"};
+        //        private final String[] TITLES = {"推荐", "新人", "高颜值", "附近", "已认证"};
+        private final String[] TITLES = {"推荐", "新人", "当地人", "热门陪游"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -298,18 +324,17 @@ public class HomeFragment extends BaseFragment {
                 case 0:
                     return recommendFragment == null ? RecommendFragment.newInstance() : recommendFragment;
                 case 1:
-                    return newPersonFragment == null ? NewPersonFragment.newInstance() : newPersonFragment;
+                    return newPerson2018Fragment == null ? NewPerson2018Fragment.newInstance() : newPerson2018Fragment;
                 case 2:
-                    return highBeautyFragment == null ? HighBeautyFragment.newInstance() : highBeautyFragment;
+                    return localPerson2018Fragment == null ? LocalPerson2018Fragment.newInstance() : localPerson2018Fragment;
                 case 3:
-                    return nearbyFragment == null ? NearbyFragment.newInstance() : nearbyFragment;
-                case 4:
-                    return certifyFragment == null ? CertifyFragment.newInstance() : certifyFragment;
+                    return hotAccompanyEndFragment == null ? HotAccompanyEndFragment.newInstance() : hotAccompanyEndFragment;
+//                case 4:   废弃此项
+//                    return certifyFragment == null ? CertifyFragment.newInstance() : certifyFragment;
                 default:
                     return recommendFragment == null ? RecommendFragment.newInstance() : recommendFragment;
             }
         }
-
     }
 
     public static HomeFragment newInstance() {

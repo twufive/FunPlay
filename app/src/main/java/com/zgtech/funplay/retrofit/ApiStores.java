@@ -39,9 +39,10 @@ public interface ApiStores {
     /*** baseUrl*/
 //    String API_SERVER_URL = "http://192.168.188.196/";
 //    String API_SERVER_URL = "http://192.168.188.71:8080/";
+    String API_SERVER_URL = "http://122.114.240.121:8080/qwan-manager/";
 //    String API_SERVER_URL = "http://192.168.188.70/";
 //    String API_SERVER_URL = "http://www.azgyf.com/";
-    String API_SERVER_URL = "http://www.qwanapp.com/";
+//    String API_SERVER_URL = "http://www.qwanapp.com/";
 
 
 
@@ -147,13 +148,9 @@ public interface ApiStores {
     @GET("user/space/getOrders")
     Call<SpaceOrderModel> getSpaceOrdersData();//旅游圈发布说说时，需要用到的订单列表
 
-
-
-
     /***个人中心模块*/
     @GET("user/info")
     Call<MyInfoModel> getMyInfoData();//获取我的个人信息
-
 
     @GET("user/space/queryUserSpace")
     Call<MineExternalModel> getMyExternalInfoData(@Query("isMe") String isMe, @Query("userKey") String userKey);//获取我的外部个人信息

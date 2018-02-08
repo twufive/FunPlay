@@ -63,6 +63,7 @@ public class ChatActivity extends BaseActivity {
 
     private String imUser;
     private String imUserNick;
+    private String userId;
 
 
     @Override
@@ -75,6 +76,7 @@ public class ChatActivity extends BaseActivity {
         devOpenHelper = new DaoMaster.DevOpenHelper(this, "zayin.db", null);
         isFromConversationList = getIntent().getExtras().getBoolean("isFromConversationList", false);
         imUser = getIntent().getExtras().getString("imUser", "");
+        userId = getIntent().getExtras().getString("userId", "");
 
         initToolBar();
         initEaseChatFragment();
@@ -153,7 +155,7 @@ public class ChatActivity extends BaseActivity {
             @Override
             public void onAvatarClick(String username) {
                 Intent intent = new Intent(ChatActivity.this, CoreUserDetailPageActivity.class);
-                intent.putExtra("userId", username);
+                intent.putExtra("userId", userId);
                 startActivity(intent);
             }
 
