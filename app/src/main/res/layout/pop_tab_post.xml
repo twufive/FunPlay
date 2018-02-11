@@ -51,7 +51,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="一起拼团"
+                        android:text="新闻资讯"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -99,7 +99,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="玩转地球"
+                        android:text="系统公告"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -107,7 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="所有人可以定期存款，满一年可抽奖，奖品由各类旅游套餐组成"
+                        android:text="恭喜你陪游发布成功，\n您已成为当地人"
                         android:textColor="@color/little_black"
                         android:textSize="13sp" />
 
@@ -145,7 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="寻找导游"
+                android:text="寻找当地人"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -169,7 +169,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="一起拼团"
+                android:text="结伴出游"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -194,7 +194,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="玩赚地球"
+                android:text="系统公告"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
