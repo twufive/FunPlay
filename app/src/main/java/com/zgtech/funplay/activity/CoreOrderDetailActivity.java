@@ -82,7 +82,6 @@ public class CoreOrderDetailActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-
         initStatusBarState();
     }
 

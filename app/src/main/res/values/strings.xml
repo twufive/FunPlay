@@ -8,4 +8,18 @@
         <item>大于3年</item>
     </string-array>
 
+    <string-array name="provimce_array">
+        <item>湖南</item>
+        <item>湖北</item>
+        <item>广东</item>
+        <item>广西</item>
+    </string-array>
+
+    <string-array name="city_array">
+        <item>长沙</item>
+        <item>益阳</item>
+        <item>湘潭</item>
+        <item>常德</item>
+    </string-array>
+
 </resources>

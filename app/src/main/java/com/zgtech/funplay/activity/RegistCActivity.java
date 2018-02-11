@@ -114,9 +114,7 @@ public class RegistCActivity extends BaseActivity {
                     public void onSelectComleted(String result) {
                         String[] split = result.split(",");
                         String strConstellation = split[0];
-                        String constellationCode = split[1];
-
-                        constellation = constellationCode;
+                        constellation = split[1];
                         tvConstellation.setText(strConstellation);
                     }
                 });
@@ -134,6 +132,7 @@ public class RegistCActivity extends BaseActivity {
                     modifyPersonal();
                 }
                 break;
+            default:
         }
     }
 
@@ -146,7 +145,7 @@ public class RegistCActivity extends BaseActivity {
         }
 
 
-        HashMap map = new HashMap();
+        HashMap<Object,Object> map = new HashMap<>(1);
         map.put("userRegisterProgress", "2");
         map.put("userSex", sexCode);
         map.put("userHeight", height);

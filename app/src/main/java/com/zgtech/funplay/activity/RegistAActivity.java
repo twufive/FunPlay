@@ -87,11 +87,14 @@ public class RegistAActivity extends BaseActivity {
                 }
                 break;
             case R.id.btn_regist:
-                doRegist();
+//                doRegist();
+//                暂时修改为直接进入第二注册界面
+                toNextActivityAndCloseThis(RegistInfoActivity.class);
                 break;
             case R.id.tv_protocol:
                 //打开用户协议webView
                 break;
+            default:
         }
     }
 

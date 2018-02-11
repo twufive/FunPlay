@@ -33,41 +33,52 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <RadioButton
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="全部"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:background="@drawable/bg_radiobutton"
+                    android:layout_marginRight="15dp"
+                    />
 
 
-                <TextView
+                <RadioButton
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="男"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:background="@drawable/bg_radiobutton"
+                    android:layout_marginRight="15dp"
+                    />
 
 
-                <TextView
+                <RadioButton
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="女"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:background="@drawable/bg_radiobutton"
+                    />
 
-            </LinearLayout>
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -194,11 +205,110 @@
     </android.support.v7.widget.CardView>
 
 
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="85dp"-->
+        <!--android:layout_margin="6dp"-->
+
+        <!--app:cardCornerRadius="4dp"-->
+        <!--app:cardElevation="1dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="服务"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView4"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_colorprimary"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="徒步伴游"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="12sp" />-->
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="接送机"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="包车服务"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="当地玩法"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
+
+
+                <!--<TextView-->
+
+                    <!--android:layout_width="0dp"-->
+
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="其他"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
+
+
+            <!--</LinearLayout>-->
+
+
+        <!--</LinearLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
+
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="65dp"
         android:layout_margin="6dp"
-
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
         app:cardCornerRadius="4dp"
         app:cardElevation="1dp">
 
@@ -207,90 +317,60 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:gravity="center"
-                android:text="服务"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="45dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_colorprimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="徒步伴游"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="接送机"
+                    android:text="好评"
                     android:textColor="@color/black"
-                    android:textSize="12sp" />
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:layout_marginRight="55dp"
+                    android:textStyle="bold"
+                    />
 
 
-                <TextView
+                <RadioButton
                     android:layout_width="0dp"
-                    android:layout_height="25dp"
-
-                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
                     android:gravity="center"
-                    android:text="包车服务"
+                    android:text="默认"
                     android:textColor="@color/black"
-                    android:textSize="12sp" />
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:background="@drawable/bg_radiobutton"
+                    android:layout_marginRight="35dp"
+                    />
 
 
-                <TextView
+                <RadioButton
                     android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
                     android:gravity="center"
-                    android:text="当地玩法"
+                    android:text="好评率"
                     android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-                <TextView
-
-                    android:layout_width="0dp"
-
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="其他"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-            </LinearLayout>
-
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:background="@drawable/bg_radiobutton"
+                    />
+            </RadioGroup>
 
         </LinearLayout>
+
+
     </android.support.v7.widget.CardView>
+
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -311,7 +391,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="center"
-                android:text="人物标签"
+                android:text="服务地区"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -320,66 +400,79 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_colorprimary"
-                    android:gravity="center"
-                    android:text="购物达人"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/provimce_array"
+                    android:layout_marginRight="15dp"
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/city_array"
+                    />
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_colorprimary"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="购物达人"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="12sp" />-->
 
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="资深吃货"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="资深吃货"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
 
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
 
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="极限玩家"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="星座分析"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="极限玩家"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
 
 
-                <TextView
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="星座分析"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
 
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_corners_theme_gray"
-                    android:gravity="center"
-                    android:text="电影达人"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
+
+                <!--<TextView-->
+
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/bg_corners_theme_gray"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="电影达人"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12sp" />-->
 
 
             </LinearLayout>

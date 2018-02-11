@@ -83,7 +83,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'io.reactivex.rxjava2:rxjava:2.1.1'
     //recyclerview
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.35'
     compile 'com.github.anzaizai:EasyRefreshLayout:1.1.6'
     //   commonCompile
     compile 'com.github.YancyYe:GalleryPick:1.2.1'
@@ -92,7 +92,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
     compile project(':easeUI_CN')
-
 
     //pay
     compile 'com.pingxx:pingpp-core:2.1.14' // 必须添加

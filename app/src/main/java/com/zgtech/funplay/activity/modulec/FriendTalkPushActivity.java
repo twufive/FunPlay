@@ -169,6 +169,7 @@ public class FriendTalkPushActivity extends BaseActivity {
             case R.id.iv_add_order:
                 showMyOrderListDialog();
                 break;
+            default:
         }
     }
 

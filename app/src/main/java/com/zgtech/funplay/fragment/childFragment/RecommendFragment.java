@@ -33,8 +33,6 @@ import retrofit2.Response;
 public class RecommendFragment extends BaseFragment {
     private RecyclerView recyclerViewSite;
     private RecyclerView recyclerViewPerson;
-    private LinearLayoutManager linearLayoutManagerSite;
-    private LinearLayoutManager linearLayoutManagerPerson;
 
     private RecommendSiteAdapter siteAdapter;
     private RecommendPersonAdapter personAdapter;
@@ -108,17 +106,16 @@ public class RecommendFragment extends BaseFragment {
 
     private void initSite() {
         siteAdapter = new RecommendSiteAdapter(mActivity, R.layout.fp_item_recommend, addressList);
-        linearLayoutManagerSite = new LinearLayoutManager(mActivity);
+        LinearLayoutManager linearLayoutManagerSite = new LinearLayoutManager(mActivity);
         linearLayoutManagerSite.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewSite.setLayoutManager(linearLayoutManagerSite);
         recyclerViewSite.setAdapter(siteAdapter);
-
         dialog.dismiss();
     }
 
     private void initPerson() {
         personAdapter = new RecommendPersonAdapter(mActivity, R.layout.fp_item_recommend, foodList);
-        linearLayoutManagerPerson = new LinearLayoutManager(mActivity);
+        LinearLayoutManager linearLayoutManagerPerson = new LinearLayoutManager(mActivity);
         linearLayoutManagerPerson.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewPerson.setLayoutManager(linearLayoutManagerPerson);
         recyclerViewPerson.setAdapter(personAdapter);

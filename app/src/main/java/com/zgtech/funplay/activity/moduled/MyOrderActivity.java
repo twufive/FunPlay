@@ -48,8 +48,8 @@ public class MyOrderActivity extends BaseActivity {
         setContentView(R.layout.activity_mine_pintuan);
         ButterKnife.bind(this);
 
-        initData();
         initView();
+        initData();
     }
 
     @Override

@@ -19,6 +19,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
@@ -66,17 +67,18 @@ public class RetrofitUtil {
 
     @NonNull
     private static OkHttpClient initOkHttpClient(Cache cache, Interceptor cacheInterceptor, Interceptor addQueryParameterInterceptor) {
-        OkHttpClient okHttpClient = new OkHttpClient.Builder()
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        return new OkHttpClient.Builder()
                 .addInterceptor(addQueryParameterInterceptor)
                 .addInterceptor(cacheInterceptor)
+                .addNetworkInterceptor(logging)
                 .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)//设置读取超时时间
                 .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)//设置写的超时时间
                 .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)//设置连接超时时间
                 .cache(cache)
 //                .addNetworkInterceptor()
                 .build();
-
-        return okHttpClient;
     }
 
     @NonNull

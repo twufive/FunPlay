@@ -41,8 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".activity.MainActivity"
             android:windowSoftInputMode="adjustPan" />
@@ -53,22 +51,15 @@
         <activity android:name=".activity.RegistBActivity" />
         <activity android:name=".activity.RegistCActivity" />
         <activity android:name=".activity.ChatActivity" />
-
         <activity android:name=".activity.PhotoViewActivity" />
         <activity android:name=".activity.CoreUserDetailPageActivity" />
         <activity android:name=".activity.CoreOrderDetailActivity" />
         <activity android:name=".activity.CoreWanZhuanDiQiuActivity" />
-
-
         <activity android:name=".activity.tabcenter.PinTuanTogetherActivity" />
         <activity android:name=".activity.tabcenter.PushNewOrderActivity" />
-
         <activity android:name=".activity.modulea.FilterActivity" />
-
         <activity android:name=".activity.modulec.FriendTalkPushActivity" />
-
         <activity android:name=".activity.modulea.GuiderQueryActivity" />
-
         <activity android:name=".activity.moduled.MyOrderActivity" />
         <activity android:name=".activity.moduled.MyPinTuanActivity" />
         <activity android:name=".activity.moduled.MyInfoActivity" />
@@ -80,40 +71,36 @@
         <activity android:name=".activity.moduled.CertifyIDActivity" />
         <activity android:name=".activity.moduled.CertifyVocationActivity" />
 
-
-        <!--ease ui-->
+        <!-- ease ui -->
         <activity
             android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-        <!--环信的key-->
+        <!-- 环信的key -->
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="1172170330115303#funplay" />
 
-
-        <!--高德地图的key-->
-        <meta-data android:name="com.amap.api.v2.apikey"
-            android:value="b5c8367fb8549fad6418d2810b63a79b"/>
+        <!-- 高德地图的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b5c8367fb8549fad6418d2810b63a79b" />
 
         <activity
             android:name="com.zaaach.citypicker.CityPickerActivity"
-            android:theme="@style/CityPicker.NoActionBar"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
+            android:theme="@style/CityPicker.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
 
         <service
             android:name="com.hyphenate.chat.EMChatService"
@@ -126,6 +113,7 @@
         <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
                 <data android:scheme="package" />
             </intent-filter>
             <!-- 可选filter -->
@@ -145,20 +133,16 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-
         <!-- Ping++ SDK -->
         <activity
             android:name="com.pingplusplus.android.PaymentActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-        </activity>
-
-        <!-- 微信支付 -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 微信支付 -->
         <!-- 1.需要将以下"替换成自己 APK 的包名"换成在微信平台上注册填写的包名 -->
         <!-- 2.WxPayEntryActivity 这个类在 SDK 内部实现，开发者不需要额外实现该类 -->
         <activity-alias
-            android:name="com.zgtech.funplay.wxapi.WXPayEntryActivity"
+            android:name=".wxapi.WXPayEntryActivity"
             android:exported="true"
             android:targetActivity="com.pingplusplus.android.PaymentActivity" />
 
@@ -167,14 +151,14 @@
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:exported="false"
-            android:screenOrientation="behind"/>
+            android:screenOrientation="behind" />
         <activity
             android:name="com.alipay.sdk.auth.AuthActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:exported="false"
-            android:screenOrientation="behind"/>
-
-
+            android:screenOrientation="behind" />
+        <activity android:name=".activity.RegistInfoActivity" />
+        <activity android:name=".activity.modulea.QualityScenicActivity"></activity>
     </application>
 
 </manifest>

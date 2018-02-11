@@ -22,8 +22,8 @@ import butterknife.OnClick;
 public class FilterActivity extends BaseActivity {
     @Bind(R.id.rsb_age)
     RangeSeekBar rsbAge;
-    @Bind(R.id.rsb_price)
-    RangeSeekBar rsbPrice;
+//    @Bind(R.id.rsb_price)
+//    RangeSeekBar rsbPrice;
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
@@ -32,8 +32,8 @@ public class FilterActivity extends BaseActivity {
     TextView tvRight;
     @Bind(R.id.tv_age_range)
     TextView tvAgeRange;
-    @Bind(R.id.tv_range_price)
-    TextView tvRangePrice;
+//    @Bind(R.id.tv_range_price)
+//    TextView tvRangePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +52,10 @@ public class FilterActivity extends BaseActivity {
         tvRight.setText("确定");
 
         rsbAge.setRules(18, 70, 1, 1);
-        rsbPrice.setRules(50, 1000, 1, 1);
+//        rsbPrice.setRules(50, 1000, 1, 1);
 
         rsbAge.setValue(18, 22);
-        rsbPrice.setValue(50, 160);
+//        rsbPrice.setValue(50, 160);
 
 
         rsbAge.setOnRangeChangedListener(new RangeSeekBar.OnRangeChangedListener() {
@@ -68,16 +68,16 @@ public class FilterActivity extends BaseActivity {
             }
         });
 
-        rsbPrice.setOnRangeChangedListener(new RangeSeekBar.OnRangeChangedListener() {
-            @Override
-            public void onRangeChanged(RangeSeekBar view, float min, float max) {
-                L.i("min", "" + min);
-                L.i("max", "" + max);
+//        rsbPrice.setOnRangeChangedListener(new RangeSeekBar.OnRangeChangedListener() {
+//            @Override
+//            public void onRangeChanged(RangeSeekBar view, float min, float max) {
+//                L.i("min", "" + min);
+//                L.i("max", "" + max);
 
 //                tvRangePrice.setText(min + "~" + max);
-                tvRangePrice.setText(Integer.valueOf((int) min) + "~" + Integer.valueOf((int) max));
-            }
-        });
+//                tvRangePrice.setText(Integer.valueOf((int) min) + "~" + Integer.valueOf((int) max));
+//            }
+//        });
     }
 
     @Override
@@ -93,6 +93,7 @@ public class FilterActivity extends BaseActivity {
                 break;
             case R.id.tv_right:
                 break;
+            default:
         }
     }
 }
