@@ -45,13 +45,11 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.iv_tab_post)
     ImageView ivTabPost;
 
-    private static String TAG = "MainActivity";
     String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO};
     private HomeFragment homeFragment;
     private MessageFragment messageFragment;
     private FindFragment findFragment;
     private MineFragment mineFragment;
-    private int NOW_FRAGMENT;
     private boolean popupWindowIsShow = false;
 
 
@@ -68,7 +66,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        NOW_FRAGMENT = getIntent().getIntExtra("whichFragment", 0);
+        int NOW_FRAGMENT = getIntent().getIntExtra("whichFragment", 0);
         ivTabPost.bringToFront();
 
         initTabBottom();
@@ -84,10 +82,6 @@ public class MainActivity extends BaseActivity {
     private void initTabBottom() {
         bnbMain.setMode(BottomNavigationBar.MODE_FIXED);
         bnbMain.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_a, "首页").setActiveColorResource(R.color.colorPrimary));
-//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_b, "消息").setActiveColorResource(R.color.colorPrimary));
-//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_c, "旅游圈").setActiveColorResource(R.color.colorPrimary));
-//        bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_tab_d, "我的").setActiveColorResource(R.color.colorPrimary));
         bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_home_black_24dp, "首页").setActiveColorResource(R.color.colorPrimary));
         bnbMain.addItem(new BottomNavigationItem(R.drawable.ic_message_black_24dp, "消息").setActiveColorResource(R.color.colorPrimary));
         bnbMain.addItem(new BottomNavigationItem(R.drawable.icon_white, "").setActiveColorResource(R.color.white).setInActiveColorResource(R.color.white));
@@ -123,7 +117,6 @@ public class MainActivity extends BaseActivity {
                         }
                         break;
                     case 2:
-                        /**这里是中间的那个红色按钮噢*/
                         L.i("tabCenterClick", "true");
                         break;
                     case 3:
@@ -171,6 +164,9 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    /**
+     * 点击加号弹窗的窗口
+     */
     private void showPop() {
         View popView = getLayoutInflater().inflate(R.layout.pop_tab_post, null);
         final PopupWindow pop = new PopupWindow(popView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, true);
@@ -187,16 +183,60 @@ public class MainActivity extends BaseActivity {
         initPoPClicks(pop, popView);
     }
 
+    /**
+     * 初始化点击中间加号弹出窗口的点击事件
+     * @param pop 窗口
+     * @param popView 视图
+     */
     private void initPoPClicks(final PopupWindow pop, View popView) {
-        CardView cardPinTuan = (CardView) popView.findViewById(R.id.cardview_pintuan);
-        CardView cardDiqiu = (CardView) popView.findViewById(R.id.cardview_diqiu);
+        // 新闻界面
+        CardView cvPopNews = (CardView) popView.findViewById(R.id.cv_pop_news);
+        cvPopNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, PinTuanTogetherActivity.class);
+            }
+        });
 
-        LinearLayout llSeekGuider = (LinearLayout) popView.findViewById(R.id.ll_seek_guider);
-        LinearLayout llPinTuan = (LinearLayout) popView.findViewById(R.id.ll_pintuan_together);
-        LinearLayout llDiqiu = (LinearLayout) popView.findViewById(R.id.ll_play_diqiu);
+        // 系统公告
+        CardView cvPopPost = (CardView) popView.findViewById(R.id.cv_pop_post);
+        cvPopPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+            }
+        });
+
+        // 寻找当地人
+        LinearLayout llFindLocal = (LinearLayout) popView.findViewById(R.id.ll_pop_find_local);
+        llFindLocal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pop.dismiss();
+                bnbMain.selectTab(0);
+            }
+        });
+
+        // 结伴出游
+        LinearLayout llTravelTogether = (LinearLayout) popView.findViewById(R.id.ll_pop_travel_together);
+        llTravelTogether.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, PinTuanTogetherActivity.class);
+            }
+        });
+
+        // 系统公告
+        LinearLayout llPopPost = (LinearLayout) popView.findViewById(R.id.ll_pop_post);
+        llPopPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+            }
+        });
+
 
         ImageView ivPostPop = (ImageView) popView.findViewById(R.id.iv_tab_post_pop);
-
         ivPostPop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,46 +244,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        //进入一起拼团体系页面
-        cardPinTuan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toTargetActivity(pop, PinTuanTogetherActivity.class);
-            }
-        });
 
-        llPinTuan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toTargetActivity(pop, PinTuanTogetherActivity.class);
-            }
-        });
-
-
-        //进入玩赚地球体系页面
-        cardDiqiu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
-            }
-        });
-
-        llDiqiu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
-            }
-        });
-
-
-        //跳入首页
-        llSeekGuider.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pop.dismiss();
-                bnbMain.selectTab(0);
-            }
-        });
 
     }
 
@@ -265,14 +266,9 @@ public class MainActivity extends BaseActivity {
                 decorView.setSystemUiVisibility(option);
                 getWindow().setStatusBarColor(Color.TRANSPARENT);
             }
-        } else {
-
         }
     }
 
-    /*****************
-     * 双击退出程序
-     ************************************************/
     private long exitTime = 0;
 
     @Override

@@ -23,7 +23,7 @@
             android:textSize="20sp" />
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cardview_pintuan"
+            android:id="@+id/cv_pop_news"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
@@ -71,7 +71,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cardview_diqiu"
+            android:id="@+id/cv_pop_post"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
@@ -125,13 +125,13 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/ll_seek_guider"
+            android:id="@+id/ll_pop_find_local"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="70dp"
             android:layout_marginRight="20dp"
-            android:layout_toLeftOf="@+id/ll_pintuan_together"
+            android:layout_toLeftOf="@+id/ll_pop_travel_together"
             android:orientation="vertical">
 
             <ImageView
@@ -152,7 +152,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_pintuan_together"
+            android:id="@+id/ll_pop_travel_together"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -176,13 +176,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_play_diqiu"
+            android:id="@+id/ll_pop_post"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="70dp"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/ll_pintuan_together"
+            android:layout_toRightOf="@+id/ll_pop_travel_together"
             android:orientation="vertical">
 
             <ImageView
