@@ -1,19 +1,19 @@
-package com.zgtech.funplay.fragment.childFragment;
+package com.zgtech.funplay.activity.tabcenter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.tabcenter.TravelAroundDetailActivity;
-import com.zgtech.funplay.adapter.NewPersonAdapter;
-import com.zgtech.funplay.base.BaseFragment;
+import com.zgtech.funplay.base.BaseActivity;
+import com.zgtech.funplay.fragment.childFragment.HotTravelAroundAdapter;
+import com.zgtech.funplay.model.NewsModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
@@ -24,67 +24,86 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * 热门陪游
- *
- *
- * Created by Administrator on 2017/8/1.
- */
+public class TravelAroundActivity extends BaseActivity {
 
-public class HotAccompanyEndFragment extends BaseFragment {
-    private RecyclerView recyclerView;
+    @Bind(R.id.rv_travel_around)
+    RecyclerView rv;
+    @Bind(R.id.ll_back)
+    LinearLayout llBack;
+    @Bind(R.id.tv_toolbar)
+    TextView tvToolbar;
+    @Bind(R.id.iv_right)
+    ImageView ivRight;
+
     private HotTravelAroundAdapter newPersonAdapter;
     private List<RecommendOther3Model.ObjBean> originList = new ArrayList<>();
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_newperson, container, false);
-        ButterKnife.bind(this, view);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_travel_around);
+        ButterKnife.bind(this);
 
-        initView(view, savedInstanceState);
+        initView();
         initData();
-        return view;
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        L.i("HotAccompanyEndFragment", "onDestroy");
-    }
-
-    @Override
-    protected void initView(View view, Bundle savedInstanceState) {
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+    public void initView() {
+        llBack.setVisibility(View.VISIBLE);
+        llBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        tvToolbar.setText("结伴出游");
+        ivRight.setVisibility(View.VISIBLE);
+        ivRight.setImageResource(R.drawable.bg_add_photo);
     }
 
     private void initNewPerson(List<RecommendOther3Model.ObjBean> originList) {
-        newPersonAdapter = new HotTravelAroundAdapter(mActivity, R.layout.fp_item_hot_travel_around, originList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mActivity);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(newPersonAdapter);
-        newPersonAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(getActivity(), TravelAroundDetailActivity.class);
-                startActivity(intent);
-            }
-        });
+        newPersonAdapter = new HotTravelAroundAdapter(this, R.layout.fp_item_hot_travel_around, originList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        rv.setLayoutManager(linearLayoutManager);
+        rv.setAdapter(newPersonAdapter);
+    }
+
+
+    @OnClick(R.id.tv_right)
+    public void onViewClicked(View view){
+        switch (view.getId()){
+            case R.id.tv_right:
+                toNextActivity(PublishTravelAroundActivity.class);
+                break;
+        }
     }
 
     @Override
-    protected void initData() {
+    public void initData() {
+
+        newPersonAdapter = new HotTravelAroundAdapter(this, R.layout.fp_item_hot_travel_around, originList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        rv.setLayoutManager(linearLayoutManager);
+        rv.setAdapter(newPersonAdapter);
+        newPersonAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+//                int viewId = originList.get(position).getUserId();
+//                Intent intent = new Intent(TravelAroundActivity.this, NewsDetailActivity.class);
+//                intent.putExtra("newsId", String.valueOf(viewId));
+//                startActivity(intent);
+            }
+        });
+
         HashMap map = new HashMap();
         map.put("cursor", "0");
         map.put("more", "false");
@@ -121,10 +140,4 @@ public class HotAccompanyEndFragment extends BaseFragment {
             }
         });
     }
-
-    public static HotAccompanyEndFragment newInstance() {
-        HotAccompanyEndFragment fragment = new HotAccompanyEndFragment();
-        return fragment;
-    }
-
 }

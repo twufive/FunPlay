@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -15,6 +16,8 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.zgtech.funplay.FunPlayApplication;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreOrderDetailActivity;
+import com.zgtech.funplay.activity.modulea.QualityFoodActivity;
+import com.zgtech.funplay.activity.modulea.QualityScenicActivity;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.retrofit.ApiStores;
 
@@ -23,21 +26,20 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
- * 推荐   景点适配器
+ * 推荐   人物适配器
  * Created by Administrator on 2017/8/3.
  */
 
-public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBean.AddressListBean, BaseViewHolder> {
+public class HomeQualityFoodAdapter extends BaseQuickAdapter<RecommendModel.ObjBean.FoodListBean, BaseViewHolder> {
     private Activity act;
 
-    public RecommendSiteAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<RecommendModel.ObjBean.AddressListBean> data) {
+    public HomeQualityFoodAdapter(Activity act, @LayoutRes int layoutResId, @Nullable List<RecommendModel.ObjBean.FoodListBean> data) {
         super(layoutResId, data);
-
         this.act = act;
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, final RecommendModel.ObjBean.AddressListBean individualModel) {
+    protected void convert(BaseViewHolder helper, final RecommendModel.ObjBean.FoodListBean individualModel) {
         CircleImageView ivAvatar = helper.getView(R.id.iv_avatar);
         ImageView ivStar = helper.getView(R.id.iv_star);
         ImageView iv01 = helper.getView(R.id.iv_01);
@@ -49,6 +51,8 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
         TextView tvSign = helper.getView(R.id.tv_sign);
         TextView tvRead = helper.getView(R.id.tv_read);
         CardView cardview = helper.getView(R.id.cardview);
+        RelativeLayout rl = helper.getView(R.id.rl_bottom);
+
 
         ivAvatar.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())
@@ -62,6 +66,7 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
 
         tvSign.setText(individualModel.getOrderTitle() + "");
         tvRead.setText(individualModel.getCommentCount() + "");
+
 
         switch (individualModel.getAvgMark()){
             case 5:
@@ -98,6 +103,7 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
                 iv03.setVisibility(View.GONE);
                 iv04.setVisibility(View.GONE);
                 iv05.setVisibility(View.GONE);
+                break;
             case 0:
                 iv01.setVisibility(View.VISIBLE);
                 iv02.setVisibility(View.VISIBLE);
@@ -105,15 +111,27 @@ public class RecommendSiteAdapter extends BaseQuickAdapter<RecommendModel.ObjBea
                 iv04.setVisibility(View.VISIBLE);
                 iv05.setVisibility(View.VISIBLE);
                 break;
+        }
 
+        if(individualModel.getCommentCount() == -1){
+            rl.setVisibility(View.GONE);
+        } else {
+            rl.setVisibility(View.VISIBLE);
         }
 
         cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act, CoreOrderDetailActivity.class);
-                intent.putExtra("orderId", individualModel.getOrderId() + "");
-                act.startActivity(intent);
+                if(individualModel.getCommentCount() != -1) {
+                    // 点击非更多 进入指定详情页
+                    Intent intent = new Intent(act, CoreOrderDetailActivity.class);
+                    intent.putExtra("foodId", individualModel.getOrderId() + "");
+                    act.startActivity(intent);
+                } else {
+                    // 点击更多 进入列表页
+                    Intent intent = new Intent(act, QualityFoodActivity.class);
+                    act.startActivity(intent);
+                }
             }
         });
     }

@@ -158,7 +158,22 @@
             android:exported="false"
             android:screenOrientation="behind" />
         <activity android:name=".activity.RegistInfoActivity" />
-        <activity android:name=".activity.modulea.QualityScenicActivity"></activity>
+        <activity android:name=".activity.modulea.QualityScenicActivity"/>
+        <activity android:name=".activity.modulea.QualityScenicDetailActivity"/>
+        <activity android:name=".activity.modulea.QualityFoodActivity" />
+        <activity android:name=".activity.modulea.QualityFoodDetailActivity" />
+        <activity android:name=".activity.moduled.MyWalletActivity" />
+        <activity android:name=".activity.moduled.WalletAddActivity" />
+        <activity android:name=".activity.moduled.WalletCashActivity" />
+        <activity android:name=".activity.moduled.BillDetailActivity" />
+        <activity android:name=".activity.moduled.CardListActivity" />
+        <activity android:name=".activity.moduled.BindCardActivity" />
+        <activity android:name=".activity.tabcenter.NewsActivity" />
+        <activity android:name=".activity.tabcenter.NewsDetailActivity" />
+        <activity android:name=".activity.tabcenter.AnnouncementActivity" />
+        <activity android:name=".activity.tabcenter.TravelAroundActivity" />
+        <activity android:name=".activity.tabcenter.PublishTravelAroundActivity" />
+        <activity android:name=".activity.tabcenter.TravelAroundDetailActivity" />
     </application>
 
 </manifest>

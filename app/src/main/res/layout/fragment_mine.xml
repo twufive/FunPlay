@@ -177,7 +177,7 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
-                        android:id="@+id/rl_pintuan"
+                        android:id="@+id/rl_travel_around"
                         style="@style/rvMineTab">
 
                         <LinearLayout

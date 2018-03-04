@@ -1,7 +1,6 @@
-package com.zgtech.funplay.activity.modulea;
+package com.zgtech.funplay.activity.tabcenter;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,15 +10,12 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.activity.CoreOrderDetailActivity;
+import com.zgtech.funplay.activity.modulea.QualityFoodDetailActivity;
 import com.zgtech.funplay.base.BaseActivity;
-import com.zgtech.funplay.model.QualityScenicModel;
-import com.zgtech.funplay.model.RecommendModel;
+import com.zgtech.funplay.model.NewsModel;
 import com.zgtech.funplay.retrofit.RequestBodyBuilder;
 import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.T;
-
-import org.greenrobot.greendao.annotation.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,28 +23,27 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import io.reactivex.annotations.NonNull;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class QualityScenicActivity extends BaseActivity {
+public class NewsActivity extends BaseActivity {
 
-    @Bind(R.id.rv_quality_scenic)
+    @Bind(R.id.rv_news)
     RecyclerView rv;
     @Bind(R.id.ll_back)
     LinearLayout llBack;
     @Bind(R.id.tv_toolbar)
     TextView tvToolbar;
 
-    List<QualityScenicModel.ListBean> scenicList = new ArrayList<>();
-    QualityScenicAdapter adapter;
+    List<NewsModel.ListBean> newsList = new ArrayList<>();
+    NewsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quality_scenic);
+        setContentView(R.layout.activity_news);
         ButterKnife.bind(this);
 
         initView();
@@ -64,7 +59,7 @@ public class QualityScenicActivity extends BaseActivity {
                 finish();
             }
         });
-        tvToolbar.setText("精华景点");
+        tvToolbar.setText("新闻资讯");
     }
 
     @Override
@@ -73,23 +68,25 @@ public class QualityScenicActivity extends BaseActivity {
         LinearLayoutManager linearLayoutManagerSite = new LinearLayoutManager(this);
         linearLayoutManagerSite.setOrientation(LinearLayoutManager.VERTICAL);
         rv.setLayoutManager(linearLayoutManagerSite);
-        adapter = new QualityScenicAdapter(R.layout.fp_item_quality_senic,scenicList);
+        adapter = new NewsAdapter(R.layout.fp_item_news, newsList);
         rv.setAdapter(adapter);
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                int viewId = scenicList.get(position).getViewId();
-                Intent intent = new Intent(QualityScenicActivity.this, QualityScenicDetailActivity.class);
-                intent.putExtra("viewId", String.valueOf(viewId));
+                int viewId = newsList.get(position).getNewsId();
+                Intent intent = new Intent(NewsActivity.this, NewsDetailActivity.class);
+                intent.putExtra("newsId", String.valueOf(viewId));
                 startActivity(intent);
             }
         });
 
         HashMap<Object, Object> map = new HashMap<>();
+        map.put("row",5);
+        map.put("page",0);
         RequestBody body = RequestBodyBuilder.build(map);
-        mApiStores.getQualityScenicData(body).enqueue(new Callback<QualityScenicModel>() {
+        mApiStores.getNewsData(body).enqueue(new Callback<NewsModel>() {
             @Override
-            public void onResponse(Call<QualityScenicModel> call, Response<QualityScenicModel> response) {
+            public void onResponse(Call<NewsModel> call, Response<NewsModel> response) {
                 if (response.isSuccessful()) {
                     if (response.body().getCode() == 2) {
                         handleServerData(response.body());
@@ -101,16 +98,17 @@ public class QualityScenicActivity extends BaseActivity {
                 }
             }
 
-            private void handleServerData(QualityScenicModel model) {
-                List<QualityScenicModel.ListBean> list = model.getList();
+            private void handleServerData(NewsModel model) {
+                List<NewsModel.ListBean> list = model.getList();
                 L.e("dataCount----" + list.size());
-                scenicList.clear();
-                scenicList.addAll(list);
+                newsList.clear();
+                newsList.addAll(list);
                 adapter.notifyDataSetChanged();
             }
 
+
             @Override
-            public void onFailure(Call<QualityScenicModel> call, Throwable t) {
+            public void onFailure(Call<NewsModel> call, Throwable t) {
                 T.showShort(t.toString());
             }
         });

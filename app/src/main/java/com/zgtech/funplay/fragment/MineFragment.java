@@ -18,6 +18,8 @@ import com.hss01248.dialog.interfaces.MyDialogListener;
 import com.hyphenate.chat.EMClient;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.CoreUserDetailPageActivity;
+import com.zgtech.funplay.activity.moduled.BillDetailActivity;
+import com.zgtech.funplay.activity.moduled.CardListActivity;
 import com.zgtech.funplay.activity.moduled.MyCertifyActivity;
 import com.zgtech.funplay.activity.moduled.MyCollectActivity;
 import com.zgtech.funplay.activity.moduled.MyInfoActivity;
@@ -26,6 +28,7 @@ import com.zgtech.funplay.activity.moduled.MyPinTuanActivity;
 import com.zgtech.funplay.activity.moduled.MyPwdActivity;
 import com.zgtech.funplay.activity.moduled.MyReportActivity;
 import com.zgtech.funplay.activity.moduled.MySuggestActivity;
+import com.zgtech.funplay.activity.moduled.MyWalletActivity;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.greendao.gen.DaoMaster;
 import com.zgtech.funplay.greendao.gen.DaoSession;
@@ -73,7 +76,7 @@ public class MineFragment extends BaseFragment {
     AppBarLayout appBar;
     @Bind(R.id.rl_order)
     RelativeLayout rlOrder;
-    @Bind(R.id.rl_pintuan)
+    @Bind(R.id.rl_travel_around)
     RelativeLayout rlPinTuan;
     @Bind(R.id.rl_info)
     RelativeLayout rlInfo;
@@ -91,8 +94,17 @@ public class MineFragment extends BaseFragment {
     RelativeLayout rlPwd;
     @Bind(R.id.rl_logout)
     RelativeLayout rlLogout;
-    private String userId;
+    @Bind(R.id.rl_bill_detail)
+    RelativeLayout rlBillDetail;
+    @Bind(R.id.rl_bind_card)
+    RelativeLayout rlBindCard;
+    @Bind(R.id.rl_receive_evaluate)
+    RelativeLayout rlReceiveEvaluate;
+    @Bind(R.id.rl_wallet)
+    RelativeLayout rlWallet;
 
+
+    private String userId;
     private DaoMaster.DevOpenHelper devOpenHelper;
 
     @Override
@@ -201,7 +213,13 @@ public class MineFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care, R.id.tv_fans, R.id.rl_order, R.id.rl_pintuan, R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion, R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout})
+    @OnClick({
+            R.id.iv_avatar, R.id.tv_nick, R.id.tv_sign, R.id.tv_care,
+            R.id.tv_fans, R.id.rl_order, R.id.rl_travel_around,
+            R.id.rl_info, R.id.rl_page, R.id.rl_mine_collect, R.id.rl_mine_suggestion,
+            R.id.rl_certify, R.id.rl_report, R.id.rl_pwd, R.id.rl_logout,
+            R.id.rl_wallet,R.id.rl_bill_detail,R.id.rl_bind_card,
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_avatar:
@@ -215,38 +233,62 @@ public class MineFragment extends BaseFragment {
             case R.id.tv_fans:
                 break;
             case R.id.rl_order:
+                // 我的订单
                 toNextActivity(MyOrderActivity.class);
                 break;
-            case R.id.rl_pintuan:
+            case R.id.rl_travel_around:
+                // 我的陪游 TODO
                 toNextActivity(MyPinTuanActivity.class);
                 break;
             case R.id.rl_info:
+                // 我的资料
                 toNextActivity(MyInfoActivity.class);
                 break;
             case R.id.rl_page:
+                // 我的动态 TODO
                 SP.setString(mActivity, "otherUserId", userId);
-
                 Intent intent = new Intent(mActivity, CoreUserDetailPageActivity.class);
                 intent.putExtra("isMyself", true);
                 intent.putExtra("userId", userId);
                 mActivity.startActivity(intent);
                 break;
             case R.id.rl_mine_collect:
+                // 我的收藏
                 toNextActivity(MyCollectActivity.class);
                 break;
             case R.id.rl_mine_suggestion:
+                // 意见反馈
                 toNextActivity(MySuggestActivity.class);
                 break;
             case R.id.rl_certify:
+                // 个人认证
                 toNextActivity(MyCertifyActivity.class);
                 break;
             case R.id.rl_report:
                 toNextActivity(MyReportActivity.class);
                 break;
             case R.id.rl_pwd:
+                // 修改密码
+                toNextActivity(MyPwdActivity.class);
+                break;
+            case R.id.rl_wallet:
+                // 我的钱包
+                toNextActivity(MyWalletActivity.class);
+                break;
+            case R.id.rl_bill_detail:
+                // 账单详情
+                toNextActivity(BillDetailActivity.class);
+                break;
+            case R.id.rl_bind_card:
+                // 绑定银行卡
+                toNextActivity(CardListActivity.class);
+                break;
+            case R.id.rl_receive_evaluate:
+                // 收到的评价 TODO
                 toNextActivity(MyPwdActivity.class);
                 break;
             case R.id.rl_logout:
+                // 退出登录
                 showLogoutDialog();
                 break;
         }

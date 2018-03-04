@@ -30,7 +30,7 @@ public class MyCertifyActivity extends BaseActivity {
     ImageView ivCertifyIdcard;
     @Bind(R.id.tv_certify_idcard)
     TextView tvCertifyIdcard;
-    @Bind(R.id.ll_card)
+    @Bind(R.id.ll_scenic_card)
     CardView cardIdcard;
     @Bind(R.id.iv_certify_profession)
     ImageView ivCertifyProfession;
@@ -68,7 +68,7 @@ public class MyCertifyActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.ll_back, R.id.tv_toolbar, R.id.ll_card, R.id.card_profession})
+    @OnClick({R.id.ll_back, R.id.tv_toolbar, R.id.ll_scenic_card, R.id.card_profession})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_back:
@@ -76,7 +76,7 @@ public class MyCertifyActivity extends BaseActivity {
                 break;
             case R.id.tv_toolbar:
                 break;
-            case R.id.ll_card:
+            case R.id.ll_scenic_card:
                 if (stateIdent.equals("未认证")) {
                     toNextActivity(CertifyIDActivity.class);
                 }

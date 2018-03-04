@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zgtech.funplay.R;
-import com.zgtech.funplay.adapter.RecommendPersonAdapter;
-import com.zgtech.funplay.adapter.RecommendSiteAdapter;
+import com.zgtech.funplay.adapter.HomeQualityFoodAdapter;
+import com.zgtech.funplay.adapter.HomeQualityScenicAdapter;
 import com.zgtech.funplay.base.BaseFragment;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.utils.L;
@@ -31,13 +31,13 @@ import retrofit2.Response;
  */
 
 public class RecommendFragment extends BaseFragment {
-    private RecyclerView recyclerViewSite;
-    private RecyclerView recyclerViewPerson;
+    private RecyclerView recyclerViewScenic;
+    private RecyclerView recyclerViewFood;
 
-    private RecommendSiteAdapter siteAdapter;
-    private RecommendPersonAdapter personAdapter;
+    private HomeQualityScenicAdapter scenicAdapter;
+    private HomeQualityFoodAdapter foodAdapter;
 
-    private List<RecommendModel.ObjBean.AddressListBean> addressList = new ArrayList<>();
+    private List<RecommendModel.ObjBean.AddressListBean> scenicList = new ArrayList<>();
     private List<RecommendModel.ObjBean.FoodListBean> foodList = new ArrayList<>();
     private ProgressDialog dialog;
 
@@ -68,8 +68,8 @@ public class RecommendFragment extends BaseFragment {
 
     @Override
     protected void initView(View thisView, Bundle savedInstanceState) {
-        recyclerViewSite = (RecyclerView) thisView.findViewById(R.id.recyclerview_site);
-        recyclerViewPerson = (RecyclerView) thisView.findViewById(R.id.recyclerview_person);
+        recyclerViewScenic = (RecyclerView) thisView.findViewById(R.id.recyclerview_site);
+        recyclerViewFood = (RecyclerView) thisView.findViewById(R.id.recyclerview_person);
     }
 
     @Override
@@ -89,8 +89,21 @@ public class RecommendFragment extends BaseFragment {
             }
 
             private void handleServerData(RecommendModel model) {
-                addressList = model.getObj().getAddressList();
+                scenicList = model.getObj().getAddressList();
                 foodList = model.getObj().getFoodList();
+
+                // 拼装 更多
+                RecommendModel.ObjBean.AddressListBean addressListBean = new RecommendModel.ObjBean.AddressListBean();
+                addressListBean.setOrderTitle("更多");
+                addressListBean.setCommentCount(-1);
+                addressListBean.setOrderPicture1(scenicList.get(0).getOrderPicture1());
+                scenicList.add(addressListBean);
+
+                RecommendModel.ObjBean.FoodListBean foodListBean = new RecommendModel.ObjBean.FoodListBean();
+                foodListBean.setOrderTitle("更多");
+                foodListBean.setCommentCount(-1);
+                foodListBean.setOrderPicture1(foodList.get(0).getOrderPicture1());
+                foodList.add(foodListBean);
 
                 initSite();
                 initPerson();
@@ -105,20 +118,20 @@ public class RecommendFragment extends BaseFragment {
 
 
     private void initSite() {
-        siteAdapter = new RecommendSiteAdapter(mActivity, R.layout.fp_item_recommend, addressList);
+        scenicAdapter = new HomeQualityScenicAdapter(mActivity, R.layout.fp_item_recommend, scenicList);
         LinearLayoutManager linearLayoutManagerSite = new LinearLayoutManager(mActivity);
         linearLayoutManagerSite.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerViewSite.setLayoutManager(linearLayoutManagerSite);
-        recyclerViewSite.setAdapter(siteAdapter);
+        recyclerViewScenic.setLayoutManager(linearLayoutManagerSite);
+        recyclerViewScenic.setAdapter(scenicAdapter);
         dialog.dismiss();
     }
 
     private void initPerson() {
-        personAdapter = new RecommendPersonAdapter(mActivity, R.layout.fp_item_recommend, foodList);
+        foodAdapter = new HomeQualityFoodAdapter(mActivity, R.layout.fp_item_recommend, foodList);
         LinearLayoutManager linearLayoutManagerPerson = new LinearLayoutManager(mActivity);
         linearLayoutManagerPerson.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerViewPerson.setLayoutManager(linearLayoutManagerPerson);
-        recyclerViewPerson.setAdapter(personAdapter);
+        recyclerViewFood.setLayoutManager(linearLayoutManagerPerson);
+        recyclerViewFood.setAdapter(foodAdapter);
     }
 
     private void showProgressDialog() {

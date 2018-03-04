@@ -20,13 +20,21 @@ import com.hyphenate.easeui.ui.EaseConversationListFragment;
 import com.zgtech.funplay.R;
 import com.zgtech.funplay.activity.ChatActivity;
 import com.zgtech.funplay.base.BaseFragment;
+import com.zgtech.funplay.model.CustomServeModel;
+import com.zgtech.funplay.model.RecommendOther3Model;
 import com.zgtech.funplay.utils.L;
 import com.zgtech.funplay.utils.SP;
+import com.zgtech.funplay.utils.T;
 
+import java.util.Iterator;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * 消息模块
@@ -98,6 +106,42 @@ public class MessageFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
+    }
+
+    @OnClick(R.id.tv_right)
+    public void onViewClicked(View view) {
+        switch (view.getId()){
+            case R.id.tv_right:
+                mApiStores.getCustomServeData().enqueue(new Callback<CustomServeModel>() {
+                    @Override
+                    public void onResponse(Call<CustomServeModel> call, Response<CustomServeModel> response) {
+                        if (response.isSuccessful()) {
+                            if (response.body().getCode() == 2) {
+                                handleServerData(response.body());
+                            } else {
+                                T.showShort(response.body().getMsg());
+                            }
+                        } else {
+                            T.showShort(response.toString());
+                        }
+                    }
+
+                    private void handleServerData(CustomServeModel model) {
+                        List<CustomServeModel.ListBean> list = model.getList();
+                        CustomServeModel.ListBean listBean = list.get(0);
+                        CustomServeModel.ListBean listBean1 = list.get(1);
+                        String one = listBean.getName() + listBean.getType() + ":" + listBean.getVal();
+                        String two = listBean1.getName() + listBean1.getType() + ":" + listBean1.getVal();
+                        T.showLong(getActivity(),one + "\n" + two);
+                    }
+
+                    @Override
+                    public void onFailure(Call<CustomServeModel> call, Throwable t) {
+                        T.showShort(t.toString());
+                    }
+                });
+                break;
+        }
     }
 
 

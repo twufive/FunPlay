@@ -2,18 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/ll_scenic_card"
+        android:id="@+id/ll_travel_around_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:layout_margin="12dp"
             android:orientation="horizontal">
 
@@ -38,87 +38,45 @@
                     android:textColor="@color/little_black"
                     android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/tv_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="2dp"
-                    android:text="4.6分"
-                    android:textColor="@color/red"
-                    android:textSize="12sp" />
-
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="3dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_price"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:gravity="bottom"
                         android:text="￥90"
                         android:textColor="@color/red"
-                        android:textSize="16sp" />
+                        android:textSize="22sp" />
 
                     <TextView
+                        android:layout_below="@id/tv_price"
                         android:id="@+id/tv_price_old"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="6dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:layout_toRightOf="@id/tv_price"
-                        android:gravity="bottom"
                         android:text="￥240"
                         android:textColor="@color/little_black"
-                        android:textSize="11sp" />
+                        android:textSize="14sp"
+                        />
 
                     <Button
                         android:id="@+id/btn_rush"
-                        android:layout_width="70dp"
-                        android:layout_height="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:background="@drawable/bg_corners_theme_little_red"
-                        android:text="马上抢"
+                        android:text="查看当地人"
                         android:textColor="@color/white"
-                        android:textSize="13sp" />
-
+                        android:textSize="13sp"
+                        android:layout_marginBottom="5dp"
+                        />
                 </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp">
-
-                    <Button
-                        android:id="@+id/btn_count_all"
-                        android:layout_width="70dp"
-                        android:layout_height="15dp"
-                        android:layout_alignParentBottom="true"
-                        android:background="@drawable/bg_corners_theme_little_red_big_arc"
-                        android:text="5人团"
-                        android:textColor="@color/white"
-                        android:textSize="11sp" />
-
-                    <TextView
-                        android:id="@+id/tv_count_now"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="5dp"
-                        android:text="已团4人"
-                        android:textColor="@color/little_red"
-                        android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-
             </LinearLayout>
-
-
         </LinearLayout>
 
 

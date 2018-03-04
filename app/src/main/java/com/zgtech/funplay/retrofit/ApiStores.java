@@ -2,6 +2,7 @@ package com.zgtech.funplay.retrofit;
 
 import com.zgtech.funplay.model.BaseResultModel;
 import com.zgtech.funplay.model.ChargeModel;
+import com.zgtech.funplay.model.CustomServeModel;
 import com.zgtech.funplay.model.FriendTalkData;
 import com.zgtech.funplay.model.LoginBackUserModel;
 import com.zgtech.funplay.model.MineExternalModel;
@@ -9,8 +10,14 @@ import com.zgtech.funplay.model.MyInfoModel;
 import com.zgtech.funplay.model.MyOrderModel;
 import com.zgtech.funplay.model.MyPinTuanModel;
 import com.zgtech.funplay.model.NearbyData;
+import com.zgtech.funplay.model.NewsDetailModel;
+import com.zgtech.funplay.model.NewsModel;
 import com.zgtech.funplay.model.OrderDetailModel;
 import com.zgtech.funplay.model.PinTuanTogetherModel;
+import com.zgtech.funplay.model.QualityFoodDetailModel;
+import com.zgtech.funplay.model.QualityFoodModel;
+import com.zgtech.funplay.model.QualityScenicDetailModel;
+import com.zgtech.funplay.model.QualityScenicModel;
 import com.zgtech.funplay.model.QueryGuiderModel;
 import com.zgtech.funplay.model.RecommendModel;
 import com.zgtech.funplay.model.RecommendOther3Model;
@@ -108,8 +115,6 @@ public interface ApiStores {
     @GET("order/queryGuide")
     Call<UserDetailModel> getUserDetailData(@Query("userId") String userId);//查询某个导游的详情数据
 
-
-
     /***消息模块*/
 
 
@@ -175,4 +180,44 @@ public interface ApiStores {
     @POST("identity/apply")
     Call<BaseResultModel> doCertify(@Body RequestBody requestBody);//申请认证实名
 
+
+    // ****************************************************** 分割线  增加的部分
+
+    // 热门景点
+    @POST("public/hotView")
+    Call<QualityScenicModel> getQualityScenicData(@Body RequestBody requestBody);
+
+    // 景点详情
+    @POST("public/getView")
+    Call<QualityScenicDetailModel> getScenicDetailData(@Query("id") String id);
+
+    // 优质美食
+    @POST("public/hotFood")
+    Call<QualityFoodModel> getQualityFoodData(@Body RequestBody requestBody);
+
+    // 美食详情
+    @POST("public/getFood")
+    Call<QualityFoodDetailModel> getFoodDetailData(@Query("id") String id);
+
+    // 新闻资讯
+    @POST("public/news")
+    Call<NewsModel> getNewsData(@Body RequestBody requestBody);
+
+    // 新闻详情
+    @POST("public/getNews")
+    Call<NewsDetailModel> getNewsDetailData(@Query("id") String id);
+
+    // 系统公告
+    @POST("msg/list")
+    Call<NewsModel> getAnnouncementData(@Body RequestBody requestBody);
+
+    // 热门陪游
+    @POST("public/hotOrder")
+    Call<NewsModel> getHotTravelAroundData();
+
+    // 客服
+    @POST("public/kefu")
+    Call<CustomServeModel> getCustomServeData();
+
+    //
 }

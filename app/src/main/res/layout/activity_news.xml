@@ -6,12 +6,12 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/little_little_gray"
-    tools:context="com.zgtech.funplay.activity.modulea.QualityScenicActivity">
+    tools:context="com.zgtech.funplay.activity.tabcenter.NewsActivity">
 
     <include layout="@layout/toolbar" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_quality_scenic"
+        android:id="@+id/rv_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="8dp"

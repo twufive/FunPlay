@@ -46,7 +46,7 @@ public class PinTuanTogetherAdapter extends BaseQuickAdapter<PinTuanTogetherMode
         Button btnRush = helper.getView(R.id.btn_rush);
         Button btnCountAll = helper.getView(R.id.btn_count_all);
         TextView tvCountNow = helper.getView(R.id.tv_count_now);
-        LinearLayout llCard = helper.getView(R.id.ll_card);
+        LinearLayout llCard = helper.getView(R.id.ll_scenic_card);
 
         ivSite.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(FunPlayApplication.getContext())

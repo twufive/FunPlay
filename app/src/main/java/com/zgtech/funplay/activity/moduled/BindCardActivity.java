@@ -14,11 +14,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 我的主页
+ * 账单明细
  * Created by Administrator on 2017/8/14.
  */
 
-public class MySuggestActivity extends BaseActivity {
+public class BindCardActivity extends BaseActivity {
 
     @Bind(R.id.ll_back)
     LinearLayout llBack;
@@ -28,7 +28,7 @@ public class MySuggestActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_suggest);
+        setContentView(R.layout.activity_bind_card);
         ButterKnife.bind(this);
         initData();
         initView();
@@ -37,8 +37,7 @@ public class MySuggestActivity extends BaseActivity {
     @Override
     public void initView() {
         llBack.setVisibility(View.VISIBLE);
-        tvToolbar.setText("意见反馈");
-
+        tvToolbar.setText("绑定银行卡");
     }
 
     @Override

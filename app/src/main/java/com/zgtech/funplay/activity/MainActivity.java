@@ -22,7 +22,10 @@ import android.widget.Toast;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.zgtech.funplay.R;
+import com.zgtech.funplay.activity.tabcenter.AnnouncementActivity;
+import com.zgtech.funplay.activity.tabcenter.NewsActivity;
 import com.zgtech.funplay.activity.tabcenter.PinTuanTogetherActivity;
+import com.zgtech.funplay.activity.tabcenter.TravelAroundActivity;
 import com.zgtech.funplay.base.BaseActivity;
 import com.zgtech.funplay.fragment.FindFragment;
 import com.zgtech.funplay.fragment.HomeFragment;
@@ -194,7 +197,7 @@ public class MainActivity extends BaseActivity {
         cvPopNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toTargetActivity(pop, PinTuanTogetherActivity.class);
+                toTargetActivity(pop, NewsActivity.class);
             }
         });
 
@@ -203,7 +206,7 @@ public class MainActivity extends BaseActivity {
         cvPopPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+                toTargetActivity(pop, AnnouncementActivity.class);
             }
         });
 
@@ -222,7 +225,7 @@ public class MainActivity extends BaseActivity {
         llTravelTogether.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toTargetActivity(pop, PinTuanTogetherActivity.class);
+                toTargetActivity(pop, TravelAroundActivity.class);
             }
         });
 
@@ -231,7 +234,7 @@ public class MainActivity extends BaseActivity {
         llPopPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toTargetActivity(pop, CoreWanZhuanDiQiuActivity.class);
+                toTargetActivity(pop, AnnouncementActivity.class);
             }
         });
 
